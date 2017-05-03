@@ -1,0 +1,133 @@
+<div class="div_modify_post">
+
+	<a href="<?php echo $domain;?>realisations" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+	<main class="container realisations main_admin_post">
+		<?php $aModif = AffModifier($_GET['cocktail_id']); ?>
+
+		<h2>Modifier un Article</h2>
+
+		<form method="POST" action="" class="form" id="modify_post" enctype="multipart/form-data">
+			<fieldset>
+				<legend></legend>
+
+				<input type="hidden" name="session" id="session" value=<?= $_SESSION['id'] ?> />
+				<input type="hidden" name="id_post" id="id_post" value="<?=$aModif[0]['post_id']?>">
+
+				<p class="flex">
+					<label for="title">Titre : </label>
+					<input type="text" placeholder="Titre" id="title_modify_post" name="title" value="<?=$aModif[0]['post_titre']?>" required>
+				</p>
+				<p class="flex">
+					<label for="description">Description / Réalisation :<br>
+						<em>(séparer les 2 parties par : '/////')</em></label>
+						<textarea id="description_modify_post" name="description" required><?=$aModif[0]['post_description']?></textarea>
+					</p>
+
+					<p class="flex">
+						<label for="ingredients">Ingrédients :<br>
+							<em>(séparer chaque ingrédient par un tiret '-')</em></label>
+							<textarea placeholder="Ingredients" id="ingredients_modify_post" name="ingredients"><?=$aModif[0]['ingredient_description']?></textarea>
+						</p>
+
+						<!-- CHOIX DE LA CATEGORIE -->
+
+						<div class="flex div_primary_category">
+							<p class="category_post">Catégorie :</p>
+
+							<div class="div_category">
+								<p>
+									<input type="radio" id="realisations" name="category" value="realisations"
+									<?php if($aModif[0]['post_categorie'] == "realisations")
+									{ echo("checked"); } ?> >
+									<label for="realisations">Mes Réalisations</label>
+								</p>
+								<p>
+									<input type="radio" id="prestations" name="category" value="prestations"
+									<?php if($aModif[0]['post_categorie'] == "prestations")
+									{ echo("checked"); } ?> >
+									<label for="prestations">Mes Prestations</label>
+								</p>
+								<p>
+									<input type="radio" id="autre" name="category" value="autre"
+									<?php if($aModif[0]['post_categorie'] == "autre")
+									{ echo("checked"); } ?> >
+									<label for="autre">Autre</label>
+								</p>
+							</div>
+						</div>
+
+
+						<!-- CHOIX DU/DES MATERIELS -->
+						<?php
+						$aMaterial = array(
+							0 => $aModif[0]['post_material_id1'],
+							1 => $aModif[0]['post_material_id2'],
+							2 => $aModif[0]['post_material_id3'],
+							3 => $aModif[0]['post_material_id4'],
+							4 => $aModif[0]['post_material_id5'],
+						);
+						?>
+						<div class="flex div_primary_material">
+							<p class="material_post">Matériel(s) nécessaire(s) :</p>
+
+							<div class="div_material">
+								<p>
+									<input type="checkbox" id="material_shaker" name="material_shaker"
+									<?php if (in_array(1, $aMaterial))
+									{ echo("checked"); } ?> >
+									<label for="material_shaker">Shaker</label>
+								</p>
+								<p>
+									<input type="checkbox" id="material_verreamelange" name="material_verreamelange"
+									<?php if (in_array(2, $aMaterial))
+									{ echo("checked"); } ?> >
+									<label for="material_verreamelange">Verre à Mélange</label>
+								</p>
+								<p>
+									<input type="checkbox" id="material_cuillereamelange" name="material_cuillereamelange"
+									<?php if (in_array(3, $aMaterial))
+									{ echo("checked"); } ?> >
+									<label for="material_cuillereamelange">Cuillère à Mélange</label>
+								</p>
+								<p>
+									<input type="checkbox" id="material_pilon" name="material_pilon"
+									<?php if (in_array(4, $aMaterial))
+									{ echo("checked"); } ?> >
+									<label for="material_pilon">Pilon</label>
+								</p>
+								<p>
+									<input type="checkbox" id="material_blender" name="material_blender"
+									<?php if (in_array(5, $aMaterial))
+									{ echo("checked"); } ?> >
+									<label for="material_blender">Blender</label>
+								</p>
+							</div>
+						</div>
+
+						<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+						<!-- 1 Mo = 2^20 octets = 1048576 octets -->
+
+						<?php
+						if (!empty($aModif['picture']))
+						{ ?>
+							<div class="div_picture flex">
+								<p class="picture_mini_post">Image actuelle :</p>
+								<img class="cocktails_mini" src="<?php echo $domain;?>pictures/<?=$aModif['picture']['picture_source']?>">
+							</div>
+							<?php } ?>
+
+							<p class="flex">
+								<label for="picture">Uploader une image :<br>
+									<em>(JPG, PNG ou GIF - Max. 1 Mo)</em></label>
+									<input type="file" id="picture_modify_post" name="picture">
+								</p>
+
+							</fieldset>
+
+							<!-- <input type="hidden" name="value_input_submit" value="modifier"/> -->
+							<input type="submit" value=" Modifier un Article" class="cta input_modify_post" id="modification_modify_post" name="modifier">
+						</form>
+
+					</main>
+				</div>
+

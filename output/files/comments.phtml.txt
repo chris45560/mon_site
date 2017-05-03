@@ -1,0 +1,13 @@
+<?php
+
+echo("<article class='comments'>");
+
+$aAvatar_Source = Recup_Avatar_User_Pseudo($aTab['user_pseudo']);
+if($aAvatar_Source){
+?>
+<img class="avatars" src="<?php echo $domain;?>avatars/<?=$aAvatar_Source['avatar_source']?>">
+<?php
+}
+echo ("<p class='pseudo'>".$aTab['user_pseudo']." : </p><p class='text_comments'>".$aTab['comment_description']."</p>"
+      ."<em>".$aTab['date']."</em>"."</article>");
+

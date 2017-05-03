@@ -1,0 +1,102 @@
+<?php
+if(!isset($_SESSION['id']) || $_SESSION['status'] != 5){ echo "<script type='text/javascript'>document.location.replace('index.php');</script>";}
+else{
+?>
+<main class="container list_order_admin">
+
+  <a href="<?php echo $domain;?>admin" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+  <h2><i class="fa fa-list-ul" aria-hidden="true"></i> Liste des Commandes</h2>
+  <section class="section_admin">
+
+    <table class="tab_list_orders">
+
+      <thead>
+        <tr class="thead_tr_order">
+          <th>Id Commande</th>
+          <th>Montant Total</th>
+          <th>Date</th>
+          <th class="td_short">Id User</th>
+          <th>Pseudo User</th>
+          <th>Prénom User</th>
+          <th>Nom User</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <?php
+        foreach($aList_Orders as $aIndex => $aCol){ ?>
+          <tr class="tr_order">
+            <?php
+            foreach ($aCol as $key => $sValue)
+            {
+              if($key == "order_id" ||
+              $key == "order_totalamount" ||
+              $key == "order_date" ||
+              $key == "user_id" ||
+              $key == "user_pseudo" ||
+              $key == "user_firstname" ||
+              $key == "user_lastname")
+              {
+                if($key == "order_totalamount")
+                { ?>
+                  <td><?= $sValue ?>,00€</td>
+                  <?php
+                }
+                else if($key == "order_id")
+                {
+                  ?>
+                  <td class="td_details_order flex"><em class="details_order"><i class="fa fa-plus-circle" aria-hidden="true"></i> Détails</em><p><?= $sValue ?></p></td>
+                  <?php
+                }
+                else if($key == "user_id")
+                {
+                  ?>
+                  <td class="td_short"><?= $sValue ?></td>
+                  <?php
+                }
+                else
+                {
+                  ?>
+                  <td><?= $sValue ?></td>
+                  <?php
+                }
+              }
+            } ?>
+            <td class="td_short_a"><a href="<?php echo $domain;?>inc/order_pdf.php?order_id=<?=$aCol['order_id']?>"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></td>
+          </tr>
+
+          <?php
+          $aEachOrder = getAllOrderLines($aCol['order_id']);
+          ?>
+          <tr>
+            <td colspan="3">
+              <table class="table_orderlines">
+                <thead>
+                  <tr class="thead_tr_orderlines">
+                    <th>Nom du Produit</th>
+                    <th>Prix Unitaire</th>
+                    <th>Quantité</th>
+                    <th>Prix Total</th>
+                  </tr>
+                </thead>
+                <?php
+                foreach($aEachOrder as $iInd => $aTab)
+                {
+                  include('orderlines.phtml');
+                }
+                ?>
+              </table>
+            </td>
+          </tr>
+          <?php } ?>
+        </tbody>
+        <tfooter>
+        </tfooter>
+      </table>
+
+    </section>
+
+  </main>
+<?php } ?>
+

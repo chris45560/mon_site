@@ -1,0 +1,83 @@
+<main class="container gifts_cards">
+
+  <h2><i class="fa fa-gift" aria-hidden="true"></i> Cartes Cadeaux</h2>
+  <section class="section_prestations section_gifts_cards">
+
+    <p>Vous souhaitez offrir un cadeau original et convivial à vos proches,
+      vos collaborateurs ou vos clients à l'occasion d'une fête, d'un anniversaire, d'une retraire,...
+    </p>
+    <br>
+    <p>Plusieurs formules sous la forme d’une élégante « Carte Cadeau » vous sont proposées :</p>
+    <br>
+    <ul>
+      <li>
+        <article class="article_prestations">
+          <img src="<?php echo $domain;?>assets/img/carte_cadeau_green_officiel.png" alt="carte_cadeau_green_officiel">
+          <div class="flex div_article">
+            <h3><i class="fa fa-gift" aria-hidden="true"></i> Carte Mojito</h3>
+            <p>1 Atelier Cocktails <span>pour 1 personne</span> <span>d’une valeur de 70 euros</span></p>
+            <div class="div_quantity_basket flex">
+            <form class="quantity_spinner">
+              <label for="spinner">Quantité :</label>
+              <input class="giftcards_quantity spinner" name="giftcards_quantity" value="1" min="1" max="10">
+            </form>
+            <a href="?id_gifts_cards=1" class="cta basket"><i class="fa fa-cart-plus" aria-hidden="true"></i> Ajouter au Panier</a>
+          </div>
+        </div>
+        </article>
+      </li>
+
+      <li>
+        <article class="article_prestations">
+          <img src="<?php echo $domain;?>assets/img/carte_cadeau_blue_officiel.png" alt="carte_cadeau_blue_officiel">
+          <div class="flex div_article">
+            <h3><i class="fa fa-gift" aria-hidden="true"></i> Carte Curaçao</h3>
+            <p>1 Atelier Cocktails <span>pour 2 personnes</span> <span>d’une valeur de 140 euros</span></p>
+            <div class="div_quantity_basket flex">
+              <form class="quantity_spinner">
+                <label for="spinner">Quantité :</label>
+                <input class="giftcards_quantity spinner" name="giftcards_quantity" value="1" min="1" max="10">
+              </form>
+              <a href="?id_gifts_cards=2" class="cta basket"><i class="fa fa-cart-plus" aria-hidden="true"></i> Ajouter au Panier</a>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <li>
+        <article class="article_prestations">
+          <img src="<?php echo $domain;?>assets/img/carte_cadeau_red_officiel.png" alt="carte_cadeau_red_officiel">
+          <div class="flex div_article">
+            <h3><i class="fa fa-gift" aria-hidden="true"></i> Carte Sunrise</h3>
+            <p>1 Atelier Cocktails <span>pour 4 personnes</span> <span>d’une valeur de 260 euros</span></p>
+            <div class="div_quantity_basket flex">
+            <form class="quantity_spinner">
+              <label for="spinner">Quantité :</label>
+              <input class="giftcards_quantity spinner" name="giftcards_quantity" value="1" min="1" max="10">
+            </form>
+            <a href="?id_gifts_cards=3" class="cta basket"><i class="fa fa-cart-plus" aria-hidden="true"></i> Ajouter au Panier</a>
+          </div>
+        </div>
+        </article>
+      </li>
+
+    </ul>
+    <br>
+    <p>
+      Dés réception de votre règlement,
+      la « Carte Cadeau »  est envoyée à l'adresse de votre choix.
+    </p>
+    <p>Les « Cartes Cadeaux » sont valables 1 an à compter de la date d'émission.</p>
+
+  </section>
+
+  <div class="div_inscription">
+    <p>Pour vous inscrire, c'est simple :</p>
+    <ul class="prestations_inscription">
+      <li><i class="fa fa-laptop" aria-hidden="true"></i><span> par internet : </span>remplissez le formulaire dans : <a class="a_contact" href="contact">"Contact / Réservation"</a></li>
+      <li><i class="fa fa-mobile" aria-hidden="true"></i> par téléphone : au <a class="tel_contact2" href="tel:+33682062629">06 82 06 26 29</a></li>
+    </ul>
+  </div>
+
+</main>
+

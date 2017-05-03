@@ -1,0 +1,187 @@
+<main class="container prestations">
+
+  <a href="<?php echo $domain;?>prestations" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+  <h2><i class="fa fa-handshake-o" aria-hidden="true"></i> Team Building</h2>
+  <section class="section_prestations_details">
+
+    <img src="<?php echo $domain;?>assets/img/team_building_cocktails.jpg" alt="team_building_cocktails">
+    <img src="<?php echo $domain;?>assets/img/team_building_cocktails2.jpg" alt="team_building_cocktails2">
+    <img src="<?php echo $domain;?>assets/img/team_building_cocktails3.jpg" alt="team_building_cocktails3">
+
+    <p>
+      Dans l’esprit team building, cette soirée d'entreprise se déroule autour du concept original
+      du bar « DO IT YOURSELF». Elle a pour objectif de développer, dans une ambiance chaleureuse et conviviale,
+      l'entente entre vos collaborateurs, de consolider leurs rapports et le sentiment d’ esprit d'équipe.
+      Vous l’aurez deviné, tout se déroule autour de la fabrication d’un cocktail.
+      L’idée ? Offrir à vos employés la possibilité de créer eux-même leurs cocktails
+      et de s’étonner les uns les autres au travers de leurs réalisations et encourager les interactions.
+    </p>
+    <br>
+    <p>
+      Le concept de ce team building repose sur un challenge en équipes autour de la
+      réalisation d’un cocktail. <br/>Le déroulement est simple :
+    </p>
+
+    <p>
+      <ul class="list_team_building">
+        <li>
+          Je commence par expliquer à chaque participant,
+          les fondamentaux de la réalisation du cocktail : savoir distinguer et marier
+          les différentes saveurs, connaître la fonction des ustensiles,
+          ainsi que des astuces de présentation.
+          C'est l’occasion pour les convives d’apprendre la recette d’un ou deux cocktails (à définir).
+        </li>
+
+        <li>
+          Les convives sont divisés en groupe, par affinité ou selon le choix de l’entreprise,
+          et chaque équipe est mise au défi de réaliser un cocktail selon un thème préalablement
+          défini (une couleur, un alcool, un cocktail à revisiter).
+          Je supervise chaque équipe (par roulement de 5 à 10 personnes), prodigue mes conseils et veille à la bonne progression de l'atelier.
+          Chaque participant dispose
+          d’un poste de travail et de son kit de barman comprenant :
+          un pilon, un shaker, une passoire, un verre et une cuillère à mélange
+          ainsi qu’un large choix d’ingrédients nécessaires (alcools, liqueurs, jus) à l’élaboration de leur boisson.
+        </li>
+
+        <li>
+          A l’issue du temps imparti, les équipes doivent présenter leurs réalisations au jury
+          (composé de 3 personnes choisies par la société et de moi-même).
+          Ensemble nous déterminons l’équipe gagnante du concours en fonction des notes attribuées
+          à la présentation, au goût et à l’originalité du cocktail présenté.
+          Les gagnants de ce team building remportent des kits barman et
+          tous les participants repartent avec le livret récapitulatif des recettes apprises lors de la soirée.
+        </li>
+      </ul>
+
+      <div class="victory_team_building">
+        <p>Pour les vainqueurs :</p>
+        <div class="victory_team_building_winning flex">
+
+          <figure>
+            <img src="<?php echo $domain;?>assets/img/shaker.jpg" alt="shaker">
+            <figcaption>Un Shaker</figcaption>
+          </figure>
+          <p>+</p>
+          <figure>
+            <img src="<?php echo $domain;?>assets/img/cuillere_a_melange.jpg" alt="cuillere_melange">
+            <figcaption>Une Cuillère à Mélange</figcaption>
+          </figure>
+          <p>+</p>
+          <figure>
+            <img src="<?php echo $domain;?>assets/img/pilon.jpg" alt="pilon">
+            <figcaption>Un Pilon</figcaption>
+          </figure>
+
+        </div>
+      </div>
+
+        <p>
+          Ce bar participatif donne l’occasion à tous les convives de
+          s’initier à l’art subtil du mélange des saveurs, au maniement du shaker et
+          à la découpe de fruits.
+        </p>
+        <br>
+        <p>
+          C’est l’activité idéale pour fêter le départ de l’un de vos collègues
+          ou récompenser les efforts de vos employés.
+          La solidarité et la convivialité entre collégues en sortiront renforcées.
+          Aujourd’hui, je vous propose de passer derrière le bar et de vous transmettre
+          les techniques et secrets des plus grands bartenders.
+        </p>
+
+        <h3>Team Building</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre de Participants</th>
+              <th>Montant</th>
+              <th>Prix par Personne</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5</td>
+              <td>250,00 €</td>
+              <td>50,00 €</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>480,00 €</td>
+              <td>48,00 €</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>690,00 €</td>
+              <td>46,00 €</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>880,00 €</td>
+              <td>44,00 €</td>
+            </tr>
+            <tr>
+              <td>25</td>
+              <td>1050,00 €</td>
+              <td>42,00 €</td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td>1200,00 €</td>
+              <td>40,00 €</td>
+            </tr>
+          </tbody>
+          <tfoot>
+          </tfoot>
+        </table>
+
+        <p><em>
+          Mes tarifs sont dégressifs. Ils incluent le prêt du matériel de bar,
+          la vaisselle et les consommables. Les prix sont indiqués TTC.
+        </em></p>
+        <p><em>
+          Ateliers entièrement personnalisables - Dates et horaires au choix selon disponibilités
+        </em></p>
+
+        <img src="<?php echo $domain;?>assets/img/team_building_cocktails4.jpeg" alt="team_building_cocktails4">
+        <img src="<?php echo $domain;?>assets/img/team_building_cocktails5.jpg" alt="team_building_cocktails5">
+
+      </section>
+
+      <div class="div_inscription">
+        <p>Pour vous inscrire, c'est simple :</p>
+        <ul class="prestations_inscription">
+          <li><i class="fa fa-laptop" aria-hidden="true"></i><span> par internet : </span>remplissez le formulaire dans : <a class="a_contact" href="<?php echo $domain;?>contact">"Contact / Réservation"</a></li>
+          <li><i class="fa fa-mobile" aria-hidden="true"></i> par téléphone : au <a class="tel_contact2" href="tel:+33682062629">06 82 06 26 29</a></li>
+        </ul>
+      </div>
+
+    </main>
+
+
+
+    <!-- 5 bonnes raisons d'organiser
+    un team building
+
+    Pratique apparue dans les années 80 aux Etats-Unis, le team building ou littéralement « construction d’équipe » a pour objectif principal objectif de consolider les relations entre les employés d’une entreprise afin de créer des relations saines et une ambiance favorable au travail d’équipe.
+
+    Pour parvenir à cet objectif, sont mises en place des activités ludiques, récréatives, qui encouragent les échanges entre les participants dans la bonne humeur. Elles peuvent prendre la forme d’activités sportives, créatives, culturelles, voyages…
+
+    1. Célébrer un départ
+    ​
+    L’un de vos collègues tire sa révérence : départ en retraite, mutation, changement d’entreprise…
+    Offrez-lui une dernière soirée d'entreprise inoubliable. Elle sera l’occasion d’évoquer les moments difficiles comme les bons souvenirs et de lui souhaiter tous vos vœux de réussite pour le futur.
+    2. Renforcer la cohésion​
+    ​
+    Pour assurer sa pérennité une société doit pouvoir se doter des meilleurs éléments mais aussi faire en sorte que ses employés s’y sentent au mieux et y trouvent leur place. Participer à un team building encourage les interactions, favorise les échanges, la complicité, l’entraide et la solidarité entre les participants. C’est réellement l’occasion pour chacun d’entre eux de tisser du lien et développer le sentiment d’appartenance au groupe.
+    3. Récompenser les efforts​
+    ​
+    Vous venez de passer une période intense au cours de laquelle chacun de vos collègues, associés, se sont surpassés pour mener à votre projet à son terme jusqu’à sa réussite. Sortir du cadre, et leur offrir une soirée animée autour d’une activité ludique, est moment privilégié pour de leur montrer votre gratitude et souder les liens qui vous unissent.
+    4. Intégrer de nouveaux collaborateurs
+    ​
+    L’arrivée de nouvelles personnes au cœur d’un groupe déjà constitué, avec ses règles, ses habitudes, peut se révéler une étape délicate pour certaines personnes. Aussi, un team building original peut permettre à vos partenaires du quotidien de partager un moment de convivialité et apprendre à se connaître et nouer des liens.
+    5. Gestion de crises
+    Selon son domaine d’activité, et dans certaines situations, une entreprise peut être un lieu où les employés sont soumis à de fortes pressions. Ce type de contexte engendre bien souvent stress et tensions au sein d’une équipe. Sortir de ce cadre et offrir à vos collègues une activité de team building peut permettre d’anticiper, voire désamorcer les conflits, et repartir du bon pied.
+    ​ -->
+

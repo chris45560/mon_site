@@ -1,0 +1,327 @@
+<main class="container user_profile">
+
+	<?php $aUser = RecupInfosUser($_SESSION['pseudo']); ?>
+
+	<h2>Mon Profil</h2>
+	<article>
+		<h3 class="user_status">
+			<?php
+			switch($aUser['user_status']){
+				case 0: echo "<i class='fa fa-user' aria-hidden='true'></i> Utilisateur";
+				break;
+				case 1: echo "<i class='fa fa-book' aria-hidden='true'></i> Rédacteur";
+				break;
+				case 5: echo "<i class='fa fa-user-secret' aria-hidden='true'></i> Administrateur";
+				break;
+				default: break;
+			} ?>
+		</h3>
+
+		<form method="POST" action="" class="form" id="form_user_profile" enctype="multipart/form-data">
+			<fieldset>
+				<legend></legend>
+				<!-- Pots de Miel -->
+				<input type="hidden" name="user_id" id="user_id" value=<?= $aUser['user_id'] ?> />
+				<input type="hidden" name="pseudo_user_id" id="pseudo_user_id" value=<?= $aUser['user_pseudo'] ?> />
+				<!-- -->
+				<p class="flex">
+					<label for="pseudo_user_profile">Pseudo : </label>
+					<input type="text" placeholder="Nom" id="pseudo_user_profile" name="pseudo_user_profile" value="<?=$aUser['user_pseudo']?>" disabled>
+				</p>
+				<p class="flex">
+					<label for="password_user_profile">Password : </label>
+					<input type="password" placeholder="Password" id="password_user_profile" name="password_user_profile">
+				</p>
+				<p class="flex">
+					<label for="new_password_user_profile">Nouveau Password : </label>
+					<input type="password" placeholder="Nouveau Password" id="new_password_user_profile" name="new_password_user_profile">
+				</p>
+				<p class="flex">
+					<label for="new_password_confirm_user_profile">Confirmation Nouveau Password : </label>
+					<input type="password" placeholder="Nouveau Password" id="new_password_confirm_user_profile" name="new_password_confirm_user_profile">
+				</p>
+				<p class="flex">
+					<label for="mail_user_profile">Adresse Mail : </label>
+					<input type="text" placeholder="Adresse Mail" id="mail_user_profile" name="mail_user_profile"
+					value="<?php
+					if(!empty($aUser['user_mail'])){ echo $aUser['user_mail'];}
+					else if (isset($_POST['mail_user_profile'])){ echo htmlentities(trim($_POST['mail_user_profile'])); }?>"
+					required>
+				</p>
+
+				<p class="flex flex_birthdate_user_profile">
+					<label for="birthdate_user_profile">Date de Naissance : </label>
+
+					<select id="day_birthdate_user_profile" name="day_birthdate_user_profile" class="birthdate_user">
+						<?php
+						$bDayVerif = false;
+						for($i=1; $i<=31; $i++)
+						{
+							if(!$bDayVerif && $i == date('d',strtotime($aUser['user_birthdate'])) || ($i == $_POST['day_birthdate_user_profile'])){
+								if($i<10){$i="0".$i;}
+								echo "<option selected='selected' value=".$i.">".$i."</option>";
+								$bDayVerif = true;
+							}
+							else
+							{
+								if($i<10){$i="0".$i;}
+								echo "<option value=".$i.">".$i."</option>";
+							}
+						}
+						?>
+					</select>
+
+					<select id="month_birthdate_user_profile" name="month_birthdate_user_profile" class="birthdate_user">
+
+						<?php
+						$aTab = array(
+							'01' => 'Janvier',
+							'02' => 'Février',
+							'03' => 'Mars',
+							'04' => 'Avril',
+							'05' => 'Mai',
+							'06' => 'Juin',
+							'07' => 'Juillet',
+							'08' => 'Août',
+							'09' => 'Septembre',
+							'10' => 'Octobre',
+							'11' => 'Novembre',
+							'12' => 'Décembre'
+						);
+						$bMonthVerif = false;
+						foreach($aTab as $iIndex => $sValue){
+							if(!$bMonthVerif && $iIndex == date('m',strtotime($aUser['user_birthdate'])) || ($iIndex == $_POST['month_birthdate_user_profile']))
+							{
+								echo "<option selected='selected' value=".$iIndex.">".$sValue."</option>";
+								$bMonthVerif = true;
+							}
+							else
+							{
+								echo "<option value=".$iIndex.">".$sValue."</option>";
+							}
+						}
+						?>
+					</select>
+
+					<select id="year_birthdate_user_profile" name="year_birthdate_user_profile" class="birthdate_user">
+						<?php
+						$bYearVerif = false;
+						for($i=2017; $i>=1900; $i--)
+						{
+							if(!$bYearVerif && $i == date('Y',strtotime($aUser['user_birthdate'])) || ($i == $_POST['year_birthdate_user_profile']))
+							{
+								echo "<option selected='selected' value=".$i.">".$i."</option>";
+								$bYearVerif = true;
+							}
+							else
+							{
+								echo "<option value=".$i.">".$i."</option>";
+							}
+						}
+						?>
+					</select>
+				</p>
+
+
+
+				<div class="favorites_cocktails flex">
+					<p><i class='fa fa-star gold' aria-hidden='true'></i> Liste de mes cocktails favoris :</p>
+						<?php
+						if(isset($_SESSION))
+						{
+							$sFavorites = Recup_Favorites_Cocktail_User($_SESSION['id']);
+							if($sFavorites['user_cocktail_favorites'] == "")
+							{ echo "<p class='no_favorite'>Aucun</p>";}
+							else
+							{
+								?>
+								<ul>
+									<?php
+									$aCocktail_Favorites = explode("-",$sFavorites['user_cocktail_favorites']);
+									asort($aCocktail_Favorites);
+									foreach($aCocktail_Favorites as $iKey => $sValue)
+									{
+										?>
+										<li><a class="a_prestations" href="<?php echo $domain;?>cocktail/<?= Recup_Id_Cocktail($sValue)['post_id']?>"><?=$sValue?></a></li>
+										<?php
+									}
+									?>
+								</ul>
+								<?php
+							}
+						}
+						?>
+					</div>
+
+
+
+
+					<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+					<!-- 1 Mo = 2^20 octets = 1048576 octets -->
+
+					<?php
+					$aAvatar = Recup_Avatar_User_Pseudo($_SESSION['pseudo']);
+					if ($aAvatar)
+					{ ?>
+						<div class="div_avatar flex">
+							<p class="avatar_mini_post">Avatar actuel :</p>
+							<img class="avatar_mini" src="<?php echo $domain;?>avatars/<?=$aAvatar['avatar_source']?>" alt=<?=$aAvatar['avatar_source']?>>
+						</div>
+
+						<p class="flex">
+							<label for="avatar_user_profile">Changer d'Avatar : <br><em>(JPG, PNG ou GIF - Max. 1 Mo)</em></label>
+							<input type="file" class="avatar_user_profile" name="avatar_user_profile">
+						</p>
+						<?php
+					}
+					else
+					{
+						?>
+						<p class="flex">
+							<label for="avatar_user_profile">Ajouter un Avatar : <br><em>(JPG, PNG ou GIF - Max. 1 Mo)</em></label>
+							<input type="file" class="avatar_user_profile" name="avatar_user_profile">
+						</p>
+						<?php
+					}
+					?>
+					<div class="text_align_left">
+						<p class="avatar_p">ou choisissez-en un parmis ceux présents ci-dessous :</p>
+					</div>
+					<div class="avatar_div_bdd">
+						<?php $aList_Avatars = Recup_Ten_Avatars_Bdd();
+						foreach($aList_Avatars as $sIndex => $aAvatar)
+						{
+							foreach($aAvatar as $sKey => $sValue)
+							{
+								if($sKey == "avatar_source")
+								{
+									?>
+									<div class="avatar_div_bdd_under">
+										<label for="avatar_user_profile_bdd"><img class="avatar_mini_bdd click_avatar" src="<?php echo $domain;?>avatars/<?= $sValue ?>" alt="<?= $sValue ?>"></label>
+										<input type="radio" name="avatar_user_profile_bdd" class="avatar_user_profile"
+										<?php
+										if($aUser['user_avatar_id']== $aAvatar['avatar_id']){echo " checked ";}
+										if(isset($_POST['avatar_user_profile_bdd']) && $_POST['avatar_user_profile_bdd']== $aAvatar['avatar_id']){echo " checked ";}?>
+										value=<?= $aAvatar['avatar_id'] ?>>
+									</div>
+									<?php
+								}
+							}
+						}
+						?>
+					</div>
+
+				</fieldset>
+
+				<fieldset class="coordonnees_user">
+					<h2><i class="fa fa-map-marker" aria-hidden="true"></i> Mes Coordonnées</h2>
+
+					<p class="flex flex_civility_user_profile">
+						<label for="civility_user_profile">Civilité : </label>
+						<select id="civility_user_profile" name="civility_user_profile" class="civility_user_profile">
+
+							<?php if(!empty($aUser['user_civility'])){ ?>
+								<option <?php if($aUser['user_civility']=='monsieur'){echo "selected";} ?> value='monsieur'>Monsieur</option>
+								<option <?php if($aUser['user_civility']=='madame'){echo "selected";} ?> value='madame'>Madame</option>
+								<?php }
+								else if(isset($_POST['civility_user_profile'])){ ?>
+									<option <?php if($_POST['civility_user_profile']=='monsieur'){echo "selected";} ?> value='monsieur'>Monsieur</option>
+									<option <?php if($_POST['civility_user_profile']=='madame'){echo "selected";} ?> value='madame'>Madame</option>
+									<?php }
+									else { ?>
+										<option value='monsieur'>Monsieur</option>
+										<option value='madame'>Madame</option>
+										<?php } ?>
+
+									</select>
+								</p>
+
+								<p class="flex">
+									<label for="lastname_user_profile">Nom : </label>
+									<input type="text" placeholder="Nom" id="lastname_user_profile" name="lastname_user_profile"
+									value="<?php
+									if(!empty($aUser['user_lastname'])){ echo $aUser['user_lastname'];}
+									else if (isset($_POST['lastname_user_profile'])){ echo htmlentities(trim($_POST['lastname_user_profile'])); }?>"
+									>
+								</p>
+
+								<p class="flex">
+									<label for="firstname_user_profile">Prénom : </label>
+									<input type="text" placeholder="Prénom" id="firstname_user_profile" name="firstname_user_profile"
+									value="<?php
+									if(!empty($aUser['user_firstname'])){ echo $aUser['user_firstname'];}
+									else if (isset($_POST['firstname_user_profile'])){ echo htmlentities(trim($_POST['firstname_user_profile'])); }?>"
+									>
+								</p>
+
+								<p class="flex">
+									<label for="address_user_profile">Adresse Postale : </label>
+									<input type="text" placeholder="Adresse Postale" id="address_user_profile" name="address_user_profile"
+									value="<?php
+									if(!empty($aUser['user_address'])){ echo $aUser['user_address'];}
+									else if (isset($_POST['address_user_profile'])){ echo htmlentities(trim($_POST['address_user_profile'])); }?>"
+									>
+								</p>
+
+
+								<p class="flex">
+									<label for="city_user_profile">Ville : </label>
+									<input type="text" placeholder="Ville" id="city_user_profile" name="city_user_profile"
+									value="<?php
+									if(!empty($aUser['user_city'])){ echo $aUser['user_city'];}
+									else if (isset($_POST['city_user_profile'])){ echo htmlentities(trim($_POST['city_user_profile'])); }?>"
+									>
+								</p>
+
+								<p class="flex">
+									<label for="zipcode_user_profile">Code Postal : </label>
+									<input type="text" placeholder="Code Postal" id="zipcode_user_profile" name="zipcode_user_profile"
+									value="<?php
+									if(!empty($aUser['user_zipcode'])){ echo $aUser['user_zipcode'];}
+									else if (isset($_POST['zipcode_user_profile'])){ echo htmlentities(trim($_POST['zipcode_user_profile'])); }?>"
+									>
+								</p>
+
+								<p class="flex">
+									<label for="country_user_profile">Pays : </label>
+									<input type="text" placeholder="Pays" id="country_user_profile" name="country_user_profile"
+									value="<?php
+									if(!empty($aUser['user_country'])){ echo $aUser['user_country'];}
+									else if (isset($_POST['country_user_profile'])){ echo htmlentities(trim($_POST['country_user_profile'])); }?>"
+									>
+								</p>
+
+								<p class="flex">
+									<label for="phone_user_profile">Téléphone : </label>
+									<input type="text" placeholder="Téléphone" id="phone_user_profile" name="phone_user_profile"
+									value="<?php
+									if(!empty($aUser['user_phone'])){ echo $aUser['user_phone'];}
+									else if (isset($_POST['phone_user_profile'])){ echo htmlentities(trim($_POST['phone_user_profile'])); }?>"
+									>
+								</p>
+
+							</fieldset>
+
+							<p class="flex flex_radio">
+								<span class="input_radio">Souhaitez-vous vous inscrire à la Newsletter ?</span>
+								<input type="radio" name="newsletter_user_profile" id="newsletter_user_profile_yes"
+
+								<?php
+								if($aUser['user_newsletter']=='1'){echo " checked ";}
+								if(isset($_POST['newsletter_user_profile']) && $_POST['newsletter_user_profile']=='1'){echo " checked ";}?>
+								value="yes">
+								<label for="newsletter_user_profile_yes">OUI</label>
+								<input type="radio" name="newsletter_user_profile" id="newsletter_user_profile_no"
+								<?php
+								if($aUser['user_newsletter']!='1'){echo " checked ";}
+								if(isset($_POST['newsletter_user_profile']) && $_POST['newsletter_user_profile']!='1'){echo " checked ";}?>
+								value="no">
+								<label for="newsletter_user_profile_no">NON</label>
+							</p>
+
+							<!-- <input type="hidden" name="value_input_submit" value="modifier"/> -->
+							<input type="submit" value=" Modifier mon Profil" class="cta input_modify_user_profile" id="modification_modify_user_profile" name="modify_user_profile">
+						</form>
+					</article>
+				</main>
+

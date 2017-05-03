@@ -1,0 +1,156 @@
+<?php
+if(!isset($_SESSION['id']) || $_SESSION['status'] != 5){ echo "<script type='text/javascript'>document.location.replace('index.php');</script>";}
+else{
+?>
+<main class="container prestations main_prestations">
+
+  <?php
+  if(isset($aList_Comments_Post))
+  { ?>
+    <a href="<?php echo $domain;?>list_posts" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+    <?php
+    if(empty($aList_Comments_Post))
+    { ?>
+      <?= "<h2 class='no-comment'><i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Aucun Commentaire <i class='fa fa-exclamation-triangle' aria-hidden='true'></i></h2>";?>
+    </main>
+    <?php
+    return;
+  }
+  ?>
+
+  <h2><i class="fa fa-list-ul" aria-hidden="true"></i>
+    Liste des Commentaires du Post <?= $aList_Comments_Post[0]['comment_id_post']." : <br>".$aList_Comments_Post[0]['post_titre']?></h2>
+    <section class="section_admin">
+
+      <table class="tab_list_comments">
+
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Id User</th>
+            <th>Pseudo User</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <?php
+          foreach($aList_Comments_Post as $aIndex => $aCol){ ?>
+            <tr>
+              <?php
+              foreach ($aCol as $key => $sValue) {
+                if($key == "comment_id" ||
+                $key == "comment_description" ||
+                $key == "date" ||
+                $key == "user_id" ||
+                $key == "user_pseudo")
+                { ?>
+                  <td><?= $sValue ?></td>
+                  <?php }
+                } ?>
+              </tr>
+              <?php }
+            }
+
+            else if(isset($aList_Comments_User))
+            { ?>
+              <a href="<?php echo $domain;?>list_users" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+              <?php
+              if(empty($aList_Comments_User))
+              { ?>
+                <?= "<h2 class='no-comment'><i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Aucun Commentaire <i class='fa fa-exclamation-triangle' aria-hidden='true'></i></h2>";?>
+              </main>
+              <?php
+              return;
+            }
+            ?>
+            <h2><i class="fa fa-list-ul" aria-hidden="true"></i>
+              Liste des Commentaires du User <?= $aList_Comments_User[0]['user_id']." : <br>".$aList_Comments_User[0]['user_pseudo']?></h2>
+              <section class="section_admin">
+
+                <table class="tab_list_comments">
+
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Description</th>
+                      <th>Date</th>
+                      <th>Id Post</th>
+                      <th>Titre Post</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <?php
+                    foreach($aList_Comments_User as $aIndex => $aCol){ ?>
+                      <tr>
+                        <?php
+                        foreach ($aCol as $key => $sValue) {
+                          if($key == "comment_id" ||
+                          $key == "comment_description" ||
+                          $key == "date" ||
+                          $key == "comment_id_post" ||
+                          $key == "post_titre")
+                          { ?>
+                            <td><?= $sValue ?></td>
+                            <?php }
+                          } ?>
+                        </tr>
+                        <?php }
+                      }
+
+                      else{
+                        ?>
+
+                        <a href="<?php echo $domain;?>admin" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+                        <h2><i class="fa fa-list-ul" aria-hidden="true"></i> Liste des Commentaires</h2>
+                        <section class="section_admin">
+
+                          <table class="tab_list_comments">
+                            <thead>
+                              <tr>
+                                <th>Id</th>
+                                <th>Description</th>
+                                <th>Date</th>
+                                <th>Id Post</th>
+                                <th>Titre Post</th>
+                                <th>Id User</th>
+                                <th>Pseudo User</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <?php
+                              foreach($aList_Comments as $aIndex => $aCol){ ?>
+                                <tr>
+                                  <?php
+                                  foreach ($aCol as $key => $sValue) {
+                                    if($key == "comment_id" ||
+                                    $key == "comment_description" ||
+                                    $key == "date" ||
+                                    $key == "comment_id_post" ||
+                                    $key == "post_titre" ||
+                                    $key == "user_id" ||
+                                    $key == "user_pseudo")
+                                    { ?>
+                                      <td><?= $sValue ?></td>
+                                      <?php }
+                                    } ?>
+                                  </tr>
+                                  <?php }
+                                }
+                                ?>
+
+                              </tbody>
+                              <tfooter>
+                              </tfooter>
+                            </table>
+
+                          </section>
+
+                        </main>
+<?php } ?>

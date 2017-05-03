@@ -1,0 +1,253 @@
+<main class="container contact">
+
+  <h2><i class="fa fa-calendar" aria-hidden="true"></i> Contact / Réservation</h2>
+
+  <article class="contact_article">
+
+    <p class="left">
+      Mon siège est à Versailles mais je peux me déplacer sur Paris ainsi que dans toute la banlieue parisienne.
+      Je peux également me rendre dans toute la région Centre (Orléans, Blois, Tours,...)
+      ainsi qu'en Bretagne (Rennes, Saint Malo,...).
+    </p>
+    <p>Mes cours peuvent être dispensés en anglais si vous le souhaitez.</p>
+
+    <p class="center">Pour tous renseignements ou prise de contact :</p>
+
+    <div class="coordonnees">
+      <p><i class="fa fa-user" aria-hidden="true"></i>Christophe HEBERT</p>
+      <p><i class="fa fa-mobile" aria-hidden="true"></i><a class="tel_contact" href="tel:+33682062629">06 82 06 26 29</a></p>
+      <p><i class="fa fa-comments-o" aria-hidden="true"></i><a class="mail_contact" href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+      <p><i class="fa fa-map-marker" aria-hidden="true"></i>78390 Bois d'Arcy, France</p>
+    </div>
+
+    <div class='embed-container maps'>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5256.057725057246!2d2.0293637963889215!3d48.800427767877856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e686c1edc3fc4b%3A0xe11a844f672a0820!2sVille+de+Bois+d&#39;Arcy!5e0!3m2!1sfr!2sfr!4v1491393351703"
+      frameborder="0" allowfullscreen>
+    </iframe>
+  </div>
+
+  <p class="center">ou</p>
+  <p class="center">complétez le formulaire de contact ci-dessous :</p>
+
+  <form class="form" id="contact_form" method="POST" action="">
+    <fieldset>
+      <h2>Formulaire de Contact</h2>
+      <p class="flex">
+        <label for="name_user_contact">* Nom :</label>
+        <input type="text" placeholder="Nom" id="name_user_contact" name="name_user_contact"
+        value="<?php
+        if (isset($_POST['name_user_contact'])){ echo htmlentities(trim($_POST['name_user_contact'])); }?>"
+        required>
+      </p>
+
+      <p class="flex">
+        <label for="mail_user_contact">* Adresse Mail :</label>
+        <input type="text" placeholder="Adresse Mail" id="mail_user_contact" name="mail_user_contact"
+        value="<?php
+        if (isset($_POST['mail_user_contact'])){ echo htmlentities(trim($_POST['mail_user_contact'])); }?>"
+        required>
+      </p>
+
+      <p class="flex">
+        <label for="prestation_contact">* Indiquez la Prestation :</label>
+        <select name="prestation_contact" id="prestation_contact">
+
+          <?php
+          $aPrestations = array(
+            'cours_cocktails' => 'Cours de Cocktails',
+            'party_cocktails' => 'Fêter un Evénement',
+            'team_building' => 'Team Building',
+            'children_coktails' => 'Animation Cocktails Enfants'
+          );
+          foreach($aPrestations as $sIndex => $sValue)
+          {
+            echo "<option value='".$sIndex."'>".$sValue."</option>";
+            // <option value="cours_cocktails">Cours de Cocktails</option>
+            // <option value="party_cocktails">Fêter un Evénement</option>
+            // <option value="team_building">Team Building</option>
+            // <option value="children_coktails">Animation Cocktails Enfants</option>
+          }
+          ?>
+
+        </select>
+      </p>
+
+      <p class="flex">
+        <label for="date_contact">* Date souhaitée :</label>
+        <input type="date" id="date_contact" name="date_contact"
+        min="<?php echo date('Y-m-d');?>" value="<?php echo date('Y-m-d');?>">
+      </p>
+
+      <p class="flex flex_hour">
+        <label for="hour_begin_contact">* Heure de début souhaitée :</label>
+        <select id="hour_begin_contact" name="hour_begin_contact" class="hour">
+          <?php
+          $aHours = array(
+            '00' => '00h',
+            '01' => '01h',
+            '02' => '02h',
+            '03' => '03h',
+            '04' => '04h',
+            '05' => '05h',
+            '06' => '06h',
+            '07' => '07h',
+            '08' => '08h',
+            '09' => '09h',
+            '10' => '10h',
+            '11' => '11h',
+            '12' => '12h',
+            '13' => '13h',
+            '14' => '14h',
+            '15' => '15h',
+            '16' => '16h',
+            '17' => '17h',
+            '18' => '18h',
+            '19' => '19h',
+            '20' => '20h',
+            '21' => '21h',
+            '22' => '22h',
+            '23' => '23h'
+          );
+          foreach($aHours as $iIndex => $sValue)
+          {
+            echo "<option value='".$iIndex."'>".$sValue."</option>";
+            // <option value="00">00h</option>
+            // <option value="01">01h</option>
+            // <option value="02">02h</option>
+            // <option value="03">03h</option>
+            // <option value="04">04h</option>
+            // <option value="05">05h</option>
+            // <option value="06">06h</option>
+            // <option value="07">07h</option>
+            // <option value="08">08h</option>
+            // <option value="09">09h</option>
+            // <option value="10">10h</option>
+            // <option value="11">11h</option>
+            // <option value="12">12h</option>
+            // <option value="13">13h</option>
+            // <option value="14">14h</option>
+            // <option value="15">15h</option>
+            // <option value="16">16h</option>
+            // <option value="17">17h</option>
+            // <option value="18">18h</option>
+            // <option value="19">19h</option>
+            // <option value="20">20h</option>
+            // <option value="21">21h</option>
+            // <option value="22">22h</option>
+            // <option value="23">23h</option>
+          }
+          ?>
+        </select>
+
+        <!-- <label for="minutes_begin_contact">Minutes : </label> -->
+        <select id="minutes_begin_contact" name="minutes_begin_contact" class="hour">
+          <?php
+          $aMinutes = array(
+            '00' => '00',
+            '15' => '15',
+            '30' => '30',
+            '45' => '45'
+          );
+          foreach($aMinutes as $iIndex => $iValue)
+          {
+            echo "<option value='".$iIndex."'>".$iValue."</option>";
+          }
+          // <option value="00">00</option>
+          // <option value="15">15</option>
+          // <option value="30">30</option>
+          // <option value="45">45</option>
+          ?>
+        </select>
+      </p>
+
+      <p class="flex flex_hour">
+        <label for="hour_end_contact">* Heure de fin souhaitée :</label>
+        <select id="hour_end_contact" name="hour_end_contact" class="hour">
+          <?php
+          foreach($aHours as $iIndex => $sValue)
+          {
+            echo "<option value='".$iIndex."'>".$sValue."</option>";
+          }
+          ?>
+        </select>
+
+        <select id="minutes_end_contact" name="minutes_end_contact" class="hour">
+          <?php
+          foreach($aMinutes as $iIndex => $iValue)
+          {
+            echo "<option value='".$iIndex."'>".$iValue."</option>";
+          }
+          ?>
+        </select>
+      </p>
+
+      <p class="flex">
+        <label for="persons_number">* Nombre de Participants :</label>
+        <select id="persons_number" name="persons_number">
+          <?php
+          $aNumber_People = array(
+            '1' => '1',
+            '2' => '2',
+            '3' => '3',
+            '4' => '4',
+            '5' => '5',
+            '6' => '6',
+            '7' => '7',
+            '8' => '8',
+            '9' => '9',
+            '10' => '10',
+            '15' => '15',
+            '20' => '20',
+            '25' => '25',
+            '30' => '30',
+            '+30' => '+30'
+          );
+          foreach($aNumber_People as $iIndex => $iValue)
+          {
+            echo "<option value='".$iIndex."'>".$iValue."</option>";
+          }
+          // <option value="1">1</option>
+          // <option value="2">2</option>
+          // <option value="3">3</option>
+          // <option value="4">4</option>
+          // <option value="5">5</option>
+          // <option value="6">6</option>
+          // <option value="7">7</option>
+          // <option value="8">8</option>
+          // <option value="9">9</option>
+          // <option value="10">10</option>
+          // <option value="15">15</option>
+          // <option value="20">20</option>
+          // <option value="25">25</option>
+          // <option value="30">30</option>
+          // <option value="+30">+30</option>
+          ?>
+        </select>
+      </p>
+
+      <p class="flex">
+        <label for="message_contact">Message : </label>
+        <textarea placeholder="Message" id="message_contact" name="message_contact"><?php
+        if(isset($_POST['message_contact'])){ echo htmlentities(trim($_POST['message_contact'])); }?></textarea>
+        <!-- trim : Supprime les espaces (ou d'autres caractères) en début et fin de chaîne -->
+      </p>
+
+      <p class='warning_form_user'><i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Les champs marqués d'un * sont obligatoires !</p>
+
+    </fieldset>
+    <input type="submit" value=" Envoyer" class="cta submit_contact" id="submit_contact" name="submit_contact">
+  </form>
+
+</div>
+
+<p>
+  <em>
+    Arrhes souhaitées à la réservation<br>
+    Conditions d'annulation en bas de page<br>
+    Dates et horaires au choix selon disponibilités
+  </em>
+</p>
+
+</article>
+
+</main>

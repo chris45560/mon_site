@@ -1,0 +1,197 @@
+<main class="container user_profile check_information">
+
+<?php
+if(!isset($_SESSION['id']))
+{
+	?>
+	<a href="<?php echo $domain;?>user_order" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+  <?php
+}
+else
+{
+	?>
+	<a href="<?php echo $domain;?>user_basket" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+  <?php
+}
+?>
+	<?php $aUser = RecupInfosUser($_SESSION['pseudo']); ?>
+
+	<h2><i class="fa fa-map-marker" aria-hidden="true"></i> Remplissez vos Coordonnées</h2>
+	<article>
+		<form method="POST" action="" class="form" id="form_user_order_contact_information">
+
+				<fieldset>
+
+          <input type="hidden" name="user_id" id="user_id" value=<?= $aUser['user_id'] ?> />
+
+          <p class="flex flex_civility_user_order_contact">
+            <label for="civility_user_order_contact">Civilité : </label>
+            <select id="civility_user_order_contact" name="civility_user_order_contact" class="civility_user_order_contact">
+							<?php if(!empty($aUser['user_civility'])){ ?>
+              <option <?php if($aUser['user_civility']=='monsieur'){echo "selected";} ?> value='monsieur'>Monsieur</option>
+              <option <?php if($aUser['user_civility']=='madame'){echo "selected";} ?> value='madame'>Madame</option>
+							<?php }
+							else if(isset($_POST['civility_user_order_contact'])){ ?>
+							<option <?php if($_POST['civility_user_order_contact']=='monsieur'){echo "selected";} ?> value='monsieur'>Monsieur</option>
+	            <option <?php if($_POST['civility_user_order_contact']=='madame'){echo "selected";} ?> value='madame'>Madame</option>
+							<?php }
+							else { ?>
+							<option value='monsieur'>Monsieur</option>
+		          <option value='madame'>Madame</option>
+							<?php } ?>
+            </select>
+          </p>
+
+					<p class="flex">
+						<label for="lastname_user_order_contact">Nom : </label>
+						<input type="text" placeholder="Nom" id="lastname_user_order_contact" name="lastname_user_order_contact"
+						value="<?php
+						if(!empty($aUser['user_lastname'])){ echo $aUser['user_lastname'];}
+						else if (isset($_POST['lastname_user_order_contact'])){ echo htmlentities(trim($_POST['lastname_user_order_contact'])); }?>"
+						required>
+					</p>
+
+					<p class="flex">
+						<label for="firstname_user_order_contact">Prénom : </label>
+						<input type="text" placeholder="Prénom" id="firstname_user_order_contact" name="firstname_user_order_contact"
+						value="<?php
+						if(!empty($aUser['user_firstname'])){ echo $aUser['user_firstname'];}
+						else if (isset($_POST['firstname_user_order_contact'])){ echo htmlentities(trim($_POST['firstname_user_order_contact'])); }?>"
+						required>
+					</p>
+
+					<p class="flex">
+						<label for="address_user_order_contact">Adresse Postale : </label>
+						<input type="text" placeholder="Adresse Postale" id="address_user_order_contact" name="address_user_order_contact"
+						value="<?php
+						if(!empty($aUser['user_address'])){ echo $aUser['user_address'];}
+						else if (isset($_POST['address_user_order_contact'])){ echo htmlentities(trim($_POST['address_user_order_contact'])); }?>"
+						required>
+					</p>
+
+					<p class="flex">
+						<label for="city_user_order_contact">Ville : </label>
+						<input type="text" placeholder="Ville" id="city_user_order_contact" name="city_user_order_contact"
+						value="<?php
+						if(!empty($aUser['user_city'])){ echo $aUser['user_city'];}
+						else if (isset($_POST['city_user_order_contact'])){ echo htmlentities(trim($_POST['city_user_order_contact'])); }?>"
+						required>
+					</p>
+
+					<p class="flex">
+						<label for="zipcode_user_order_contact">Code Postal : </label>
+						<input type="text" placeholder="Code Postal" id="zipcode_user_order_contact" name="zipcode_user_order_contact"
+						value="<?php
+						if(!empty($aUser['user_zipcode'])){ echo $aUser['user_zipcode'];}
+						else if (isset($_POST['zipcode_user_order_contact'])){ echo htmlentities(trim($_POST['zipcode_user_order_contact'])); }?>"
+						required>
+					</p>
+
+					<p class="flex">
+						<label for="country_user_order_contact">Pays : </label>
+						<input type="text" placeholder="Pays" id="country_user_order_contact" name="country_user_order_contact"
+						value="<?php
+						if(!empty($aUser['user_country'])){ echo $aUser['user_country'];}
+						else if (isset($_POST['country_user_order_contact'])){ echo htmlentities(trim($_POST['country_user_order_contact'])); }?>"
+						required>
+					</p>
+
+					<p class="flex">
+						<label for="phone_user_order_contact">Téléphone : </label>
+						<input type="text" placeholder="Téléphone" id="phone_user_order_contact" name="phone_user_order_contact"
+						value="<?php
+						if(!empty($aUser['user_phone'])){ echo $aUser['user_phone'];}
+						else if (isset($_POST['phone_user_order_contact'])){ echo htmlentities(trim($_POST['phone_user_order_contact'])); }?>"
+						required>
+					</p>
+
+          <p class="flex">
+            <label for="mail_user_order_contact">Adresse Mail : </label>
+            <input type="text" placeholder="Adresse Mail" id="mail_user_order_contact" name="mail_user_order_contact"
+						value="<?php
+						if(!empty($aUser['user_mail'])){ echo $aUser['user_mail'];}
+						else if (isset($_POST['mail_user_order_contact'])){ echo htmlentities(trim($_POST['mail_user_order_contact'])); }?>"
+						required>
+          </p>
+
+          <p class="flex flex_birthdate_user_order_contact">
+            <label for="birthdate_user_order_contact">Date de Naissance : </label>
+
+            <select id="day_birthdate_user_order_contact" name="day_birthdate_user_order_contact" class="birthdate_user">
+              <?php
+              $bDayVerif = false;
+              for($i=1; $i<=31; $i++)
+              {
+                if(!$bDayVerif && $i == date('d',strtotime($aUser['user_birthdate'])) || ($i == $_POST['day_birthdate_user_order_contact'])){
+									if($i<10){$i="0".$i;}
+                  echo "<option selected='selected' value=".$i.">".$i."</option>";
+                  $bDayVerif = true;
+                }
+                else
+                {
+                  if($i<10){$i="0".$i;}
+                  echo "<option value=".$i.">".$i."</option>";
+                }
+              }
+              ?>
+            </select>
+
+            <select id="month_birthdate_user_order_contact" name="month_birthdate_user_order_contact" class="birthdate_user">
+
+              <?php
+              $aTab = array(
+                '01' => 'Janvier',
+                '02' => 'Février',
+                '03' => 'Mars',
+                '04' => 'Avril',
+                '05' => 'Mai',
+                '06' => 'Juin',
+                '07' => 'Juillet',
+                '08' => 'Août',
+                '09' => 'Septembre',
+                '10' => 'Octobre',
+                '11' => 'Novembre',
+                '12' => 'Décembre'
+              );
+              $bMonthVerif = false;
+              foreach($aTab as $iIndex => $sValue){
+                if(!$bMonthVerif && $iIndex == date('m',strtotime($aUser['user_birthdate'])) || ($iIndex == $_POST['month_birthdate_user_order_contact']))
+                {
+                  echo "<option selected='selected' value=".$iIndex.">".$sValue."</option>";
+                  $bMonthVerif = true;
+                }
+                else
+                {
+                  echo "<option value=".$iIndex.">".$sValue."</option>";
+                }
+              }
+              ?>
+            </select>
+
+            <select id="year_birthdate_user_order_contact" name="year_birthdate_user_order_contact" class="birthdate_user">
+              <?php
+              $bYearVerif = false;
+              for($i=2017; $i>=1900; $i--)
+              {
+                if(!$bYearVerif && $i == date('Y',strtotime($aUser['user_birthdate'])) || ($i == $_POST['year_birthdate_user_order_contact']))
+								{
+                  echo "<option selected='selected' value=".$i.">".$i."</option>";
+                  $bYearVerif = true;
+                }
+                else
+                {
+                  echo "<option value=".$i.">".$i."</option>";
+                }
+              }
+              ?>
+            </select>
+          </p>
+          <p class='warning_form_user'><i class='fa fa-exclamation-triangle' aria-hidden='true'></i> Tous les champs sont obligatoires !</p>
+				</fieldset>
+
+				<!-- <input type="hidden" name="value_input_submit" value="modifier"/> -->
+				<input type="submit" value=" Envoyer" class="cta" id="input_form_user_order_contact_information" name="user_order_contact_information">
+			</form>
+
+		</article>
+	</main>

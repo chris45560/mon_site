@@ -1,0 +1,66 @@
+<?php
+if(!isset($_SESSION['id']) || $_SESSION['status'] != 5){ echo "<script type='text/javascript'>document.location.replace('index.php');</script>";}
+else{
+?>
+<main class="container prestations main_prestations">
+
+  <a href="<?php echo $domain;?>admin" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+  <h2><i class="fa fa-list-ul" aria-hidden="true"></i> Liste des Articles</h2>
+  <section class="section_admin">
+
+    <table class="tab_list_posts">
+
+      <thead>
+        <tr>
+          <th>Id Post</th>
+          <th>Titre</th>
+          <th class="post_description">Description</th>
+          <th>Date</th>
+          <th>Catégorie</th>
+          <th>Id User</th>
+          <th>Pseudo User</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <?php
+        foreach($aList_Posts as $aIndex => $aCol){ ?>
+          <tr>
+            <?php
+            foreach ($aCol as $key => $sValue)
+            {
+              if($key == "post_id" ||
+              $key == "post_titre" ||
+              $key == "post_description" ||
+              $key == "date" ||
+              $key == "post_categorie" ||
+              $key == "post_id_user" ||
+              $key == "user_pseudo")
+              {
+                if($key == "post_description")
+                {
+                  ?>
+                  <td class="post_description" onclick="location.href='<?=$domain."list_comments/id_post=".$aCol['post_id']?>'"><?= $sValue ?></td>
+                  <?php
+                }
+                else{
+                  ?>
+                  <td onclick="location.href='<?=$domain."list_comments/id_post=".$aCol['post_id']?>'"><?= $sValue ?></td>
+                  <?php
+                }
+              }
+            } ?>
+          </tr>
+          <?php } ?>
+
+        </tbody>
+        <tfooter>
+        </tfooter>
+      </table>
+
+    </section>
+
+  </main>
+<?php } ?>
+

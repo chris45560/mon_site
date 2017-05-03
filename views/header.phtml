@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mon Atelier Cocktails</title>
+
+  <link href="<?php echo $domain;?>assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+
+  <!-- <link rel="apple-touch-icon" href="assets/img/icone_monsite.png"> -->
+
+  <link rel="apple-touch-icon" href="<?php echo $domain;?>assets/img/logo_site.jpg" />
+  <!-- <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone4.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" /> -->
+
+  <link rel="stylesheet" href="<?php echo $domain;?>assets/css/style.css">
+  <link rel="stylesheet" href="<?php echo $domain;?>assets/script/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="<?php echo $domain;?>assets/css/font-awesome-4.7.0/css/font-awesome.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+
+
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mogra" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+
+  <script src="<?php echo $domain;?>assets/script/jquery.js"></script>
+ 	<script src="<?php echo $domain;?>assets/script/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="<?php echo $domain;?>assets/script/script.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <!-- <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  <script src="assets/script/tinymce.js"></script> -->
+</head>
+
+<body>
+	<?php include_once($domain."/inc/analyticstracking.php") ?>
+  <header>
+    <div class="header_div container flex">
+      <a class="logo" href="<?php echo $domain;?>"><img src="<?php echo $domain;?>assets/img/mojito_fraise.jpg" alt="logo"></a>
+      <h1><a href="<?php echo $domain;?>">Mon Atelier Cocktails</a></h1>
+      <a class="header_basket" href="<?php echo $domain;?>user_basket"><span id="quantity_basket_header"><?php  if(!isset($_SESSION['basket'])){ echo "0"; } else{ echo $_SESSION['basket']['quantity_total']; } ?></span></a>
+      <a class="connect cta" id="logintogglebtn"><i class="fa fa-user" aria-hidden="true"></i> Connexion</a>
+
+      <div id="loggerarea" class="hidden">
+        <h2><i class="fa fa-user" aria-hidden="true"></i> Connexion</h2>
+        <form class="form" method="POST" action="<?= $domain ?>">
+          <fieldset>
+            <p class="flex">
+              <label for="pseudo">Pseudo : </label>
+              <input type="text" placeholder="Pseudo" id="pseudo_logger_area" name="pseudo" required>
+            </p>
+            <p class="flex">
+              <label for="password">Password : </label>
+              <input type="password" placeholder="Password" id="password_logger_area" name="password" required>
+              <p><a href="<?php echo $domain;?>reset_password" class="new_account">Mot de passe oublié ?</a></p>
+            </p>
+            <p>Pas encore de compte ? Cliquer <a href="<?php echo $domain;?>create_account" class="new_account">ICI</a> !</p>
+          </fieldset>
+          <input type="submit" value="Se connecter" class="cta" id="connexion_logger_area" name="connexion">
+        </form>
+      </div>
+
+    </div>
+
+    <nav class="header_nav container">
+      <ul class="flex">
+        <li><a href="<?php echo $domain;?>who_am_i"><i class="fa fa-question-circle" aria-hidden="true"></i> Qui suis-je ?</a></li>
+        <li><a href="<?php echo $domain;?>realisations"><i class="fa fa-glass" aria-hidden="true"></i> Mes Réalisations</a></li>
+        <li><a href="<?php echo $domain;?>prestations"><i class="fa fa-car" aria-hidden="true"></i> Mes Prestations</a></li>
+        <li><a href="<?php echo $domain;?>gifts_cards"><i class="fa fa-gift" aria-hidden="true"></i> Cartes Cadeaux</a></li>
+        <li><a href="<?php echo $domain;?>contact"><i class="fa fa-calendar" aria-hidden="true"></i> Contact / Réservation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--
+  <div class="cocktailimage">
+  <h2 class="cocktailtitre">Les Meilleurs Cocktails de Paris</h2>
+</div>
+-->

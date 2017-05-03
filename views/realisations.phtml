@@ -1,0 +1,46 @@
+<main class="container realisations main_prestations">
+
+  <h2><i class="fa fa-glass" aria-hidden="true"></i> Mes Réalisations</h2>
+
+  <?php
+  $aTab = array();
+  $aPosts = Recup_List_Posts();
+  foreach ($aPosts as $iKey => $aValue) {
+  $aTab[$aValue['post_id']] = $aValue['post_titre']; }
+  asort($aTab);
+?>
+  <section class="section_prestations">
+    <ul>
+      <?php
+      foreach ($aTab as $iKey => $sValue) { ?>
+        <li>
+<?php
+          if(!empty($_SESSION['id']))
+          {
+            $sFavorites = Recup_Favorites_Cocktail_User($_SESSION['id']);
+            $aCocktail_Favorites = explode("-",$sFavorites['user_cocktail_favorites']);
+            if(in_array($sValue,$aCocktail_Favorites))
+            {
+
+              // Si ce cocktail est un de mes cocktails favoris alors j'affiche l'étoile or
+              // Sinon je n'affiche rien
+              ?>
+              <i class='fa fa-star gold' aria-hidden='true'></i>
+              <?php
+            }
+          }
+?>
+          <a class="realisations_cocktail_a" href="<?php echo $domain;?>cocktail/<?= $iKey ?>"><?= $sValue ?></a></li>
+        <?php } ?>
+    </ul>
+  </section>
+
+  <div class="div_inscription">
+    <p>Pour vous inscrire, c'est simple :</p>
+    <ul class="prestations_inscription">
+      <li><i class="fa fa-laptop" aria-hidden="true"></i><span> par internet : </span>remplissez le formulaire dans : <a class="a_contact" href="<?php echo $domain;?>contact">"Contact / Réservation"</a></li>
+      <li><i class="fa fa-mobile" aria-hidden="true"></i> par téléphone : au <a class="tel_contact2" href="tel:+33682062629">06 82 06 26 29</a></li>
+    </ul>
+  </div>
+
+</main>

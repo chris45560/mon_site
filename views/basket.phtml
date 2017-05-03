@@ -1,0 +1,79 @@
+<main class="container user_basket">
+
+  <h2><i class="fa fa-shopping-basket" aria-hidden="true"></i> Panier</h2>
+
+  <section class="section_admin">
+
+    <?php
+    if(!isset($_SESSION['basket']) || $_SESSION['basket']['total'] == 0)
+    {
+      echo "<p>Votre Panier est vide pour le moment</p>";
+    }
+    else
+    {
+      $aBasket = $_SESSION['basket'];
+      ?>
+
+      <table class="tab_basket">
+
+        <thead>
+          <tr>
+            <th class="basket_picture">Photo</th>
+            <th>Designation</th>
+            <th class="basket_description">Description</th>
+            <th>Prix Unitaire</th>
+            <th>Quantité</th>
+            <th>Prix Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+          foreach($aBasket as $aIndex => $aCol)
+          {
+            if($aIndex == 'total'){ continue;}
+            if($aIndex == 'quantity_total'){ continue;}?>
+            <tr>
+              <td class="basket_picture"><img class="picture_basket" src="<?php echo $domain;?>assets/img/<?=$aCol['giftscard_photo']?>"></td>
+              <td><?= $aCol['giftscard_name'] ?></td>
+              <td class="basket_description"><?= $aCol['giftscard_description'] ?></td>
+              <td><?= $aCol['giftscard_saleprice'] ?>,00 €</td>
+
+              <td>
+                <form>
+                  <input class="giftcards_quantity_basket" type="number" id="<?=$aCol['giftscard_id']?>" name="giftcards_quantity_basket" value=<?= $aCol['giftscard_quantity']?> min="1" max="10">
+                </form>
+                <div class="div_giftcards_quantity cta">Mettre à jour</div>
+              </td>
+
+              <td class="giftscard_total_amount"><?= $aCol['giftscard_total_amount'] ?>,00 €</td>
+              <td class="td_basket_delete"><a class="basket_delete" href="?del_product_basket=<?=$aCol['giftscard_id']?>"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+            </tr>
+            <?php } ?>
+          </tbody>
+          <tfooter>
+          </tfooter>
+        </table>
+
+        <div class="basket_total_price">
+          <p><strong>TOTAL TTC
+            (<?php
+            echo $aBasket['quantity_total'];
+            if($aBasket['quantity_total'] == 1)
+            {
+              echo " article";
+            }
+            else
+            {
+              echo " articles";
+            }
+            ?>) : <span><?=$aBasket['total'] ?>,00 €
+            </span></strong></p>
+          </div>
+
+          <form method="POST" action="user_order">
+            <input type="submit" name="register_basket" class="cta input_register_basket" value=" Passer la Commande">
+          </form>
+          <?php } ?>
+        </section>
+
+      </main>

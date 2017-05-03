@@ -1,0 +1,77 @@
+<main class="container prestations">
+
+  <a href="<?php echo $domain;?>prestations" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+  <h2 class="short"><i class="fa fa-glass" aria-hidden="true"></i> Cours de Cocktails</h2>
+  <section class="section_prestations_details">
+
+    <img src="<?php echo $domain;?>assets/img/cours_cocktail.00_jpg_srz" alt="cours_cocktails">
+    <img src="<?php echo $domain;?>assets/img/cours_cocktail.jpg" alt="cours_cocktails2">
+
+    <p>Chaque participant acquiert, pas à pas, les techniques et les petits secrets
+      pour réaliser et réussir 3 savoureux cocktails, avec ou sans alcool,
+      durant une séance de 2 heures. Les cocktails réalisés sont définis avec vous lors de la réservation.
+      N'hésitez pas à regarder dans l'onglet <a class="a_prestations" href="<?php echo $domain;?>realisations">"Mes Réalisations"</a> pour vous donner quelques idées !</p>
+      <p><em>Suggestion: Mojito Original / Amaretto Sour / Rose Baccarat + un Shooter offert à la fin !</em></p>
+
+
+      <h3>Cours de Cocktails <span>(2 heures)</span></h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre de Participants</th>
+            <th>Montant</th>
+            <th>Prix par Personne</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2</td>
+            <td>140,00 €</td>
+            <td>70,00 €</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>260,00 €</td>
+            <td>65,00 €</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>380,00 €</td>
+            <td>63,00 €</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>460,00 €</td>
+            <td>58,00 €</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>550,00 €</td>
+            <td>55,00 €</td>
+          </tr>
+        </tbody>
+        <tfoot>
+        </tfoot>
+      </table>
+
+      <p><em>Mes tarifs sont dégressifs. Ils incluent le prêt du matériel de bar,
+        la vaisselle et les consommables. Les prix sont indiqués TTC.</em></p>
+
+        <p>Chaque participant repart avec un livret récapitulatif de la séance.</p>
+
+        <p class="lien_chimix"><em>Si vous voulez d'ores et déjà vous entrainer à créer vos cocktails, demandez à <a class="a_prestations" href="<?php echo $domain;?>video-games/shaker">Chimix</a>, notre barman,
+           qui sera ravie de vous conseiller !</em></p>
+      </section>
+
+      <div class="div_inscription">
+        <p>Pour vous inscrire, c'est simple :</p>
+        <ul class="prestations_inscription">
+          <li><i class="fa fa-laptop" aria-hidden="true"></i><span> par internet : </span>remplissez le formulaire dans : <a class="a_contact" href="<?php echo $domain;?>contact">"Contact / Réservation"</a></li>
+          <li><i class="fa fa-mobile" aria-hidden="true"></i> par téléphone : au <a class="tel_contact2" href="tel:+33682062629">06 82 06 26 29</a></li>
+        </ul>
+      </div>
+
+    </main>
+

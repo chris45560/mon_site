@@ -1,0 +1,23 @@
+<?php
+if(!isset($_SESSION['id']) || $_SESSION['status'] != 5){ echo "<script type='text/javascript'>document.location.replace('$domain.index.php');</script>";}
+else{
+?>
+<main class="container prestations main_prestations">
+
+  <h2><i class="fa fa-user-secret" aria-hidden="true"></i> Partie Administration</h2>
+  <section class="section_admin">
+    <h3>Base de données :</h3>
+
+    <a href="<?php echo $domain;?>list_orders" class="cta"><i class="fa fa-plus-circle" aria-hidden="true"></i> Liste des Commandes</a>
+    <a href="<?php echo $domain;?>list_users" class="cta"><i class="fa fa-plus-circle" aria-hidden="true"></i> Liste des Utilisateurs</a>
+    <a href="<?php echo $domain;?>list_posts" class="cta"><i class="fa fa-plus-circle" aria-hidden="true"></i> Liste des Articles</a>
+    <a href="<?php echo $domain;?>list_giftscards" class="cta"><i class="fa fa-plus-circle" aria-hidden="true"></i> Liste des Cartes Cadeaux</a>
+    <a href="<?php echo $domain;?>list_comments" class="cta"><i class="fa fa-plus-circle" aria-hidden="true"></i> Liste des Commentaires</a>
+    <a href="<?php echo $domain;?>list_pictures" class="cta"><i class="fa fa-plus-circle" aria-hidden="true"></i> Liste des Images</a>
+    <a href="<?php echo $domain;?>list_avatars" class="cta"><i class="fa fa-plus-circle" aria-hidden="true"></i> Liste des Avatars</a>
+    <a href="<?php echo $domain;?>list_materials" class="cta"><i class="fa fa-plus-circle" aria-hidden="true"></i> Liste des Matériels</a>
+    <a href="<?php echo $domain;?>list_ingredients" class="cta"><i class="fa fa-plus-circle" aria-hidden="true"></i> Liste des Ingrédients</a>
+  </section>
+
+</main>
+<?php } ?>

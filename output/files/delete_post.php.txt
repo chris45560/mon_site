@@ -1,0 +1,23 @@
+<?php
+
+// CHARGEMENT DU FICHIER "config.php"
+require 'config.php';
+
+// CHARGEMENT DU FICHIER "connexion.php"
+require 'connexion.php';
+
+// CHARGEMENT DU FICHIER "functions.php"
+require 'functions.php';
+
+session_start();
+
+if(isset($_GET) && isset($_GET['id']))
+{
+	Supprimer($_GET['id']);
+	echo "OK";
+}
+else
+{
+	echo "KO";
+}
+

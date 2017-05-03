@@ -1,0 +1,72 @@
+<?php
+if(!isset($_SESSION['id']) || $_SESSION['status'] != 5){ echo "<script type='text/javascript'>document.location.replace('index.php');</script>";}
+else{
+?>
+<main class="container prestations main_prestations">
+
+  <a href="<?php echo $domain;?>admin" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+  <h2><i class="fa fa-list-ul" aria-hidden="true"></i> Liste des Cartes Cadeaux</h2>
+  <section class="section_admin">
+
+    <table class="tab_list_pictures">
+
+      <thead>
+        <tr>
+          <th class="td_short">Id</th>
+          <th>Nom</th>
+          <th>Description</th>
+          <th>Prix de Vente</th>
+          <th>Photo</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <?php
+        foreach($aList_Giftscards as $aIndex => $aCol){ ?>
+          <tr>
+            <?php
+            foreach ($aCol as $key => $sValue) {
+              if($key == "giftscard_id" ||
+              $key == "giftscard_name" ||
+              $key == "giftscard_description" ||
+              $key == "giftscard_photo" ||
+              $key == "giftscard_saleprice")
+              {
+                if($key == "giftscard_saleprice")
+                {
+                  ?>
+                  <td><?= $sValue ?>,00 €</td>
+                  <?php
+                }
+                else if($key == "giftscard_id")
+                {
+                  ?>
+                  <td class="td_short"><?= $sValue ?></td>
+                  <?php
+                }
+                else if($key == "giftscard_photo")
+                {
+                  ?>
+                  <td><img src='<?php echo $domain;?>assets/img/<?= $sValue ?>' alt="<?= $sValue ?>"</td>
+                  <?php
+                }
+                else
+                {
+                  ?>
+                  <td><?= $sValue ?></td>
+                  <?php
+                }
+              }
+            } ?>
+            </tr>
+            <?php } ?>
+
+          </tbody>
+          <tfooter>
+          </tfooter>
+        </table>
+      </section>
+
+    </main>
+<?php } ?>

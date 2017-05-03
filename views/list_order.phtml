@@ -1,0 +1,100 @@
+<main class="container list_order_user">
+  <?php $aList_Orders = getAllOrders_User($_SESSION['id']); ?>
+  <h2><i class="fa fa-list-ul" aria-hidden="true"></i> Liste de mes Commandes</h2>
+  <section class="section_admin">
+<?php
+    if(empty($aList_Orders))
+    {
+      echo "<p>Vous n'avez encore passé aucune commande</p>";
+    }
+    else
+    { ?>
+
+    <table class="tab_list_orders">
+
+      <thead>
+        <tr class="thead_tr_order">
+          <th>Numéro Commande</th>
+          <th>Prix Total</th>
+          <th>Date</th>
+          <th class="th_short_a">PDF</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <?php
+        foreach($aList_Orders as $aIndex => $aCol)
+        { ?>
+          <tr class="tr_order" data-ajax="<?= $aCol['order_id']?>">
+            <?php
+            foreach ($aCol as $key => $sValue)
+            {
+              if($key == "order_id" ||
+              $key == "order_totalamount" ||
+              $key == "order_date")
+              {
+                if($key == "order_totalamount")
+                {
+                  ?>
+                  <td><?= $sValue ?>,00 €</td>
+                  <?php
+                }
+                else if($key == "order_id")
+                {
+                  ?>
+                  <td class="td_details_order flex"><em class="details_order"><i class="fa fa-plus-circle" aria-hidden="true"></i> Détails</em><p><?= $sValue ?></p></td>
+                  <?php
+                }
+                else
+                {
+                  ?>
+                  <td><?= $sValue ?></td>
+                  <?php
+                }
+              }
+            } ?>
+            <td class="td_short_a"><a href="<?php echo $domain;?>order_pdf/<?=$aCol['order_id']?>"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></td>
+          </tr>
+
+          <!-- ORDERLINE -->
+          <?php
+          $aEachOrder = getAllOrderLines($aCol['order_id']);
+          ?>
+          <tr>
+            <td colspan="2">
+              <table class="table_orderlines">
+                <thead>
+                  <tr class="thead_tr_orderlines">
+                    <th>Nom du Produit</th>
+                    <th>Prix Unitaire</th>
+                    <th>Quantité</th>
+                    <th>Prix Total</th>
+                  </tr>
+                </thead>
+                <?php
+                foreach($aEachOrder as $iInd => $aTab)
+                {
+                  include('orderlines.phtml');
+                }
+                ?>
+              </table>
+            </td>
+          </tr>
+
+          <?php } ?>
+        </tbody>
+        <tfooter>
+        </tfooter>
+      </table>
+<?php } ?>
+    </section>
+
+  </main>
+
+  <!--
+  $lastKey = array_pop(array_keys($aList_Orders));
+  end — Positionne le pointeur de tableau en fin de tableau
+  key — Retourne une clé d'un tableau associatif
+  array_keys — Retourne toutes les clés ou un ensemble des clés d'un tableau
+  array_pop — Dépile un élément de la fin d'un tableau
+-->

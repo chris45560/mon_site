@@ -1,0 +1,32 @@
+<div class="div_create_account div_identify_user">
+	<a href="<?php echo $domain;?>user_basket" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+	<main class="container realisations main_identify_user">
+
+	<h2>Identifiez-Vous</h2>
+	<form class="form" id="check_user" method="POST" action="">
+		<fieldset>
+			<p class="flex">
+				<label for="pseudo">Pseudo : </label>
+				<input type="text" placeholder="Pseudo" id="pseudo_check_user" name="pseudo" required>
+			</p>
+			<p class="flex">
+				<label for="password">Password : </label>
+				<input type="password" placeholder="Password" id="password_check_user" name="password" required>
+			</p>
+			<p class="form_forget_password">
+			<a href="<?php echo $domain;?>reset_password">Mot de passe oublié ?</a>
+		</p>
+		</fieldset>
+		<input type="submit" value=" Identifiez-vous" class="cta check_user" id="check_check_user" name="check_user">
+	</form>
+
+</main>
+
+	<div class="div_inscription">
+		<p>Pas encore de compte ?</p>
+		<a class="cta" href="<?php echo $domain;?>create_account">Créer votre compte</a>
+	</div>
+
+</div>
+

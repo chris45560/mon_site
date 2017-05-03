@@ -1,0 +1,84 @@
+<main class="container prestations main_prestations">
+
+  <h2><i class="fa fa-car" aria-hidden="true"></i> Mes Prestations</h2>
+  <section class="section_prestations">
+    <p>Vous souhaitez réaliser un cocktail ? Vous avez envie d'épater vos amis ? Vous voudriez animer une soirée ?</p>
+    <br>
+    <p>Choisissez le lieu et je m'occupe de vous fournir tout le matériel nécessaire,
+      du shaker aux ingrédients !</p>
+      <br>
+      <p>Plusieurs formules sont possibles :</p>
+      <ul>
+        <li>
+          <article class="article_prestations">
+            <img src="<?php echo $domain;?>assets/img/cours_cocktail.00_jpg_srz" alt="cours_cocktails">
+            <div class="flex div_article">
+              <h3><i class="fa fa-glass" aria-hidden="true"></i> Cours de Cocktails</h3>
+              <p>Chaque participant acquiert, pas à pas, les techniques et les petits secrets
+                pour réaliser et réussir 3 savoureux cocktails, avec ou sans alcool,
+                durant une séance de 2 heures.</p>
+                <a href="<?php echo $domain;?>prestations_cours_cocktails" class="cta"><i class="fa fa-plus-circle" aria-hidden="true"></i> Détails de la Prestation</a>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="article_prestations">
+              <div class="flex div_article">
+                <h3><i class="fa fa-birthday-cake" aria-hidden="true"></i> Fêter un Evénement</h3>
+                <p>Pour vos soirées, vos cocktails ou tout autre évènement organisé à votre domicile
+                  (anniversaire, enterrement de vie de jeune fille, de jeune garçon, bachelorette party,...),
+                  recourir à un barman vous permettra de profiter pleinement de vos invités !</p>
+                  <a href="<?php echo $domain;?>prestations_party_cocktails" class="cta"><i class="fa fa-plus-circle" aria-hidden="true"></i> Détails de la Prestation</a>
+                </div>
+                <img src="<?php echo $domain;?>assets/img/party_cocktails.jpg" alt="party_cocktails">
+              </article>
+            </li>
+
+            <li>
+              <article class="article_prestations">
+                <img src="<?php echo $domain;?>assets/img/team_building_cocktails.jpg" alt="team_building_cocktails">
+                <div class="flex div_article">
+                  <h3><i class="fa fa-handshake-o" aria-hidden="true"></i> Team Building</h3>
+                  <p>Vous souhaitez améliorer l’ambiance et dynamiser les échanges au sein de votre équipe,
+                    remercier vos collaborateurs ou tout simplement passer un bon moment entre collègues ?
+                    Sortez de la routine du bureau et offrez-vous une soirée de détente et de rires
+                    tout en apprenant à devenir le barman d’un soir avec l'atelier « Jeu concours ».</p>
+                    <a href="<?php echo $domain;?>prestations_team_building" class="cta"><i class="fa fa-plus-circle" aria-hidden="true"></i> Détails de la Prestation</a>
+                  </div>
+                </article>
+              </li>
+
+              <li>
+                <article class="article_prestations">
+                  <div class="flex div_article">
+                    <h3><i class="fa fa-child" aria-hidden="true"></i> Animation Cocktails pour enfants</h3>
+                    <p>Les enfants réalisent eux-mêmes leurs cocktails !<br>
+                      A base de sirops, de jus de fruits frais,... le tout accompagné de gourmandises !</p>
+                    </p>
+                    <a href="<?php echo $domain;?>prestations_animation_enfants" class="cta"><i class="fa fa-plus-circle" aria-hidden="true"></i> Détails de la Prestation</a>
+                  </div>
+                  <img src="<?php echo $domain;?>assets/img/cocktail_enfants.jpg" alt="cocktails_enfants">
+                </article>
+              </li>
+
+            </ul>
+
+            <p>N'hésitez pas si vous avez des suggestions,
+              si vous souhaitez que l'on créé ensemble un cocktail unique,
+              thémathisé ou que l'on réalise un cocktail découvert dans un bar,
+              je suis à votre écoute et prêt à vous conseiller !
+            </p>
+
+          </section>
+
+          <div class="div_inscription">
+            <p>Pour vous inscrire, c'est simple :</p>
+            <ul class="prestations_inscription">
+              <li><i class="fa fa-laptop" aria-hidden="true"></i><span> par internet : </span>remplissez le formulaire dans : <a class="a_contact" href="<?php echo $domain;?>contact">"Contact / Réservation"</a></li>
+              <li><i class="fa fa-mobile" aria-hidden="true"></i> par téléphone : au <a class="tel_contact2" href="tel:+33682062629">06 82 06 26 29</a></li>
+            </ul>
+          </div>
+
+        </main>
+

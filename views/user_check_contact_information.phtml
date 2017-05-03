@@ -1,0 +1,65 @@
+<?php
+if(!isset($_SESSION['id'])){ echo "<script type='text/javascript'>document.location.replace('".$domain."user_order');</script>";}
+else{
+?>
+<main class="container check_order">
+
+	<a href="<?php echo $domain;?>user_order_contact_information" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour au Formulaire de Modification</a>
+
+	<?php $aUser = RecupInfosUser($_SESSION['pseudo']); ?>
+
+	<h2><i class="fa fa-map-marker" aria-hidden="true"></i> Vérifier vos Coordonnées</h2>
+	<article>
+		<div class="check_div">
+			<p>
+				<span>Civilité :</span>
+				<?php if($aUser['user_civility']=='monsieur'){echo "<em>Monsieur</em>";} ?>
+				<?php if($aUser['user_civility']=='madame'){echo "<em>Madame</em>";} ?>
+			</p>
+			<p>
+				<span>Nom : </span>
+				<em><?=$aUser['user_lastname']?></em>
+			</p>
+			<p>
+				<span>Prénom : </span>
+				<em><?=$aUser['user_firstname']?></em>
+			</p>
+			<p>
+				<span>Adresse Postale : </span>
+				<em><?=$aUser['user_address']?></em>
+			</p>
+			<p>
+				<span>Ville : </span>
+				<em><?=$aUser['user_city']?></em>
+			</p>
+			<p>
+				<span>Code Postal : </span>
+				<em><?=$aUser['user_zipcode']?></em>
+			</p>
+			<p>
+				<span>Pays : </span>
+				<em><?=$aUser['user_country']?></em>
+			</p>
+			<p>
+				<span>Téléphone : </span>
+				<em><?=$aUser['user_phone']?></em>
+			</p>
+			<p>
+				<span>Mail : </span>
+				<em><?=$aUser['user_mail']?></em>
+			</p>
+			<p>
+				<span>Date de Naissance : </span>
+				<em><?=date('d',strtotime($aUser['user_birthdate']))."/"
+				.date('m',strtotime($aUser['user_birthdate']))."/"
+				.date('Y',strtotime($aUser['user_birthdate']))
+				?></em>
+			</p>
+		</div>
+		<form method="POST" action="">
+			<input type="submit" value=" Envoyer" class="cta" id="input_check_order_contact_information" name="check_order_contact_information">
+		</form>
+
+	</article>
+</main>
+<?php } ?>

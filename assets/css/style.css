@@ -1,0 +1,4142 @@
+/********************************* FONT-FACE **********************************/
+
+/*@font-face {
+font-family: Open Sans;
+src: url(../fonts/Open_Sans/Open_Sans_regular.ttf);
+}
+
+@font-face {
+font-family: Dancing Script;
+src: url(../fonts/Dancing_Script/DancingScript-Regular.ttf);
+}
+
+@font-face {
+font-family: Mogra;
+src: url(../fonts/Mogra/Mogra_regular.ttf);
+}
+
+@font-face {
+font-family: Lora;
+src: url(../fonts/Lora/Lora_regular.ttf);
+}*/
+
+/********************************* GENERAL RULES ******************************/
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	font-size: 100%;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+	background-color: #FFFFFF;
+}
+
+strong{
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	cursor: pointer;
+}
+
+span{
+	font-style: italic;
+	font-weight: bold;
+}
+
+img{
+	max-width: 100%;
+}
+
+h2{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Lora', serif;
+	font-size: 2rem;
+	padding: 10px;
+	background-color: #6b0216;
+	color: white;
+	margin: 20px 0 0;
+}
+
+h2:first-of-type{
+	margin-top: 0px;
+}
+
+figure{
+	display: inline;
+	position: relative;
+	margin-right: 20px;
+}
+
+figcaption{
+	display: inline;
+	position: absolute;
+	bottom: -5px;
+	left: 5px;
+	font-size: 1.0rem;
+	width: 100%;
+}
+
+/*************************** GOOGLE MAPS ********************************/
+
+iframe{
+	width: 800px;
+	height: 300px;
+	margin-top: 20px;
+}
+
+.maps iframe{
+	pointer-events: none;
+}
+
+/**************************** GENERAL CLASSES ****************************/
+
+.container{
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.flex{
+	display: flex;
+}
+
+.cta{
+	padding: 10px;
+	background-color: orange;
+	font-size: 1.3rem;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cta:hover{
+	background-color: black;
+	color: white;
+}
+
+.hidden{
+	display: none;
+}
+
+.no-comment{
+	margin-bottom: 20px;
+}
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+.inline{
+	display: inline;
+}
+
+.text_align_left{
+	text-align: left;
+}
+
+.lower_font_size{
+	font-size: 1.7rem;
+	font-style: normal;
+}
+
+#check_user a{
+	color: blue;
+}
+
+.tel_contact2{
+	color: white;
+	text-decoration: underline;
+}
+
+.tel_contact,
+.mail_contact{
+	color: blue;
+	text-decoration: underline;
+}
+
+.lien_chimix{
+		display: block;
+		margin-top: 20px;
+}
+
+/********************************* CLASSES SUR LES LIENS  *********************/
+
+.a_contact{
+	color: white;
+	padding: 2px 2px 2px 2px;
+	border: 2px solid white;
+	border-radius: 15px;
+}
+
+.a_contact:hover{
+	background-color: white;
+	color: black;
+	border-radius: 15px;
+}
+
+.a_prestations{
+	color: blue;
+	padding: 5px 0;
+}
+
+.a_prestations:hover{
+	text-decoration: underline;
+}
+
+.a_header_user{
+	color: black;
+	padding: 5px;
+}
+
+.a_header_user:hover{
+	background-color: black;
+	color: white;
+	border-radius: 15px;
+}
+
+/**************************** .BODY_ACCUEIL RULES ****************************/
+
+.body_accueil{
+	background-image: url('../img/cocktailtitre.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.body_accueil h1{
+	color: white;
+	background-color: transparent;
+	text-align: left;
+	text-transform: capitalize;
+	font-size: 5rem;
+	font-family: 'Dancing Script', cursive;
+	padding-left: 100px;
+	text-shadow: 2px 2px 2px;
+}
+
+.body_accueil a{
+	color: white;
+}
+
+.body_accueil em{
+	display: block;
+	color: white;
+	font-weight: normal;
+	width: 60%;
+	line-height: 2;
+	font-size: 1.2rem;
+}
+
+.body_accueil ul{
+	list-style-type: disc;
+	list-style-position: inside;
+	margin-top: 50px;
+}
+
+.body_accueil li{
+	color: white;
+	background-color: transparent;
+	text-align: left;
+	padding-left: 50px;
+	text-transform: uppercase;
+	font-size: 2rem;
+	margin: 30px 0;
+}
+
+.body_accueil li:hover,
+.body_accueil li:focus{
+	text-align: left;
+	margin-left: 120px;
+	cursor: pointer;
+	transform: scale(1.2);
+	box-shadow: 0 0 65px #CDBE9F inset, 0 0 20px #BEAE8C inset, 0 0 15px;
+}
+
+.body_accueil .fa{
+	display: none;
+}
+
+/**************************** HEADER RULES *****************************/
+
+header{
+	background-color: #dfe0e6;
+	padding: 10px;
+	font-family: 'Dancing Script', cursive;
+	position: relative;
+}
+
+header .cta{
+	font-family: 'Open Sans', sans-serif;
+}
+
+/**************************** .HEADER_DIV RULES *****************************/
+
+header .header_div{
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .header_div h1{
+	font-size: 3.5rem;
+}
+
+header .header_div .logo img{
+	width: 150px;
+	height: 150px;
+	border-radius: 100px;
+}
+
+/**************************** HEADER NAV RULES *****************************/
+
+header nav ul{
+	justify-content: space-around;
+	list-style-type: none;
+}
+
+header nav ul li{
+	padding: 10px;
+	font-size: 1.4rem;
+	cursor: pointer;
+}
+
+header nav ul li:hover{
+	background-color: black;
+	color: white;
+}
+
+header nav ul li:hover a{
+	color: white;
+}
+
+/**************************** .HEADER_BASKET RULES (Panier) ****************************/
+
+header .header_basket{
+	width: 70px;
+	height: 70px;
+	background-image: url('../img/logo-basket.png');
+	background-repeat: no-repeat;
+	background-size: 40px;
+	background-color: transparent;
+	background-position: center;
+	border-radius: 100%;
+	text-align: center;
+}
+
+header .header_basket:hover{
+	background-color: orange;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/**************************** #QUANTITY_BASKET_HEADER RULES ****************************/
+
+header .header_basket:hover #quantity_basket_header{
+	color: black;
+}
+
+#quantity_basket_header{
+	font-size: 1.2rem;
+	font-style: normal;
+	font-family: 'Open Sans', sans-serif;
+	color: #6b0216;
+	display: inline-block;
+	margin-top: 13px;
+}
+
+/**************************** HEADER CLASSES RULES *****************************/
+
+header .hello_user{
+	font-family: 'Open Sans', sans-serif;
+}
+
+header .pseudo_profile{
+	font-family: 'Open Sans', sans-serif;
+	background-color: #6b0216;
+	color: white
+}
+
+/**************************** .G-RECATCHA RULES *****************************/
+
+.g-recaptcha{
+	margin: 0 0 20px 350px;
+}
+
+.g-recaptcha iframe{
+	width: 304px;
+	height: 80px;
+}
+
+.p_recaptcha{
+	margin-top: 15px;
+	text-align: center;
+}
+/**************************** .DIV_PRIMARY_ACCOUNT RULES (sous-menu présent sous "Mon Compte") *****************************/
+
+.div_primary_account{
+	position: relative;
+}
+
+.div_account_user{
+	position: absolute;
+	top: 35px;
+	left: 0px;
+}
+
+.div_account_user ul{
+	list-style-type: none;
+}
+
+.div_account_user ul li:first-of-type{
+	margin-top: 10px;
+}
+
+.div_account_user ul li{
+	padding: 0px;
+	margin: 5px 0;
+}
+
+.div_account_user ul li a{
+	display: block;
+	margin: 0;
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+/**************************** #LOGGERAREA RULES (Fenêtre de Connexion) *****************************/
+
+#loggerarea{
+	font-family: 'Open Sans', sans-serif;
+	display: none;
+}
+
+#loggerarea h2{
+	background-color: orange;
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+	font-size: 1rem;
+	border: 1px solid black;
+}
+
+#loggerarea .new_account,
+.return_404{
+	color: blue;
+}
+
+#loggerarea .new_account:hover,
+.return_404:hover{
+	text-decoration: underline;
+}
+
+/**************************** .FORM RULES (formulaires) *****************************/
+
+.form{
+	font-family: 'Open Sans', sans-serif;
+	border: 1px solid black;
+	padding: 5px;
+}
+
+.form em{
+	font-size: 0.7rem;
+}
+
+.form .picture_mini_post,
+.form .cocktail_mini_post,
+.form .category_post,
+.form .material_post{
+	width: 13%;
+	margin-left: 30%;
+}
+
+.form .category_post,
+.form .material_post{
+	width: 18%;
+}
+
+.form .avatar_mini_post{
+	margin-left: 20%;
+}
+
+.form fieldset{
+	border: none;
+}
+
+.form label{
+	width: 40%;
+	padding: 10px 0;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form textarea{
+	width: 40%;
+	font-size: 0.8rem;
+	margin: 5px 0;
+	padding: 10px;
+}
+
+.form input[type="submit"]{
+	display: block;
+	margin: 0 auto;
+	font-size: 1rem;
+}
+
+.form textarea{
+	padding-top: 5px;
+	resize: none;
+	height: 100px;
+}
+
+input[type="file"]{
+	margin-top: 13px;
+	padding: 0;
+}
+
+input[type="submit"]{
+	cursor: pointer;
+	border: 1px solid black;
+	margin: 10px 0;
+}
+
+input:focus{
+	border-color: white;
+}
+
+/****************************** .GIFTCARDS RULES **********************/
+
+.giftcards_quantity_basket,
+.giftcards_quantity{
+	font-size: 1.1rem;
+	padding: 5px 5px 5px 10px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.gifts_cards .div_article .quantity_spinner a{
+	margin: 0;
+}
+
+.gifts_cards article{
+	justify-content: space-between;
+	width: 90%;
+}
+
+.gifts_cards img{
+	width: 250px;
+	height: 170px;
+	align-self: center;
+	margin: 10px 0;
+	border-radius: 20px;
+}
+
+.gifts_cards .div_article p{
+	text-align: center;
+}
+
+.div_quantity_basket{
+	align-items: center;
+}
+
+.div_giftcards_quantity{
+	display: none;
+	padding: 2px;
+	font-size: 0.8rem;
+	border: 1px solid black;
+	margin-top: 5px;
+}
+
+.div_article span{
+	font-style: normal;
+	font-weight: normal;
+}
+
+/****************************** .QUANTITY_SPINNER RULES **********************/
+
+.quantity_spinner{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+.quantity_spinner label{
+	width: 40%;
+}
+
+.quantity_spinner span{
+	width: 25%;
+}
+
+.quantity_spinner a{
+	width: 40%;
+}
+
+.quantity_spinner a span{
+	width: 50%;
+	height: 100%;
+}
+
+.quantity_spinner .ui-spinner-input{
+	width: 40%;
+	padding-left: 5px;
+}
+
+/**************************** #CREATE_ACCOUNT + #CHECK_USER + #RESET_PASSWORD *****************************/
+/*********************************** #CREATE_POST + #MODIFY_POST ******************************************/
+
+.div_create_account,
+.div_create_post,
+.div_modify_post{
+	text-align: center;
+}
+
+#create_account,
+#check_user,
+#reset_password,
+#create_post,
+#modify_post{
+	text-align: left;
+}
+
+#create_account label,
+#check_user label,
+#reset_password label{
+	width: 30%;
+	margin-left: 30%;
+}
+
+#create_account label{
+	width: 40%;
+}
+
+#create_account input[type="text"],
+#create_account input[type="file"],
+#create_account input[type="password"],
+#check_user input[type="text"],
+#check_user input[type="password"],
+#reset_password input[type="text"]{
+	width: 40%;
+	margin-right: 30%;
+}
+
+#create_account input[type="text"],
+#create_account input[type="password"],
+#check_user input[type="text"],
+#check_user input[type="password"],
+#reset_password input[type="text"]{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.9rem;
+	padding-left: 10px;
+}
+
+#create_account input[type="password"],
+#check_user input[type="password"]{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#create_account .birthdate_user{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.9rem;
+}
+
+#create_account .flex_birthdate_user label{
+	width: 20%;
+	margin-left: 30%;
+}
+
+#create_account #day_birthdate_user{
+	width: 5%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+#create_account #month_birthdate_user{
+	width: 12%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+#create_account #year_birthdate_user{
+	width: 8%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+#create_account .p_password{
+	position: relative;
+}
+
+#create_account .show-password,
+#create_account .show-password_moz {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	font-style: normal;
+	position: absolute;
+	top: 10px;
+	left: 333px;
+	cursor: pointer;
+	padding: 6px 5px 6px 5px;
+	border: 1px solid black;
+	box-shadow: 1px 1px 1px black;
+	background-color: white;
+}
+
+#create_account .show-password_moz {
+	top: 10px;
+	left: 405px;
+}
+
+#create_account .show-password:hover,
+#create_account .show-password_moz:hover {
+	background-color: black;
+	color: white;
+}
+
+#creation_create_account,
+#check_check_user,
+#reset_reset_password,
+#creation_create_post,
+#modification_modify_post,
+#submit_contact,
+#modification_modify_user_profile,
+#input_form_user_order_contact_information{
+	margin: 10px auto;
+	font-size: 1.5rem;
+}
+
+#form_user_order_contact_information .flex_civility_user_order_contact select{
+	width: 16%;
+}
+
+/**************************** #CREATE_POST + #MODIFY_POST RULES *****************************/
+
+#create_post label,
+#modify_post label{
+	width: 35%;
+	margin-left: 25%;
+}
+
+#create_post input[type="text"],
+#create_post input[type="file"],
+#create_post textarea,
+#modify_post input[type="text"],
+#modify_post input[type="file"],
+#modify_post textarea{
+	width: 40%;
+	margin-right: 20%;
+}
+
+.main_admin_post .form .category_post,
+.main_admin_post .form .material_post,
+.main_admin_post .form .picture_mini_post{
+	width: 25%;
+	margin-left: 25%;
+}
+
+#create_post .div_category,
+#modify_post .div_category{
+	width: 20%;
+}
+
+#create_post .div_primary_category,
+#modify_post .div_primary_category{
+	margin: 10px auto 20px auto;
+}
+
+#create_post .div_material,
+#modify_post .div_material{
+	width: 30%;
+}
+
+#create_post .div_primary_material,
+#modify_post .div_primary_material{
+	margin: 10px auto;
+}
+
+#create_post .div_category label,
+#modify_post .div_category label,
+#create_post .div_material label,
+#modify_post .div_material label{
+	padding: 0 0 0 5px;
+	margin: 0;
+}
+
+#create_post .div_category input[type="radio"],
+#modify_post .div_category input[type="radio"],
+#create_post .div_material input[type="checkbox"],
+#modify_post .div_material input[type="checkbox"]{
+	margin: 0 0 0 10px;
+	padding: 0;
+}
+
+/**************************** MAIN RULES *****************************/
+
+.create_post,
+.retour,
+.video_games{
+	display: inline-block;
+	margin: 20px auto;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.categorie{
+	background-color: #2d2b2c;
+	color: white;
+	padding: 5px;
+	text-align: left;
+}
+
+/**************************** WARNING RULES *****************************/
+
+.warning_connect{
+	font-weight: bold;
+	font-size: 1rem;
+	position: absolute;
+	margin: 0 34% 0 40%;
+	top: 0;
+	padding: 10px;
+	text-align: center;
+	color: red;
+	background-color: white;
+	border: 2px solid red;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.warning_mail_ok{
+	font-weight: bold;
+	font-size: 1rem;
+	position: absolute;
+	margin: 0 34% 0 40%;
+	top: 0;
+	padding: 10px;
+	text-align: center;
+	color: green;
+	background-color: white;
+	border: 2px solid green;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.warning_form_user{
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 10px;
+	text-align: center;
+	color: red;
+}
+
+#contact_form .warning_form_user{
+	text-align: center;
+}
+
+/**************************** .POSTS RULES *****************************/
+
+.posts{
+	text-align: center;
+	padding: 20px 50px;
+	background-color: #dddcd6;
+}
+
+.posts .post{
+	margin-bottom: 10px;
+}
+
+.posts .modify_delete_buttons{
+	padding: 10px;
+	justify-content: space-around;
+}
+
+.posts .modify_delete_buttons a{
+	flex-basis: 30%;
+}
+
+.posts .cocktails,
+.div_ingredients_details{
+	width: 200px;
+	height: 200px;
+	margin: 20px 0;
+	border-radius: 20px;
+	background-color: white;
+}
+
+.posts .picture_materials{
+	width: 200px;
+	height: 200px;
+	margin: 20px 0;
+	border-radius: 20px;
+}
+
+.tab_posts{
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+/********************************* ADMIN_POST RULES (ADD_POST + MODIF_POST)*******************************/
+
+.main_admin_post{
+	background-color: #dddcd6;
+}
+
+/**************************** INGREDIENTS + MATERIEL RULES *****************************/
+
+.cocktails,
+.picture_materials,
+.div_ingredients_details{
+	border: 2px solid black;
+}
+
+.list_ingredients{
+	list-style-type: disc;
+	text-align: left;
+	padding-left: 25px;
+	font-size: 0.9rem;
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.user_pseudo{
+	color: #FF4500;
+}
+
+.posts .cocktails{
+	margin-top: 45px;
+}
+
+.div_material figure{
+	margin-right: 0;
+}
+
+.div_material_image_ingredients{
+	justify-content: space-around;
+}
+
+.div_material_image_ingredients p,
+.posts .material{
+	display: block;
+	text-align: center;
+}
+
+.div_ingredients_details{
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background-color: white;
+	border-radius: 15px;
+	border: 2px solid black;
+}
+
+.posts .title_h3:first-of-type{
+	margin-top: 15px;
+}
+
+.posts .title_h3{
+	margin: 10px auto 5px auto;
+	font-size: 1.5rem;
+}
+
+.posts .description{
+	width: 90%;
+	margin: 0 auto 30px auto;
+	text-align: justify;
+}
+
+.posts .list_realisation{
+	width: 90%;
+	margin: 0 auto 30px auto;
+}
+
+.posts .list_realisation li{
+	text-align: left;
+}
+
+.posts .parent_comment{
+	margin: 10px 0 0;
+	background-color: #6b0216;
+	color: white;
+}
+
+.posts .comments{
+	padding: 10px;
+	position: relative;
+	border: 1px solid black;
+}
+
+.posts .comments em{
+	font-style: italic;
+	font-size: 0.8rem;
+	padding: 5px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.posts .comments:nth-of-type(2n+1){
+	background-color: white;
+	color: black;
+}
+
+.posts .comments:nth-of-type(2n){
+	background-color: #8fd506;
+	color: black;
+}
+
+.posts .comments .pseudo{
+	font-size: 1.4rem;
+	display: inline;
+	position: absolute;
+	top: 10px;
+	left: 70px;
+}
+
+.picture_titre{
+	display: inline;
+	text-align: left;
+}
+
+.avatars{
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	top: 7px;
+	left: 10px;
+}
+
+.text_comments{
+	display: block;
+	text-align: justify;
+	margin-top: 35px;
+	margin-left: 61px;
+}
+
+.posts .new_comments a{
+	display: inline-block;
+	margin: 20px 0;
+}
+
+.posts .form_comments{
+	display: none;
+}
+
+.posts .form_comments label{
+	width: 25%;
+}
+
+.posts .form_comments textarea{
+	width: 50%;
+	height: 100px;
+	font-size: 1rem;
+	padding: 5px 10px;
+}
+
+/**************************** INPUT RULES *****************************/
+
+.input_creation_account,
+.div_inscription .cta,
+.input_creation_post,
+.input_modify_post,
+.submit_contact,
+.input_modify_user_profile,
+.input_register_basket,
+#reset_reset_password,
+#input_form_user_order_contact_information,
+#input_check_order_contact_information,
+#order_confirm,
+#check_check_user{
+	background-image: url('../img/fa-user-plus.png');
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position: 5px;
+	padding-left: 30px;
+}
+
+.input_creation_post,
+.input_modify_post,
+.submit_contact,
+.input_modify_user_profile,
+.input_register_basket,
+#reset_reset_password,
+#input_form_user_order_contact_information,
+#input_check_order_contact_information,
+#check_check_user{
+	background-image: url('../img/fa-plus-circle.svg');
+	background-size: 20px;
+	padding-left: 25px;
+}
+
+.input_creation_account:hover{
+	background-image: url('../img/fa-user-plus-hover.png');
+}
+
+.input_creation_post:hover{
+	background-image: url('../img/fa-plus-circle-hover.svg');
+}
+
+.input_modify_post,
+.input_modify_user_profile{
+	background-image: url('../img/fa-pencil.png');
+}
+
+.input_modify_post:hover,
+.input_modify_user_profile:hover{
+	background-image: url('../img/fa-pencil-hover.png');
+}
+
+.submit_contact,
+#reset_reset_password,
+#input_form_user_order_contact_information,
+#input_check_order_contact_information{
+	background-image: url('../img/fa-paper.png');
+}
+
+.submit_contact:hover,
+#reset_reset_password:hover,
+#input_form_user_order_contact_information:hover,
+#input_check_order_contact_information:hover{
+	background-image: url('../img/fa-paper-hover.png');
+}
+
+#order_confirm{
+	background-image: url('../img/fa-coins.png');
+	background-size: 40px;
+	padding-left: 50px;
+	font-size: 1.5rem;
+}
+
+#order_confirm:hover{
+	background-image: url('../img/fa-coins-hover.png');
+}
+
+.input_register_basket{
+	background-image: url('../img/fa_cart_plus.png');
+}
+
+.input_register_basket:hover{
+	background-image: url('../img/fa_cart_plus_hover.png');
+}
+
+#check_check_user{
+	background-image: url('../img/user.png');
+}
+
+#check_check_user:hover{
+	background-image: url('../img/user-hover.png');
+}
+
+/**************************** COCKTAILS + AVATARS RULES *****************************/
+
+.cocktails_mini,
+.avatar_mini{
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	margin: 20px 0 20px 5px;
+}
+
+.avatar_mini{
+	margin-left: 17%;
+}
+
+.picture_mini_post,
+.avatar_mini_post{
+	display: inline-block;
+	margin: 20px 0;
+}
+
+/**************************** .WHO_AM_I RULES *****************************/
+
+.who_am_i{
+	margin: 10px auto;
+}
+
+.who_am_i .presentation{
+	padding: 20px 50px;
+	background-color: #dddcd6;
+}
+
+/**************************** .CONTACT RULES *****************************/
+
+.contact .contact_article{
+	padding: 20px 50px;
+	background-color: #dddcd6;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.contact .contact_article p{
+	text-align: center;
+}
+
+.contact .contact_article em{
+	font-size: 1rem;
+}
+
+.contact .contact_article .left{
+	text-align: left;
+}
+
+/**************************** .COORDONNEES RULES *****************************/
+
+.coordonnees{
+	border: 2px solid black;
+	display: inline-block;
+	padding: 10px;
+	box-shadow: 2px 2px 2px 2px;
+	background-color: orange;
+}
+
+.coordonnees .fa{
+	width: 25px;
+	text-align: center;
+}
+
+.contact .contact_article .coordonnees p{
+	text-align: left;
+}
+
+/**************************** .USER_PROFILE RULES *****************************/
+
+.user_profile{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.user_profile article{
+	padding: 20px 50px;
+	background-color: #dddcd6;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+/**************************** .USER_STATUS RULES *****************************/
+
+.user_status{
+	padding-bottom: 10px;
+}
+
+/**************************** .CONFIRM_ORDER + .THANKS_ORDER + .CHECK_ORDER RULES *****************************/
+
+.confirm_order,
+.thanks_order,
+.check_order,
+.form_forget_password{
+	text-align: center;
+}
+
+.confirm_order article,
+.thanks_order article,
+.check_order article{
+	padding: 20px 50px;
+	background-color: #dddcd6;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.confirm_order h3,
+.thanks_order h3,
+.check_order h3{
+	font-size: 1.5rem;
+}
+
+/**************************** .THANKS_ORDER RULES *****************************/
+
+.thanks_order{
+	margin-top: 10px;
+}
+
+.thanks_order article{
+	text-align: left;
+}
+
+.thanks_order .title_thanks_order{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/**************************** .CHECK_ORDER RULES *****************************/
+
+.check_order .check_div{
+	border: 1px solid black;
+	box-shadow: 2px 2px 2px 2px;
+	padding: 10px;
+	text-align: left;
+}
+
+.check_order p{
+	display: flex;
+	margin: 10px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+}
+
+.check_order span{
+	width: 20%;
+	margin-left: 30%;
+	align-self: center;
+	font-style: normal;
+}
+
+.check_order em{
+	flex-basis: 30%;
+	margin-right: 0;
+	align-self: center;
+	font-style: normal;
+}
+
+/**************************** .PRESTATIONS RULES *****************************/
+
+.prestations,
+.gifts_cards,
+.list_order_admin{
+	text-align: center;
+}
+
+.main_prestations,
+.gifts_cards,
+.contact,
+.list_order_user{
+	margin-top: 10px;
+}
+
+.prestations .section_prestations,
+.gifts_cards .section_prestations{
+	padding: 20px 50px;
+	background-color: #dddcd6;
+}
+
+.prestations .section_prestations{
+	text-align: left;
+}
+
+.prestations ul,
+.gifts_cards ul{
+	list-style-type: none;
+}
+
+.prestations ul h3,
+.gifts_cards ul h3{
+	font-family: 'Mogra', cursive;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.7rem;
+	display: inline-block;
+	padding: 10px;
+}
+
+.prestations article,
+.gifts_cards article{
+	display: flex;
+	margin: 20px auto;
+	padding: 5px 25px;
+	border: 1px solid black;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+	background-color: gold;
+}
+
+.prestations em,
+.gifts_cards em{
+	font-size: 0.8rem;
+}
+
+.prestations img,
+.presentation img{
+	border-radius: 100%;
+	width: 250px;
+	height: 200px;
+	margin: 20px 15px;
+}
+
+.prestations .div_article,
+.gifts_cards .div_article{
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.prestations .div_article a,
+.gifts_cards .div_article a{
+	margin: 10px auto;
+	align-self: center;
+}
+
+.prestations .div_article p{
+	margin-top: 10px;
+	align-self: center;
+	text-align: justify;
+}
+
+.prestations_inscription .fa{
+	width: 25px;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+.prestations_inscription span{
+	font-style: normal;
+	font-weight: normal;
+}
+
+.prestations_inscription{
+	list-style-type: none;
+}
+
+.prestations h3 span{
+	font-size: 1rem;
+}
+
+/**************************** .PRESENTATION RULES *****************************/
+
+.presentation{
+	text-align: center;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.presentation.presentation_moz{
+	font-weight: normal;
+}
+
+.presentation p,
+.presentation ul{
+	text-align: left;
+}
+
+.presentation h3{
+	margin: 10px 0;
+}
+
+/**************************** .DIV_INSCRIPTION RULES *****************************/
+
+.div_inscription{
+	padding: 10px;
+	background-color: #6b0216;
+	color: white;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+	display: inline-block;
+	margin: 10px;
+	text-align: left;
+}
+
+.div_inscription p{
+	text-align: center;
+}
+
+.div_inscription .cta{
+	padding-left: 40px;
+	background-color: gold;
+	border: 2px solid black;
+	margin: 10px 0;
+	display: block;
+	font-size: 1.1rem;
+}
+
+.div_inscription .cta:hover{
+	background-color: white;
+	color: black;
+}
+
+/**************************** .REALISATIONS RULES *****************************/
+
+.realisations{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.realisations .section_prestations{
+	background-color: #dddcd6;
+	text-align: left;
+	padding-left: 40%;
+}
+
+.realisations .section_prestations ul{
+	padding: 10px 0;
+}
+
+.realisations .section_prestations li{
+	margin: 5px 0;
+}
+
+.realisations_cocktail_a{
+	padding: 8px;
+	border-radius: 15px;
+}
+
+.realisations_cocktail_a:hover{
+	background-color: black;
+	color: white;
+}
+
+/**************************** .SECTION_PRESTATIONS_DETAILS RULES *****************************/
+
+.section_prestations_details{
+	padding: 50px 50px 20px 50px;
+	background-color: #dddcd6;
+}
+
+.section_prestations_details p{
+	text-align: justify;
+}
+
+.section_prestations_details table{
+	border: 2px solid black;
+	margin: 10px auto;
+}
+
+.section_prestations_details h3{
+	font-weight: bold;
+	font-size: 1.3rem;
+	margin-top: 10px;
+}
+
+.section_prestations_details h4{
+	font-weight: bold;
+	color: black;
+	background-color: orange;
+	font-size: 1.3rem;
+	margin-top: 10px;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+	display: block;
+	padding: 10px;
+}
+
+.section_prestations_details tr{
+	background-color: silver;
+	border: 2px solid black;
+}
+
+.section_prestations_details thead tr th{
+	background-color: silver;
+}
+
+.section_prestations_details tr:nth-of-type(2n){
+	background-color: white;
+}
+
+.section_prestations_details tr:nth-of-type(2n+1){
+	background-color: #8fd506;
+}
+
+.section_prestations_details td,
+.section_prestations_details th{
+	padding: 5px 10px;
+}
+
+.section_prestations_details .list_team_building{
+	list-style-type: circle;
+	margin: 10px auto;
+	text-align: justify;
+}
+
+.section_prestations_details ul li{
+	margin: 10px 0px 10px 20px;
+}
+
+.prestations{
+	margin-bottom: 10px;
+}
+
+/**************************** .VICTORY_TEAM_BUILDING RULES *****************************/
+
+.victory_team_building{
+	font-weight: bold;
+	color: black;
+	background-color: orange;
+	font-size: 1.3rem;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+	display: block;
+	padding: 10px;
+	margin: 15px 0;
+	display: inline-block;
+}
+
+.victory_team_building p{
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+.victory_team_building ul{
+	font-size: 1rem;
+	list-style-type: circle;
+	text-align: left;
+	display: inline-block;
+}
+
+.victory_team_building img{
+	border-radius: 10px;
+	width: 150px;
+	height: 100px;
+	margin: 20px 15px;
+}
+
+.victory_team_building span{
+	font-size: 1rem;
+	font-style: normal;
+}
+
+.victory_team_building_winning p{
+	font-size: 1.5rem;
+}
+
+.victory_team_building_winning figure{
+	margin: 0;
+}
+
+.victory_team_building_winning{
+	align-items: center;
+}
+
+/**************************** .CONTACT RULES *****************************/
+
+.contact p{
+	text-align: center;
+	font-size: 1rem;
+	margin: 10px 0;
+}
+
+/**************************** #CONTACT_FORM RULES (Formulaire de Contact) *****************************/
+
+#contact_form{
+	box-shadow: 2px 2px 2px 2px;
+	width: 80%;
+	margin: 0 auto;
+	background-color: rgba(223, 224, 230, 0.5);
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+	padding: 0;
+}
+
+#contact_form p{
+	text-align: left;
+}
+
+#contact_form .hour{
+	width: 10%;
+}
+
+#contact_form .flex_hour{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#contact_form .flex_hour select:first-of-type{
+	margin-right: 0;
+}
+
+#contact_form .flex_hour select:last-of-type{
+	margin-right: 34%;
+}
+
+#contact_form label{
+	width: 40%;
+	margin-left: 20%;
+}
+
+#contact_form input[type="text"],
+#contact_form input[type="date"],
+#contact_form select,
+#contact_form textarea{
+	width: 45%;
+	margin-right: 15%;
+}
+
+#contact_form input[type="date"]{
+	font-size: 1rem;
+	padding-left: 5px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#contact_form select{
+	font-size: 1rem;
+	background-color: white;
+}
+
+/**************************** #FORM_USER_PROFILE + #FORM_USER_ORDER_CONTACT_INFORMATION RULES *****************************/
+
+#form_user_profile,
+#form_user_order_contact_information{
+	box-shadow: 2px 2px 2px 2px;
+}
+
+#form_user_profile label,
+#form_user_order_contact_information label{
+	width: 30%;
+	margin-left: 20%;
+	text-align: left;
+}
+
+#form_user_profile label{
+	width: 40%;
+}
+
+#form_user_profile input[type="text"],
+#form_user_profile input[type="file"],
+#form_user_profile input[type="password"],
+#form_user_profile textarea,
+#form_user_order_contact_information input[type="text"],
+#form_user_order_contact_information input[type="password"]{
+	width: 40%;
+	margin-right: 20%;
+}
+
+#form_user_profile input[type="text"],
+#form_user_profile input[type="password"],
+#form_user_order_contact_information input[type="text"],
+#form_user_order_contact_information input[type="password"]{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.9rem;
+	padding-left: 10px;
+}
+
+#form_user_profile input[type="password"],
+#form_user_order_contact_information input[type="password"]{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#form_user_profile input[type="radio"]{
+	width: 2%;
+	margin: 15px 0 0 10px;
+}
+
+#form_user_profile .input_radio{
+	font-style: normal;
+	width: 44%;
+	margin-left: 5%;
+	margin-top: 10px;
+	text-align: left;
+}
+
+#form_user_profile .flex_radio{
+	margin-left: 70px;
+}
+
+#form_user_profile .flex_radio label{
+	width: 5%;
+	margin: 0 10px 0 2px;
+}
+
+#form_user_profile .flex_birthdate_user_profile,
+#form_user_order_contact_information .flex_birthdate_user_order_contact{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+}
+
+#form_user_profile .flex_birthdate_user_profile label,
+#form_user_profile .flex_civility_user_profile label,
+#form_user_order_contact_information .flex_birthdate_user_order_contact label,
+#form_user_order_contact_information .flex_civility_user_order_contact label{
+	width: 25.5%;
+	margin-left: 20%;
+}
+
+#form_user_profile .flex_birthdate_user_profile label,
+#form_user_profile .flex_civility_user_profile label{
+	width: 30%;
+}
+
+#form_user_profile #day_birthdate_user_profile,
+#form_user_profile #month_birthdate_user_profile,
+#form_user_profile #year_birthdate_user_profile,
+#form_user_profile #civility_user_profile,
+#form_user_order_contact_information #day_birthdate_user_profile,
+#form_user_order_contact_information #month_birthdate_user_profile,
+#form_user_order_contact_information #year_birthdate_user_profile,
+#form_user_order_contact_information #civility_user_profile{
+	width: 6%;
+	margin-top: 1%;
+}
+
+#form_user_profile #month_birthdate_user_profile,
+#form_user_order_contact_information #month_birthdate_user_profile{
+	width: 12%;
+}
+
+#form_user_profile #year_birthdate_user_profile,
+#form_user_order_contact_information #year_birthdate_user_profile{
+	width: 8%;
+}
+
+#form_user_profile #civility_user_profile,
+#form_user_order_contact_information #civility_user_profile{
+	width: 14%;
+	margin-bottom: 5px;
+}
+
+#form_user_profile select,
+#form_user_order_contact_information select{
+	font-size: 1rem;
+	background-color: white;
+}
+
+/**************************** .SECTION_ADMIN RULES *****************************/
+
+.section_admin{
+	padding: 20px;
+	background-color: #dddcd6;
+	margin-bottom: 10px;
+}
+
+.section_admin h3{
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.section_admin a{
+	display: inline-block;
+	width: 50%;
+	margin: 10px 0;
+	text-align: left;
+	padding-left: 150px;
+}
+
+.section_admin .fa-user-plus{
+	color: green;
+}
+
+.section_admin .fa-user-times{
+	color: red;
+}
+
+/**************************** TABLEAUX côté ADMIN RULES *****************************/
+
+.tab_basket,
+.tab_list_users,
+.tab_list_posts,
+.tab_list_pictures,
+.tab_list_comments,
+.tab_list_orders,
+.tabpanier,
+.tabdetailorder,
+.tabbook{
+	text-align: center;
+	width: 100%;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.tab_list_users tr:hover td,
+.tab_list_posts tr:hover td,
+.tab_list_pictures tr:hover td,
+.tab_list_comments tr:hover td,
+.tabpanier tr:hover td,
+.tabdetailorder tr:hover td,
+.tabbook tr:hover td{
+	color: white;
+	background-color: black;
+}
+
+.tab_list_users tr:hover a,
+.tab_list_posts tr:hover a,
+.tab_list_pictures tr:hover a,
+.tab_list_comments tr:hover a,
+.tabpanier tr:hover a,
+.tabdetailorder tr:hover a,
+.tabbook tr:hover a{
+	color: white;
+	background-color: black;
+}
+
+
+.tab_basket th,
+.tab_list_users th,
+.tab_list_posts th,
+.tab_list_pictures th,
+.tab_list_comments th,
+.tabpanier th,
+.tabdetailorder th,
+.tabbook th{
+	background-color: #C4A463;
+	color: white;
+	padding: 5px 10px;
+	text-transform: uppercase;
+}
+
+.tab_basket td,
+.tab_list_users td,
+.tab_list_posts td,
+.tab_list_pictures td,
+.tab_list_comments td,
+.tabpanier td,
+.tabdetailorder td,
+.tabbook td{
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.tab_basket tr:nth-of-type(2n),
+.tab_list_users tr:nth-of-type(2n),
+.tab_list_posts tr:nth-of-type(2n),
+.tab_list_pictures tr:nth-of-type(2n),
+.tab_list_comments tr:nth-of-type(2n),
+.tabpanier tr:nth-of-type(n),
+.tabdetailorder tr:nth-of-type(n),
+.tabbook tr:nth-of-type(n){
+	background-color: #8fd506;
+	color: black;
+}
+
+.tab_list_users .td_change_user_status{
+	width: 5%;
+	padding: 0;
+	margin: 0;
+}
+
+.tab_list_users .change_user_status{
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.tab_list_users th,
+.tab_list_users td{
+	width: 25%;
+}
+
+.tab_list_posts th,
+.tab_list_posts td{
+	width: 15%;
+}
+
+.tab_list_posts th.post_description{
+	width: 40%;
+}
+
+.tab_list_posts td.post_description{
+	width: 40%;
+	text-align: justify;
+}
+
+.tabbook tr,
+.tabbook th,
+.tabdetailorder tr,
+.tabdetailorder th{
+	width: 20%;
+}
+
+.tabpanier tr,
+.tabpanier th{
+	width: 16%;
+}
+
+.tab_list_pictures th,
+.tab_list_pictures td{
+	width: 12.5%;
+}
+
+.tab_list_pictures img{
+	border-radius: 0;
+	margin: 0;
+	width: 200px;
+	height: 150px;
+}
+
+.tab_list_pictures .td_short{
+	width: 5%;
+}
+
+.tab_list_pictures .td_picture{
+	width: 30%;
+}
+
+.tab_list_pictures .td_avatar{
+	width: 10%;
+}
+
+.tab_list_orders .td_short{
+	width: 2%;
+}
+
+.tab_list_comments th,
+.tab_list_comments td{
+	width: 14.28%;
+}
+
+.tab_basket th,
+.tab_basket td{
+	width: 10%;
+}
+
+.tab_basket th.basket_description{
+	width: 30%;
+}
+
+.tab_basket th.basket_picture{
+	width: 20%;
+}
+
+.tab_basket .td_basket_delete{
+	width: 2%;
+}
+
+.tab_basket .td_basket_delete a{
+	display: inline;
+	padding: 0px;
+}
+
+.tab_basket .td_basket_delete a .fa{
+	padding: 10px;
+	font-size: 1.5rem;
+	border-radius: 100%;
+}
+
+.tab_basket .td_basket_delete a:hover .fa{
+	background-color: black;
+	color: white;
+}
+
+.user_basket{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.basket_total_price{
+	border: 2px solid black;
+	display: inline-block;
+	padding: 10px;
+	box-shadow: 2px 2px 2px 2px;
+	background-color: gold;
+	margin: 10px 0;
+	font-size: 1.3rem;
+}
+
+.list_order_user{
+	text-align: center;
+}
+
+.flex_civility_user_profile{
+	margin-top: 10px;
+}
+
+.tab_posts .fa-star{
+	font-size: 1.5rem;
+	text-shadow: 2px 2px 2px black;
+}
+
+.address_user_expedition{
+	display: inline-block;
+	background-color: orange;
+	padding: 20px;
+	margin: 10px auto;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.order_expedition{
+	background-color: rgba(223, 224, 230, 0.5);
+	padding: 20px;
+	margin: 10px auto;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+	width: 60%;
+}
+
+/******************************** .COORDONNEES_USER RULES ************************/
+
+.coordonnees_user{
+	width: 80%;
+	background-color: rgba(223, 224, 230, 0.5);
+	padding: 0;
+	margin: 10px auto;
+	padding-bottom: 20px;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.coordonnees_user h2{
+	font-size: 1.5rem;
+}
+
+/******************************** .DIV_DESCRIPTION_ORDER RULES ************************/
+
+.div_description_order{
+	flex-basis: 70%;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.div_description_order .uppercase{
+	font-size: 1.2rem;
+}
+
+.div_description_order .price_order{
+	font-size: 1.2rem;
+	color: #6b0216;
+}
+
+.order_total{
+	background-color: gold;
+	padding: 10px;
+	display: inline-block;
+	margin: 10px auto;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+	font-size: 1.5rem;
+}
+
+/******************************** .TAB_LIST_ORDERS RULES ************************/
+
+.tab_list_orders .thead_tr_order{
+	background-color: #C4A463;
+	text-transform: uppercase;
+	color: white;
+	margin: 10px;
+}
+
+.tab_list_orders .thead_tr_order th,
+.tab_list_orders .tr_order td{
+	padding: 10px;
+}
+
+.tab_list_orders .tr_order:nth-of-type(4n+1){
+	background-color: gold;
+}
+
+.tab_list_orders .tr_order:nth-of-type(4n+3){
+	background-color: white;
+}
+
+.tab_list_orders .tr_order:hover{
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+.tab_list_orders .tr_order:hover .fa{
+	color: white;
+}
+
+.tab_list_orders .tr_order:hover .details_order{
+	color: white;
+}
+
+.tab_list_orders .tr_order:hover em{
+	color: black;
+}
+
+.tab_list_orders .tr_order em:hover{
+	color: white;
+}
+
+.list_order_admin .td_details_order p{
+	margin-left: 30px;
+}
+
+.tab_list_orders a{
+	margin: 0;
+	padding: 0;
+}
+
+.tab_list_orders th{
+	width: 20%;
+}
+
+.tab_list_orders .td_short_a,
+.tab_list_orders .th_short_a{
+	width: 2%;
+}
+
+.tab_list_orders .td_short_a{
+	font-size: 1.4rem;
+}
+
+/******************************** .TD_DETAILS_ORDER RULES ************************/
+
+.td_details_order{
+	text-align: left;
+	padding-left: 100px;
+	align-items: center;
+}
+
+.td_details_order .details_order{
+	font-style: normal;
+	border: 2px solid black;
+	padding: 5px 10px 5px 10px;
+	border-radius: 15px;
+	background-color: orange;
+}
+
+.td_details_order p{
+	margin-left: 60px;
+}
+
+/******************************** .TABLE_ORDERLINES RULES ************************/
+
+.table_orderlines{
+	text-align: center;
+	width: 100%;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+	display: none;
+}
+
+.table_orderlines .thead_tr_orderlines{
+	background-color: orange;
+	color: black;
+}
+
+.table_orderlines .tr_orderlines{
+	background-color: #8fd506;
+}
+
+.table_orderlines .tr_orderlines td{
+	width: 20%;
+}
+
+/***************************** BOUTONS AVANT / APRES POUR NAVIGUER ENTRE LES COCKTAILS ************/
+
+.go_cocktail{
+	background-color: #FF4500;
+	margin-bottom: 10px;
+}
+
+.div_cocktails{
+	justify-content: space-around;
+	align-items: center;
+}
+
+/***************************** .CONFIRM_ORDER RULES ***********************************/
+
+.confirm_order form p{
+	margin-top: 20px;
+}
+
+.confirm_order form input[type="checkbox"]:first-of-type{
+	margin-right: 10px;
+}
+
+.confirm_order img{
+	width: 190px;
+	height: 130px;
+	border-radius: 20px;
+	align-self: center;
+}
+
+/***************************** .MENTIONS_LEGALES RULES ***********************************/
+
+.mentions_legales h3{
+	margin: 10px auto;
+}
+
+/***************************** .CGV RULES ***********************************/
+
+.cgv .section_prestations{
+	text-align: center;
+}
+
+.cgv .download_pdf .fa{
+	font-size: 3rem;
+	margin-top: 5px;
+}
+
+/***************************** .DOWNLOAD_PDF RULES ***********************************/
+
+.download_pdf{
+	text-align: center;
+}
+
+/*************************** BDD D'AVATARS RULES ******************************/
+
+#form_user_profile p.avatar_p{
+	margin-left: 20%;
+}
+
+.avatar_user_profile,
+.click_avatar{
+	cursor : pointer;
+}
+
+.avatar_div_bdd{
+	width: 80%;
+	margin: 10px auto;
+	background-color: rgba(223, 224, 230, 0.5);
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#form_user_profile .coordonnees_user{
+	border: 2px solid black;
+}
+
+#form_user_profile .avatar_div_bdd label{
+	margin: 0;
+}
+
+#form_user_profile .avatar_div_bdd input{
+	position: absolute;
+	top: 75%;
+	left: 38%;
+	width: 10%;
+}
+
+.avatar_div_bdd_under{
+	position: relative;
+	display: inline-block;
+}
+
+.avatar_mini_bdd{
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	margin: 20px 20px 20px 20px;
+}
+
+/*********************** COCKTAILS FAVORIS ******************************/
+
+.add_favorites{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	cursor: pointer;
+	color: white;
+}
+
+.delete_favorites{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	cursor: pointer;
+	color: gold;
+}
+
+.gold{
+	color: gold;
+}
+
+.favorites_cocktails p{
+	margin: 10px 10px 0 20%;
+	position: relative;
+}
+
+.favorites_cocktails ul{
+	margin: 10px 0 10px 7%;
+	text-align: left;
+}
+
+.section_prestations .fa-star{
+	position: absolute;
+	top: 0px;
+	left: -50px;
+	font-size: 1.5rem;
+	text-shadow: 2px 2px 2px black;
+}
+
+.user_profile .fa-star{
+	font-size: 1.5rem;
+	text-shadow: 2px 2px 2px black;
+	position: absolute;
+	top: -2px;
+	left: -30px;
+}
+
+.section_prestations li{
+	position: relative;
+}
+
+.title_cocktail{
+	position: relative;
+}
+
+.title_cocktail em{
+	position: absolute;
+	top: 20px;
+	left: 50px;
+	font-size: 1.2rem;
+	font-style: italic;
+	text-transform: none;
+	font-weight: normal;
+}
+
+/***************** NOTATION DES COCKTAILS **************/
+
+.grade_div{
+	background-color: white;
+	border-radius: 15px;
+	padding: 10px;
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	justify-content: space-between;
+}
+
+.grade_div p{
+	color: black;
+	display: inline-block;
+	font-size: 1.2rem;
+	text-transform: none;
+	margin-right: 20px;
+}
+
+.grade_div ul{
+	font-size: 1.3rem;
+	align-self: center;
+}
+
+.grade_div ul li{
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	min-width: 20px;
+	min-height: 20px;
+}
+
+/* Correctif IE6 sur min-width & min-height */
+.grave_div ul.js li {
+	width: 20px;
+	height: 20px;
+}
+
+.grade_div ul li label{
+	display: block;
+	text-align: center;
+	line-height: 20px;
+	background: url('../img/mark_heart.png') center top no-repeat;
+	background-size: contain;
+	cursor: pointer;
+	font-size: 0;
+	width: 25px;
+	height: 24px;
+}
+
+ul.notes-echelle li.note-off label {
+	background: url('../img/mark_noheart3.png') center top no-repeat;
+	background-size: contain;
+}
+
+ul.notes-echelle.js input {
+	position:absolute;
+	left:-999%;
+}
+
+/* Effet lorsque une note est cochée */
+ul.notes-echelle li.note-checked {
+	font-weight:bold;
+}
+/* Effet lorsque une note est tabulée au clavier */
+ul.notes-echelle.js li.note-focus {
+	outline:1px dotted #000;
+}
+
+.picture_heart{
+	width: 25px;
+	height: 25px;
+}
+
+.cocktail_mark_global p{
+	margin-bottom: 5px;
+}
+
+.cocktail_mark_global em{
+	font-size: 0.8rem;
+}
+
+.favorites_cocktails .no_favorite{
+	margin: 10px 0 0 5%;
+	align-self: center;
+}
+
+*:focus{
+	outline: none;
+}
+
+*::-moz-focus-inner{
+	border: none;
+}
+
+/************************************ FIN NOTATION COCKTAILS ***********************************/
+
+/************************************ PAGE RESET_PASSWORD **************************************/
+
+.thanks_order .center{
+	text-align: center;
+}
+
+.div_create_account .p_reset{
+	margin: 10px auto;
+}
+
+#reset_password{
+	border: 0;
+}
+
+.main_reset_password,
+.main_create_account,
+.main_identify_user{
+	background-color: #dddcd6;
+}
+
+.main_identify_user{
+	margin-bottom: 0;
+}
+
+/************************************ .GAMES RULES *********************************************/
+
+.games .fa{
+	font-size: 1.5rem;
+}
+
+.games a{
+	display: inline-block;
+	text-align: left;
+	padding: 10px;
+	width: auto;
+}
+
+.games a:hover{
+	animation-duration: 2s;
+	animation-name: rainbow;
+}
+
+@keyframes rainbow {
+	0%{
+		transform: rotate(1deg);
+		background-color: purple;
+	}
+	10%{ background-color: red; }
+	20%{ background-color: blue; }
+	30%{ background-color: orange; }
+	40%{ background-color: yellow; }
+	50%{ background-color: green;
+	 		 font-size: 1.5rem;}
+	60%{ background-color: orange; }
+	70%{ background-color: blue; }
+	80%{ background-color: yellow; }
+	90%{ background-color: green; }
+	100%{
+		background-color: purple;
+		transform: rotate(360deg);
+	}
+}
+
+section.games{
+	justify-content: space-around;
+
+	display:-webkit-flex;
+}
+
+section.games img{
+	width: 250px;
+	height: 200px;
+	border-radius: 15px;
+	margin: 10px 0;
+}
+
+section.games article{
+	display:-webkit-flex;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px 2px black;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	flex-basis: 40%;
+	background-color: rgba(223, 224, 230, 0.5);
+
+	-webkit-flex-direction: column;
+	-webkit-justify-content: space-between;
+	-webkit-align-items: center;
+	-webkit-flex-basis: 40%;
+}
+
+section.games article h2{
+	width: 100%;
+	font-size: 1.6rem;
+	background-color: yellow;
+	color: black;
+	font-weight: bold;
+	font-family: 'Mogra', cursive;
+	align-self: center;
+	margin: 0;
+	padding: 7px;
+	text-align: center;
+	border-bottom: 2px solid black;
+}
+
+section.games article .fa{
+	font-size: 1.6rem;
+}
+
+section.games article p{
+	margin: 0 10px;
+	font-size: 0.9rem;
+	font-style: italic;
+}
+
+section.games article a{
+	margin-top: auto;
+	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
+	border-top: 2px solid black;
+	background-color: orange;
+	color: black;
+	margin: 10px 0 0 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+section.games article a:hover{
+	border-radius: 0;
+	border: 2px solid black;
+}
+
+/************************************ FOOTER RULES *********************************************/
+
+footer{
+	background-color: #dfe0e6;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+footer p:first-of-type{
+	padding-top: 5px;
+}
+
+footer .icon{
+	font-size: 2rem;
+	margin: 5px;
+	padding: 0 7px;
+}
+
+footer .facebook:hover{
+	color: #2b4085;
+}
+
+footer .twitter:hover{
+	color: #217ddf;
+}
+
+footer .meetup:hover{
+	color: #db002e;
+}
+
+footer .pinterest:hover{
+	color: #db002e;
+}
+
+footer .instagram:hover{
+	color: white;
+	/* FIREFOX : */
+	background-image:-moz-linear-gradient(60deg, #fbc545, #cb234d, #751fb7);
+	/* SAFARI et CHROME : */
+	background-image:-webkit-linear-gradient(60deg, #fbc545, #cb234d, #751fb7);
+	/* OPERA : */
+	background-image:-o-linear-gradient(60deg, #fbc545, #cb234d, #751fb7);
+
+	background-image:linear-gradient(60deg, #fbc545, #cb234d, #751fb7);
+	border-radius: 10px;
+}
+
+footer .video_games:hover{
+	text-decoration: underline;
+}
+
+footer .video_games{
+	color: blue;
+	font-size: 1rem;
+	margin: 0;
+}
+
+footer .p_video_games{
+	display: block;
+	margin: 5px auto 10px auto;
+}
+
+footer .p_video_games .fa:first-of-type{
+	margin-right: 5px;
+}
+
+footer .p_video_games .fa:last-of-type{
+	margin-left: 5px;
+}
+
+footer p .fa{
+	font-size: 1.5rem;
+}
+
+footer span{
+	font-style: normal;
+}
+
+.footer_a{
+	padding: 5px;
+}
+
+.footer_a:hover{
+	background-color: black;
+	color: white;
+	border-radius: 15px;
+}
+
+footer .span_moz{
+	font-weight: normal;
+}
+
+/****************************** MEDIA QUERY RULES *****************************/
+
+/******************** IPHONE 3G + 5 => 320 PX *******************/
+@media screen and (max-width: 600px){
+
+	/*************************** GENERAL CLASSES RULES ****************************/
+
+	.container{
+		width: 100%;
+	}
+
+	/*************************** .BODY_ACCUEIL RULES ******************************/
+
+	.body_accueil{
+		background-position: bottom center;
+	}
+
+	.body_accueil h1{
+		padding: 0;
+		text-align: center;
+		font-size: 3.5rem;
+		width: 90%;
+		margin: 10px auto;
+		line-height: 1.2;
+	}
+
+	.body_accueil em{
+		margin: 10px auto;
+		width: 90%;
+		font-size: 0.9rem;
+	}
+
+	.body_accueil ul{
+		list-style-type: none;
+		margin-top: 0;
+	}
+
+	.body_accueil li{
+		font-size: 1.5rem;
+		background-color: white;
+		padding: 0 0 0 50px;
+		border-top: 2px solid black;
+		border-bottom: 2px solid black;
+		box-shadow: 2px 2px 2px black;
+		margin: 30px auto;
+		font-family: 'Dancing Script', cursive;
+		text-transform: none;
+		font-size: 1.7rem;
+	}
+
+	.body_accueil li:hover{
+		margin-left: 0;
+		transform: none;
+		box-shadow: 0 0 65px #CDBE9F inset, 0 0 20px #BEAE8C inset, 0 0 15px;
+	}
+
+	.body_accueil li a{
+		color: black;
+	}
+
+	.body_accueil .fa{
+		display: inline;
+		color: black;
+	}
+
+	/********************************* HEADER RULES *******************************/
+
+	header{
+		text-align: center;
+		padding: 0 0 10px 0;
+		border-bottom: 2px solid black;
+	}
+
+	header .header_div{
+		flex-direction: column;
+	}
+
+	header .header_div h1{
+		padding: 0;
+		text-align: center;
+		font-size: 3.5rem;
+		margin: 10px auto;
+		line-height: 1.2;
+	}
+
+	header .header_div img{
+		display: none;
+	}
+
+	header #logintogglebtn,
+	header .div_primary_account{
+		margin: 10px auto;
+	}
+
+	header .div_primary_account{
+		display: inline-block;
+		width: 60%;
+	}
+
+	header .div_primary_account a{
+		display: inline-block;
+		width: 100%;
+	}
+
+	header .div_account_user li a{
+		font-size: 1.1rem;
+	}
+
+	header .div_account_user{
+		left: 0px;
+		top: 45px;
+		text-align: left;
+		width: 100%;
+	}
+
+	header nav{
+		text-align: left;
+	}
+
+	header nav ul{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	header nav ul li{
+		font-size: 1.7rem;
+		margin: 5px auto;
+		background-color: white;
+		width: 100%;
+		padding: 0 0 0 50px;
+		border-top: 2px solid black;
+		border-bottom: 2px solid black;
+		box-shadow: 2px 2px 2px black;
+	}
+
+	header #loggerarea{
+		width: 100%;
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+		box-shadow: 2px 2px 2px black;
+	}
+
+	header #loggerarea{
+		text-align: center;
+	}
+
+	header #loggerarea p{
+		justify-content: center;
+	}
+
+	/********************************* .G-RECATCHA RULES *********************************/
+
+	.g-recaptcha{
+		margin: 0 0 20px 4px;
+	}
+
+	/********************************* MAIN RULES *********************************/
+
+	main h2{
+		font-size: 1.7rem;
+		border-top: 2px solid black;
+		border-bottom: 2px solid black;
+	}
+
+	/******************************* WHO_AM_I RULES *******************************/
+
+	.who_am_i .presentation{
+		padding: 15px;
+		border-bottom: 2px solid black;
+	}
+
+	.who_am_i .presentation p{
+		text-align: justify;
+	}
+
+	.who_am_i .presentation ul{
+		padding-left: 20px;
+	}
+
+	/******************************* REALISATIONS RULES ****************************/
+
+	.realisations{
+		margin-bottom: 0;
+	}
+
+	.realisations .section_prestations{
+		padding-left: 30%;
+		border-bottom: 2px solid black;
+	}
+
+	/************************ PRESTATIONS_INSCRIPTION RULES ************************/
+
+	.prestations_inscription li .fa,
+	.prestations_inscription li span{
+		display: block;
+		margin: 0 auto;
+	}
+
+	.prestations_inscription li .fa{
+		margin-top: 5px;
+	}
+
+	.prestations_inscription li{
+		text-align: center;
+	}
+
+	.prestations_inscription a{
+		margin: 2px auto;
+		display: inline-block;
+	}
+
+	/********************************** POSTS RULES *******************************/
+
+	.posts{
+		border-bottom: 2px solid black;
+		padding: 15px;
+	}
+
+	.posts .list_realisation{
+		padding-left: 5px;
+	}
+
+	.tab_posts .go_cocktail{
+		padding: 5px;
+		font-size: 1rem;
+	}
+
+	.tab_posts .add_favorites{
+		position: static;
+	}
+
+	.tab_posts h2 span{
+		display: block;
+	}
+
+	.tab_posts h2 span .fa-star,
+	.tab_posts h2 span em{
+		position: static;
+		display: inline-block;
+	}
+
+	.tab_posts h2 span .fa-star{
+		margin-right: 5px;
+	}
+
+	.tab_posts h2 span em{
+		font-size: 1rem;
+	}
+
+	.div_material_image_ingredients{
+		margin-top: 20px;
+		flex-direction: column;
+	}
+
+	.posts .description{
+		margin-top: 10px;
+		text-align: justify;
+	}
+
+	.posts .text_comments{
+		display: block;
+		margin-top: 45px;
+		margin-left: 0px;
+		text-align: justify;
+	}
+
+	.posts .avatars{
+		top: 10px;
+	}
+
+	.posts .comments .pseudo{
+		top: 15px;
+		left: 60px;
+	}
+
+	.form_comments p{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.posts .form_comments label{
+		margin-bottom: 10px;
+	}
+
+	.posts .form_comments label,
+	.posts .form_comments textarea{
+		width: 100%;
+	}
+
+	.grade_div{
+		position: static;
+		justify-content: center;
+		padding: 5px 0;
+		width: 90%;
+		margin: 5px auto;
+	}
+
+	/********************************* ADMIN_POST RULES (ADD_POST + MODIF_POST)*******************************/
+
+	.main_admin_post{
+		margin-bottom: 10px;
+		border-bottom: 2px solid black;
+	}
+
+	/************************************ CREATE_POST RULES **************************************************/
+
+	#create_post{
+		border: 0;
+		text-align: center;
+	}
+
+	#create_post p{
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#create_post p label{
+		margin: 5px auto 0 auto;
+		width: auto;
+	}
+
+	#create_post p.flex input{
+		margin: 0 auto;
+		width: 90%;
+		padding: 10px;
+	}
+
+	#create_post p textarea{
+		width: 90%;
+		margin: 0;
+	}
+
+	#create_post .div_primary_category,
+	#create_post .div_primary_material{
+		flex-direction: column;
+		margin: 10px auto;
+	}
+
+	#create_post .div_primary_category>p,
+	#create_post .div_primary_material>p{
+		display: block;
+		width: auto;
+		text-align: center;
+		margin: 10px auto;
+	}
+
+	#create_post .div_category,
+	#create_post .div_material{
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	#create_post .div_category p,
+	#create_post .div_material p{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	#create_post .div_category label,
+	#create_post .div_material label{
+		flex-basis: 60%;
+		text-align: left;
+	}
+
+	#create_post .div_category input,
+	#create_post .div_material input{
+		flex-basis: 10%;
+	}
+
+	#create_post .input_creation_post{
+		margin-top: 20px;
+	}
+
+	/************************************ MODIFY_POST RULES **************************************************/
+
+	#modify_post{
+		border: 0;
+		text-align: center;
+	}
+
+	#modify_post p{
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#modify_post p label{
+		margin: 5px auto 0 auto;
+		width: auto;
+	}
+
+	#modify_post p.flex input{
+		margin: 0 auto;
+		width: 90%;
+		padding: 10px;
+	}
+
+	#modify_post p textarea{
+		width: 90%;
+		margin-right: 0;
+	}
+
+	#modify_post .div_primary_category,
+	#modify_post .div_primary_material,
+	#modify_post .div_picture{
+		flex-direction: column;
+		margin: 10px auto;
+	}
+
+	#modify_post .div_primary_category>p,
+	#modify_post .div_primary_material>p,
+	#modify_post .div_picture>p{
+		display: block;
+		width: auto;
+		text-align: center;
+		margin: 10px auto;
+	}
+
+	#modify_post .div_picture img{
+		margin: 0 auto;
+	}
+
+	#modify_post .div_category,
+	#modify_post .div_material{
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	#modify_post .div_category p,
+	#modify_post .div_material p{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	#modify_post .div_category label,
+	#modify_post .div_material label{
+		flex-basis: 60%;
+		text-align: left;
+	}
+
+	#modify_post .div_category input,
+	#modify_post .div_material input{
+		flex-basis: 10%;
+	}
+
+	#modify_post .input_modify_post{
+		margin-top: 20px;
+	}
+
+	/********************************* PRESTATIONS RULES *******************************/
+
+	.prestations .section_prestations,
+	.section_prestations_details,
+	.gifts_cards .section_prestations{
+		padding: 15px;
+		border-bottom: 2px solid black;
+	}
+
+	.section_prestations article{
+		flex-direction: column;
+		padding: 10px 15px;
+		text-align: justify;
+		align-items: center;
+	}
+
+	.section_prestations img,
+	.section_prestations_details img{
+		margin: 0;
+		width: 200px;
+		height: 150px;
+	}
+
+	.prestations .div_article p{
+		margin-top: 0;
+	}
+
+	.prestations .div_article .cta{
+		text-align: left;
+		font-size: 1rem;
+	}
+
+	.prestations h2.short{
+		font-size: 1.5rem;
+	}
+
+	.prestations h3 span{
+		display: block;
+	}
+
+	.prestations h4{
+		margin-bottom: 20px;
+	}
+
+	.section_prestations_details p{
+		text-align: justify;
+	}
+
+	.section_prestations_details p:last-of-type{
+		margin-bottom: 10px;
+	}
+
+	.section_prestations_details table thead tr th:first-of-type{
+		width: 60px;
+		padding: 5px;
+	}
+
+	.section_prestations_details table thead tr th:nth-of-type(2){
+		width: 150px;
+		padding: 0px;
+	}
+
+	.section_prestations_details table thead tr th:nth-of-type(3){
+		width: 80px;
+		padding: 5px;
+	}
+
+	/********************** VICTORY_TEAM_BUILDING RULES ***************************/
+
+	.victory_team_building p{
+		text-align: center;
+		margin-bottom: 5px;
+	}
+
+	.victory_team_building p span{
+		font-size: 0.9rem;
+	}
+
+	.victory_team_building_winning{
+		flex-direction: column;
+	}
+
+	.victory_team_building_winning figure{
+		padding-bottom: 15px;
+	}
+
+	/***************************** GIFTS_CARDS RULES ******************************/
+
+	.gifts_cards h2{
+		font-size: 1.8rem;
+	}
+
+	.gifts_cards .section_prestations{
+		text-align: justify;
+		padding: 20px;
+	}
+
+	.gifts_cards .section_prestations article{
+		padding: 10px;
+		margin: 10px auto;
+		width: 100%;
+	}
+
+	.gifts_cards .section_prestations article img{
+		width: 220px;
+	}
+
+	.quantity_spinner{
+		width: 100%;
+		margin: 10px auto;
+	}
+
+	.quantity_spinner label{
+		width: 30%;
+		margin-top: 3px;
+	}
+
+	.div_quantity_basket{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.div_article span{
+		display: block;
+	}
+
+	/******************************* CONTACT RULES *********************************/
+
+	.contact h2{
+		font-size: 1.3rem;
+	}
+
+	.contact .contact_article{
+		padding: 15px;
+		border-bottom: 2px solid black;
+	}
+
+	.contact .contact_article .left:first-of-type{
+		margin-top: 0;
+	}
+
+	.contact .contact_article .left,
+	.contact .contact_article p{
+		text-align: justify;
+	}
+
+	.contact .contact_article p.center,
+	.contact .contact_article p:last-of-type{
+		text-align: center;
+	}
+
+	.contact .contact_article .coordonnees{
+		padding: 5px;
+	}
+
+	.contact .contact_article .coordonnees p{
+		text-align: center;
+	}
+
+	.contact .maps iframe{
+		width: 100%;
+	}
+
+	.contact #contact_form{
+		width: 100%;
+	}
+
+	.contact #contact_form h2{
+		border: 0;
+		font-size: 1.2rem;
+	}
+
+	.contact #contact_form p{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+	}
+
+	.contact #contact_form p label{
+		margin: 0;
+		width: auto;
+		align-self: center;
+	}
+
+	.contact #contact_form p input,
+	.contact #contact_form p select,
+	.contact #contact_form textarea{
+		margin: 0;
+		width: 85%;
+		padding: 10px;
+		align-self: center;
+	}
+
+	.contact #contact_form p.flex_hour{
+		display: inline-block;
+		text-align: center;
+	}
+
+	.contact #contact_form p.flex_hour label{
+		display: block;
+	}
+
+	.contact #contact_form p select.hour{
+		width: auto;
+	}
+
+	.contact #contact_form p #date_contact{
+		width: 60%;
+	}
+
+	.contact #contact_form p select#persons_number{
+		width: 20%;
+	}
+
+	#contact_form .flex_hour select:last-of-type{
+		margin: 0;
+	}
+
+	.section_admin{
+		border-bottom: 2px solid black;
+	}
+
+	/***************************** USER_PROFILE RULES *****************************/
+
+	.user_profile article{
+		padding: 15px;
+		border-bottom: 2px solid black;
+	}
+
+	#form_user_profile{
+		width: 100%;
+		padding: 0;
+	}
+
+	#form_user_profile p{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#form_user_profile p label{
+		margin: 0;
+		width: auto;
+	}
+
+	#form_user_profile p.flex input{
+		margin: 0;
+		width: 90%;
+		padding: 10px;
+		align-self: center;
+	}
+
+	.favorites_cocktails{
+		flex-direction: column;
+	}
+
+	.div_avatar{
+		flex-direction: column;
+	}
+
+	#form_user_profile .flex_birthdate_user_profile{
+		display: inline-block;
+		width: 90%;
+	}
+
+	#form_user_profile .flex_birthdate_user_profile label{
+		display: block;
+		margin: 0;
+		width: auto;
+		text-align: center;
+	}
+
+	#form_user_profile #day_birthdate_user_profile{
+		width: 20%;
+	}
+
+	#form_user_profile #month_birthdate_user_profile{
+		width: 45%;
+	}
+
+	#form_user_profile #year_birthdate_user_profile{
+		width: 28%;
+	}
+
+	.favorites_cocktails p{
+		margin: 15px 0 0 15px;
+	}
+
+	.user_profile .fa-star{
+		top: -2px;
+		left: -5px;
+	}
+
+	.favorites_cocktails ul{
+		margin: 0 0 0 60px;
+	}
+
+	.div_avatar{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.form .avatar_mini_post{
+		margin: 10px 0 10px 0;
+	}
+
+	.avatar_mini{
+		margin: 0;
+	}
+
+	.avatar_div_bdd{
+		width: 95%;
+	}
+
+	.avatar_div_bdd img{
+		margin: 15px;
+	}
+
+	.form .coordonnees_user{
+		width: 95%;
+	}
+
+	.form .coordonnees_user h2{
+		border: 0;
+		font-size: 1.4rem;
+	}
+
+	#form_user_profile p.avatar_p{
+		margin: 0;
+		text-align: center;
+	}
+	#form_user_profile .flex_civility_user_profile label{
+		margin: 0;
+		width: auto;
+	}
+
+	#form_user_profile #civility_user_profile{
+		width: 40%;
+	}
+
+	#form_user_profile .flex_radio{
+		display: inline-block;
+		margin: 0;
+	}
+
+	#form_user_profile .flex_radio .input_radio{
+		display: block;
+		margin: 10px auto 5px auto;
+		width: auto;
+		text-align: center;
+	}
+
+	#form_user_profile p.flex_radio input{
+		margin: 0;
+		width: auto;
+	}
+
+	#modification_modify_user_profile{
+		margin-top: 20px;
+	}
+
+	.list_order_user .section_admin{
+		padding: 15px 2px;
+	}
+
+	/*********** AFFICHAGE DES TABLEAUX EN MEDIA QUERY SANS FLEX ******************/
+
+	/*
+	.tab_list_orders .thead_tr_order{
+	font-size: 0.9rem;
+	padding: 0;
+}
+
+.td_details_order{
+justify-content: space-around;
+align-items: center;
+padding: 3px 2px;
+}
+
+.td_details_order em.details_order{
+padding: 2px;
+}
+
+.td_details_order p{
+margin: 0 0 0 1px;
+}
+
+.tab_list_orders .tr_order th:first-of-type,
+.tab_list_orders .tr_order td:first-of-type{
+width: 100px;
+margin: 8px 0px 5px 0px;
+padding: 10px 0;
+}
+
+.tab_list_orders th:nth-of-type(2),
+.tab_list_orders td:nth-of-type(2){
+width: 100px;
+padding: 3px 2px 3px 2px;
+}
+
+.tab_list_orders th:nth-of-type(3),
+.tab_list_orders td:nth-of-type(3){
+width: 60px;
+padding: 10px 0;
+}
+*/
+
+/********************************** TABLE_ORDERS *******************************/
+
+.td_details_order{
+	justify-content: space-between;
+}
+
+.td_details_order em.details_order{
+	width: 75px;
+	margin: 0;
+	padding: 3px;
+}
+
+.td_details_order p{
+	width: 10px;
+	margin: 0;
+}
+
+.tab_list_orders .thead_tr_order{
+	margin: 0;
+	border: 0;
+}
+
+.tab_list_orders .thead_tr_order th,
+.tab_list_orders td{
+	font-size: 0.9rem;
+}
+
+.tab_list_orders tr{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tab_list_orders th,
+.tab_list_orders td{
+	border: 0px solid black;
+}
+
+.tab_list_orders .thead_tr_order th:first-of-type,
+.tab_list_orders .tr_order td:first-of-type{
+	width: 100px;
+	padding: 0;
+	margin: 0;
+}
+
+.tab_list_orders .thead_tr_order th:nth-of-type(2),
+.tab_list_orders .tr_order td:nth-of-type(2){
+	width: 90px;
+	padding: 10px 0;
+}
+
+.tab_list_orders .thead_tr_order th:nth-of-type(3),
+.tab_list_orders .tr_order td:nth-of-type(3){
+	width: 80px;
+	padding: 10px 0;
+}
+
+.tab_list_orders .thead_tr_order th:last-of-type,
+.tab_list_orders .tr_order td:last-of-type{
+	width: 30px;
+	padding: 10px 0;
+}
+
+/******************************* TABLE_ORDERLINES *****************************/
+
+.table_orderlines .thead_tr_orderlines th,
+.table_orderlines td{
+	font-size: 0.8rem;
+}
+
+.table_orderlines tr{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.table_orderlines th,
+.table_orderlines td{
+	border: 1px solid black;
+}
+
+.table_orderlines .thead_tr_orderlines th:first-of-type,
+.table_orderlines .tr_orderlines td:first-of-type{
+	width: 90px;
+	padding: 1px 0 0 0;
+}
+
+.table_orderlines .tr_orderlines td:first-of-type{
+	padding: 10px 0;
+}
+
+.table_orderlines .thead_tr_orderlines th:nth-of-type(2),
+.table_orderlines .tr_orderlines td:nth-of-type(2){
+	width: 85px;
+	padding: 10px 0;
+}
+
+.table_orderlines .thead_tr_orderlines th:nth-of-type(3),
+.table_orderlines .tr_orderlines td:nth-of-type(3){
+	width: 60px;
+	padding: 10px 0;
+}
+
+.table_orderlines .thead_tr_orderlines th:last-of-type,
+.table_orderlines .tr_orderlines td:last-of-type{
+	width: 70px;
+	padding: 10px 0;
+}
+
+/****************************** TAB_BASKET (PANIER) ***************************/
+
+.tab_basket{
+	font-size: 0.75rem;
+}
+
+.user_basket .section_admin{
+	padding: 10px 2px;
+}
+
+.tab_basket th{
+	padding: 0px;
+}
+
+.tab_basket thead th:first-of-type,
+.tab_basket tbody td:first-of-type{
+	display: none;
+}
+
+.tab_basket thead th:nth-of-type(3),
+.tab_basket tbody td:nth-of-type(3){
+	display: none;
+}
+
+.tab_basket tr{
+	display: flex;
+	align-items: center;
+}
+
+.tab_basket thead th:nth-of-type(2),
+.tab_basket tbody td:nth-of-type(2){
+	width: 90px;
+	padding: 15px 0;
+}
+
+.tab_basket thead th:nth-of-type(4),
+.tab_basket tbody td:nth-of-type(4){
+	width: 65px;
+	padding: 6px 0;
+}
+
+.tab_basket thead th:nth-of-type(5),
+.tab_basket tbody td:nth-of-type(5){
+	width: 70px;
+	padding: 15px 0;
+}
+
+.tab_basket thead th:nth-of-type(6),
+.tab_basket tbody td:nth-of-type(6){
+	width: 55px;
+	padding: 6px 0;
+}
+
+.tab_basket .td_basket_delete{
+	padding: 0;
+	width: 10px;
+}
+
+.tab_basket .td_basket_delete a .fa{
+	padding: 5px;
+}
+
+/*********************************** CREATE_ACCOUNT ****************************/
+
+.main_create_account{
+	margin-bottom: 10px;
+	border-bottom: 2px solid black;
+}
+
+#create_account{
+	border: 0;
+	text-align: center;
+}
+
+#create_account p{
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+#create_account p label{
+	margin: 0;
+	width: auto;
+}
+
+#create_account p.flex input{
+	margin: 0 auto;
+	width: 90%;
+	padding: 10px;
+}
+
+#create_account .flex_birthdate_user{
+	display: inline-block;
+	text-align: center;
+}
+
+#create_account .flex_birthdate_user label{
+	display: block;
+	width: auto;
+	text-align: center;
+	margin: 0;
+}
+
+#create_account .flex_birthdate_user #day_birthdate_user{
+	width: 22%;
+}
+
+#create_account .flex_birthdate_user #month_birthdate_user{
+	width: 48%;
+}
+
+#create_account .flex_birthdate_user #year_birthdate_user{
+	width: 30%;
+}
+
+#create_account .show-password{
+	top: 48px;
+	left: 108px;
+}
+
+#create_account .show-password_moz{
+	top: 48px;
+	left: 98px;
+}
+
+#create_account .show-password.confirm_password{
+	left: 159px;
+}
+
+#create_account .show-password_moz.confirm_password{
+	left: 149px;
+}
+
+.div_create_account{
+	border-bottom: 2px solid black;
+	margin-bottom: 10px;
+}
+
+.div_create_account .p_reset{
+	padding: 0 10px;
+	margin: 10px 0 0 0;
+}
+
+/*********************************** RESET_PASSWORD ****************************/
+
+#reset_password{
+	border: 0;
+	text-align: center;
+}
+
+#reset_password p{
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+#reset_password p label{
+	margin: 0;
+	width: auto;
+}
+
+#reset_password p.flex input{
+	margin: 0 auto;
+	width: 90%;
+	padding: 10px;
+}
+
+/*********************************** WARNING_CONNECT ***************************/
+
+.warning_connect{
+	margin: 0;
+}
+
+/*********************************** THANKS_ORDER ******************************/
+
+.thanks_order article{
+	border-bottom: 2px solid black;
+	padding: 15px;
+}
+
+/*********************************** IDENTIFY_USER *****************************/
+
+.main_identify_user form{
+	border: 0;
+}
+
+.main_identify_user{
+	border-bottom: 2px solid black;
+}
+
+.div_identify_user{
+	border-bottom: 0;
+	margin-bottom: 0;
+}
+
+/************************************* CHECK_USER ******************************/
+
+#check_user{
+	border: 0;
+	text-align: center;
+}
+
+#check_user p{
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+#check_user p label{
+	margin: 0;
+	width: auto;
+}
+
+#check_user p.flex input{
+	margin: 0 auto;
+	width: 90%;
+	padding: 10px;
+}
+
+/******************************* FORM_FORGET_PASSWORD **************************/
+
+.form_forget_password a{
+	margin-top: 5px;
+	display: block;
+}
+
+.form_forget_password a:hover{
+	text-decoration: underline;
+}
+
+.check_information{
+	margin-top: 0;
+}
+
+/********************** FORM_USER_ORDER_CONTACT_INFORMATION ********************/
+
+#form_user_order_contact_information{
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+}
+
+#form_user_order_contact_information{
+	border: 0;
+	text-align: center;
+}
+
+#form_user_order_contact_information p{
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+#form_user_order_contact_information p label{
+	margin: 0;
+	width: auto;
+}
+
+#form_user_order_contact_information p.flex input{
+	margin: 0 auto;
+	width: 90%;
+	padding: 10px;
+}
+
+#form_user_order_contact_information .flex_civility_user_order_contact label{
+	margin: 0;
+	width: auto;
+}
+
+#form_user_order_contact_information #civility_user_profile{
+	width: 40%;
+}
+
+#form_user_order_contact_information .flex_birthdate_user_order_contact{
+	display: inline-block;
+	width: 90%;
+}
+
+#form_user_order_contact_information .flex_birthdate_user_order_contact label{
+	display: block;
+	margin: 0;
+	width: auto;
+	text-align: center;
+}
+
+#form_user_order_contact_information #day_birthdate_user_profile{
+	width: 20%;
+}
+
+#form_user_order_contact_information #month_birthdate_user_profile{
+	width: 45%;
+}
+
+#form_user_order_contact_information #year_birthdate_user_profile{
+	width: 28%;
+}
+
+/******************************* WARNING_FORM_USER ****************************/
+
+.warning_form_user{
+	margin: 20px 0 10px 0;
+	padding: 0;
+}
+
+/*********************************** CHECK_ORDER ******************************/
+
+.check_order a.retour{
+	width: 50%;
+}
+
+.check_order article{
+	padding: 15px;
+	border-bottom: 2px solid black;
+}
+
+
+.check_order .check_div{
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+	text-align: center;
+}
+
+.check_order .check_div p{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.check_order .check_div p span{
+	margin: 0;
+	width: auto;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.check_order .check_div p em{
+	margin: 0 auto;
+	width: 90%;
+	padding: 0;
+}
+
+/************************************ CONFIRM_ORDER ****************************/
+
+.confirm_order article{
+	padding: 15px;
+	border-bottom: 2px solid black;
+}
+
+/********************************* ORDER_EXPEDITION ****************************/
+
+.order_expedition{
+	flex-direction: column;
+	width: 100%;
+	padding: 10px;
+}
+
+.div_description_order p{
+	margin: 4px auto;
+}
+
+.order_total{
+	padding: 8px;
+	font-size: 1.4rem;
+}
+
+/********************************* CONFIRM_ORDER *******************************/
+
+.confirm_order form p{
+	margin-top: 10px;
+}
+
+.confirm_order form input[type="checkbox"]:first-of-type{
+	width: 15px;
+	height: 15px;
+	margin-right: 0;
+}
+
+/*********************************** THANKS_ORDER ******************************/
+
+.thanks_order h2{
+	font-size: 1.3rem;
+}
+
+.thanks_order article{
+	text-align: justify;
+}
+
+.thanks_order article a{
+	display: inline-block;
+	padding: 0;
+}
+
+/********************************* GAMES RULES *******************************/
+
+section.games{
+	flex-direction: column;
+
+	-webkit-flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-justify-content: flex-start;
+}
+
+section.games img{
+	border-radius: 0;
+}
+
+section.games article{
+	display: block;
+	width: 80%;
+	margin: 10px auto;
+}
+
+/********************************* FOOTER RULES *******************************/
+
+footer{
+	padding-top: 15px;
+	border-top: 2px solid black;
+}
+footer p:last-of-type a{
+	display: block;
+	margin: 0 auto;
+}
+
+footer span{
+	display: none;
+}
+
+footer .p_video_games .fa:first-of-type,
+footer .p_video_games .fa:last-of-type{
+	display: block;
+	margin: 0;
+}
+
+footer .p_video_games span{
+	display: block;
+}
+
+/******************** IPHONE (PLUS PETIT) *******************/
+
+@media screen and (max-width: 320px){
+
+	header .div_primary_account{
+		width: 65%;
+	}
+
+	.table_orderlines .thead_tr_orderlines th{
+		font-size: 0.75rem;
+	}
+
+	#form_user_profile #day_birthdate_user_profile{
+		width: 22%;
+	}
+
+	#form_user_profile #year_birthdate_user_profile{
+		width: 29%;
+	}
+
+	.basket_total_price p span{
+		display: block;
+	}
+}
+
+/******************** IPHONE PAYSAGE *******************/
+@media screen and (max-width: 480px){
+
+}

@@ -1,0 +1,33 @@
+<footer>
+
+  <p>Rejoignez-moi sur les réseaux sociaux :</p>
+  <a href="https://www.facebook.com/" target="_blank" class="icon facebook"><i class="fa fa-facebook-square"></i></a>
+  <a href="https://twitter.com/?lang=fr" target="_blank" class="icon twitter"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.instagram.com/?hl=fr" target="_blank" class="icon instagram"><i class="fa fa-instagram"></i></a>
+  <a href="https://www.meetup.com/fr-FR/" target="_blank" class="icon meetup"><i class="fa fa-meetup"></i></a>
+  <a href="https://fr.pinterest.com/" target="_blank" class="icon pinterest"><i class="fa fa-pinterest"></i></a>
+
+  <!-- logo cb, visa, mastercard -->
+  <p class="p_video_games">
+    <i class="fa fa-gamepad" aria-hidden="true"></i>  Envie de jouer à un jeu vidéo ?
+    <?php
+    if(strpos($_SERVER['HTTP_USER_AGENT'], "Firefox")) // Si l'utilisateur utilise le navigateur "Firefox"
+    {
+      echo "<span class='span_moz'>";
+    }
+    else
+    {
+      echo "<span'>";
+    }
+    ?>
+    Cliquer
+    <a href="<?php echo $domain;?>videogames" class="video_games" id="videogames">ICI  </span></a>
+    <i class="fa fa-gamepad" aria-hidden="true"></i>
+  </p>
+  <p>
+    <a class="footer_a" href="<?php echo $domain;?>mentions_legales">Mentions Légales</a><span> - </span><a class="footer_a" href="<?php echo $domain;?>cgv">Conditions Générales de Vente</a>
+  </p>
+</footer>
+</body>
+</html>
+

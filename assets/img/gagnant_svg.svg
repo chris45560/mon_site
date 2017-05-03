@@ -1,0 +1,2606 @@
+<svg width="1300px" height="800px" xml:lang="fr"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<!-- Ciel bleu -->
+<rect x="0" y="0" width="1300" height="1000" fill="skyblue" opacity="1"></rect>
+<!-- Tapis de bar -->
+<rect x="0" y="480" width="1300" height="20" fill="black" opacity="1" stroke="black" stroke-width="3"></rect>
+<!-- Bois de la cabane -->
+<rect x="0" y="500" width="1300" height="50" fill="#A76726" opacity="1" stroke="black" stroke-width="3"></rect>
+<rect x="0" y="550" width="1300" height="50" fill="#A76726" opacity="1" stroke="black" stroke-width="3"></rect>
+<rect x="0" y="600" width="1300" height="50" fill="#A76726" opacity="1" stroke="black" stroke-width="3"></rect>
+<rect x="0" y="650" width="1300" height="50" fill="#A76726" opacity="1" stroke="black" stroke-width="3"></rect>
+<rect x="0" y="700" width="1300" height="50" fill="#A76726" opacity="1" stroke="black" stroke-width="3"></rect>
+<rect x="0" y="750" width="1300" height="50" fill="#A76726" opacity="1" stroke="black" stroke-width="3"></rect>
+<!-- Soleil -->
+<ellipse cx="1150" cy="100" rx="70" ry="70" fill="yellow" opacity="1"></ellipse>
+<!-- Nuage -->
+<ellipse cx="200" cy="75" rx="150" ry="50" fill="white" opacity="1">
+  <animate attributeName="cx" attributeType="XML"
+  repeatCount = "1"
+  id="anim2000"
+  fill="freeze"
+  from="200" to="1700"
+  begin="anim1001.begin" dur="60s"/>
+</ellipse>
+<ellipse cx="330" cy="75" rx="30" ry="30" fill="white" opacity="1">
+  <animate attributeName="cx" attributeType="XML"
+  repeatCount = "1"
+  id="anim2000"
+  fill="freeze"
+  from="330" to="1830"
+  begin="anim1001.begin" dur="60s"/>
+</ellipse>
+<ellipse cx="290" cy="50" rx="40" ry="40" fill="white" opacity="1">
+  <animate attributeName="cx" attributeType="XML"
+  repeatCount = "1"
+  id="anim2000"
+  fill="freeze"
+  from="290" to="1790"
+  begin="anim1001.begin" dur="60s"/>
+</ellipse>
+<ellipse cx="230" cy="50" rx="40" ry="40" fill="white" opacity="1">
+  <animate attributeName="cx" attributeType="XML"
+  repeatCount = "1"
+  id="anim2000"
+  fill="freeze"
+  from="230" to="1730"
+  begin="anim1001.begin" dur="60s"/>
+</ellipse>
+<ellipse cx="170" cy="50" rx="40" ry="40" fill="white" opacity="1">
+  <animate attributeName="cx" attributeType="XML"
+  repeatCount = "1"
+  id="anim2000"
+  fill="freeze"
+  from="170" to="1670"
+  begin="anim1001.begin" dur="60s"/>
+</ellipse>
+<ellipse cx="110" cy="50" rx="40" ry="40" fill="white" opacity="1">
+  <animate attributeName="cx" attributeType="XML"
+  repeatCount = "1"
+  id="anim2000"
+  fill="freeze"
+  from="110" to="1610"
+  begin="anim1001.begin" dur="60s"/>
+</ellipse>
+<ellipse cx="70" cy="75" rx="30" ry="30" fill="white" opacity="1">
+  <animate attributeName="cx" attributeType="XML"
+  repeatCount = "1"
+  id="anim2000"
+  fill="freeze"
+  from="70" to="1570"
+  begin="anim1001.begin" dur="60s"/>
+</ellipse>
+<ellipse cx="110" cy="100" rx="40" ry="40" fill="white" opacity="1">
+  <animate attributeName="cx" attributeType="XML"
+  repeatCount = "1"
+  id="anim2000"
+  fill="freeze"
+  from="110" to="1610"
+  begin="anim1001.begin" dur="60s"/>
+</ellipse>
+<ellipse cx="170" cy="100" rx="40" ry="40" fill="white" opacity="1">
+  <animate attributeName="cx" attributeType="XML"
+  repeatCount = "1"
+  id="anim2000"
+  fill="freeze"
+  from="170" to="1670"
+  begin="anim1001.begin" dur="60s"/>
+</ellipse>
+<ellipse cx="230" cy="100" rx="40" ry="40" fill="white" opacity="1">
+  <animate attributeName="cx" attributeType="XML"
+  repeatCount = "1"
+  id="anim2000"
+  fill="freeze"
+  from="230" to="1730"
+  begin="anim1001.begin" dur="60s"/>
+</ellipse>
+<ellipse cx="290" cy="100" rx="40" ry="40" fill="white" opacity="1">
+  <animate attributeName="cx" attributeType="XML"
+  repeatCount = "1"
+  id="anim2000"
+  fill="freeze"
+  from="290" to="1790"
+  begin="anim1001.begin" dur="60s"/>
+</ellipse>
+
+<!-- Barman -->
+<!-- Corps -->
+<rect x="610" y="270" width="20" height="210" fill="black" opacity="1" stroke="black" stroke-width="3"></rect>
+<!-- Tête -->
+<ellipse cx="620" cy="200" rx="80" ry="70" fill="#FFDAB9" opacity="1" stroke="black" stroke-width="2">
+  <animate attributeName="fill" attributeType="XML"
+  repeatCount = "1"
+  id="anim1116"
+  fill="freeze"
+  from="#FFDAB9" to="gold"
+  begin="anim1115.end" dur="2s"/>
+  <animate attributeName="fill" attributeType="XML"
+  repeatCount = "1"
+  id="anim1118"
+  fill="freeze"
+  from="#FFDAB9" to="#FFDAB9"
+  begin="anim1001.begin" dur="0.1s"/>
+</ellipse>
+<!-- Yeux -->
+<ellipse cx="575" cy="180" rx="15" ry="15" fill="white" opacity="1" stroke="black" stroke-width="2">
+  <animate attributeName="ry" attributeType="XML"
+  repeatCount = "1"
+  id="anim1120"
+  fill="freeze"
+  from="15" to="0"
+  begin="5s; anim1121.end+5s" dur="0.5s"/>
+  <animate attributeName="ry" attributeType="XML"
+  repeatCount = "1"
+  id="anim1121"
+  fill="freeze"
+  from="0" to="15"
+  begin="anim1120.end" dur="0.5s"/>
+</ellipse>
+
+<ellipse cx="665" cy="180" rx="15" ry="15" fill="white" opacity="1" stroke="black" stroke-width="2">
+  <animate attributeName="ry" attributeType="XML"
+  repeatCount = "1"
+  id="anim1120"
+  fill="freeze"
+  from="15" to="0"
+  begin="5s; anim1121.end+5s" dur="0.5s"/>
+  <animate attributeName="ry" attributeType="XML"
+  repeatCount = "1"
+  id="anim1121"
+  fill="freeze"
+  from="0" to="15"
+  begin="anim1120.end" dur="0.5s"/>
+</ellipse>
+
+<ellipse cx="575" cy="180" rx="5" ry="5" fill="#A76726" opacity="1" stroke="black" stroke-width="2">
+  <animate attributeName="ry" attributeType="XML"
+  repeatCount = "1"
+  id="anim1120"
+  fill="freeze"
+  from="5" to="0"
+  begin="5s; anim1121.end+5s" dur="0.5s"/>
+  <animate attributeName="ry" attributeType="XML"
+  repeatCount = "1"
+  id="anim1121"
+  fill="freeze"
+  from="0" to="5"
+  begin="anim1120.end" dur="0.5s"/>
+</ellipse>
+<ellipse cx="665" cy="180" rx="5" ry="5" fill="#A76726" opacity="1" stroke="black" stroke-width="2">
+  <animate attributeName="ry" attributeType="XML"
+  repeatCount = "1"
+  id="anim1120"
+  fill="freeze"
+  from="5" to="0"
+  begin="5s; anim1121.end+5s" dur="0.5s"/>
+  <animate attributeName="ry" attributeType="XML"
+  repeatCount = "1"
+  id="anim1121"
+  fill="freeze"
+  from="0" to="5"
+  begin="anim1120.end" dur="0.5s"/>
+</ellipse>
+
+<!-- Bouche -->
+<ellipse cx="620" cy="225" rx="50" ry="27" fill="#FFDAB9" opacity="1" stroke="black" stroke-width="2">
+  <animate attributeName="fill" attributeType="XML"
+  repeatCount = "1"
+  id="anim1117"
+  fill="freeze"
+  from="#FFDAB9" to="gold"
+  begin="anim1115.end" dur="0.1s"/>
+  <animate attributeName="fill" attributeType="XML"
+  repeatCount = "1"
+  id="anim1118"
+  fill="freeze"
+  from="#FFDAB9" to="#FFDAB9"
+  begin="anim1001.begin" dur="0.1s"/>
+</ellipse>
+<rect x="560" y="197" width="120" height="40" fill="#FFDAB9" opacity="1">
+  <animate attributeName="fill" attributeType="XML"
+  repeatCount = "1"
+  id="anim1117"
+  fill="freeze"
+  from="#FFDAB9" to="gold"
+  begin="anim1115.end" dur="0.1s"/>
+  <animate attributeName="fill" attributeType="XML"
+  repeatCount = "1"
+  id="anim1118"
+  fill="freeze"
+  from="#FFDAB9" to="#FFDAB9"
+  begin="anim1001.begin" dur="0.1s"/>
+</rect>
+
+<!-- Bras gauche du barman -->
+<line x1="400" y1="300" x2="610" y2="320" stroke-width="5" stroke="black">
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1080"
+  fill="freeze"
+  from="400" to="540"
+  begin="anim1043.end" dur="2s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1080"
+  fill="freeze"
+  from="300" to="430"
+  begin="anim1043.end" dur="2s"/>
+
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1083"
+  fill="freeze"
+  from="540" to="500"
+  begin="anim1080.end" dur="1s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1083"
+  fill="freeze"
+  from="430" to="340"
+  begin="anim1080.end" dur="1s"/>
+
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1090"
+  fill="freeze"
+  from="500" to="460"
+  begin="anim1084.end" dur="1s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1090"
+  fill="freeze"
+  from="340" to="200"
+  begin="anim1084.end" dur="1s"/>
+
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "15"
+  id="anim1091"
+  fill="freeze"
+  from="460" to="440"
+  begin="anim1090.end" dur="0.2s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "5"
+  id="anim1091"
+  fill="freeze"
+  from="200" to="180"
+  begin="anim1090.end" dur="0.2s"/>
+
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1092"
+  fill="freeze"
+  from="440" to="500"
+  begin="anim1091.end" dur="1s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1092"
+  fill="freeze"
+  from="180" to="340"
+  begin="anim1091.end" dur="1s"/>
+
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1093"
+  fill="freeze"
+  from="500" to="540"
+  begin="anim1092.end" dur="1s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1093"
+  fill="freeze"
+  from="340" to="430"
+  begin="anim1092.end" dur="1s"/>
+
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="540" to="450"
+  begin="anim1093.end" dur="1s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="430" to="430"
+  begin="anim1093.end" dur="1s"/>
+
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="450" to="600"
+  begin="anim1094.end" dur="1s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="430" to="330"
+  begin="anim1094.end" dur="1s"/>
+
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1112"
+  fill="freeze"
+  from="600" to="450"
+  begin="anim1110.end" dur="1s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1112"
+  fill="freeze"
+  from="330" to="430"
+  begin="anim1110.end" dur="1s"/>
+
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1080"
+  fill="freeze"
+  from="400" to="400"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1080"
+  fill="freeze"
+  from="300" to="300"
+  begin="anim1001.begin" dur="0.1s"/>
+
+</line>
+
+<!-- Bras droit du barman -->
+<line x1="620" y1="320" x2="820" y2="300" stroke-width="5" stroke="black">
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1003"
+  fill="freeze"
+  from="300" to="340"
+  begin="anim1001.end" dur="1s"/>
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1004"
+  fill="freeze"
+  from="820" to="580"
+  begin="anim1003.end" dur="1s"/>
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1012"
+  fill="freeze"
+  from="580" to="820"
+  begin="anim1010.end+1.5s" dur="1s"/>
+
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1070"
+  fill="freeze"
+  from="820" to="580"
+  begin="anim1020.end" dur="1s"/>
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1071"
+  fill="freeze"
+  from="580" to="820"
+  begin="anim1033.end+1.5s" dur="1s"/>
+
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1061"
+  fill="freeze"
+  from="820" to="580"
+  begin="anim1040.end" dur="1s"/>
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1062"
+  fill="freeze"
+  from="580" to="820"
+  begin="anim1053.end+1.5s" dur="1s"/>
+
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1080"
+  fill="freeze"
+  from="820" to="540"
+  begin="anim1062.end" dur="2s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1080"
+  fill="freeze"
+  from="340" to="470"
+  begin="anim1062.end" dur="2s"/>
+
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1083"
+  fill="freeze"
+  from="540" to="500"
+  begin="anim1080.end" dur="1s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1083"
+  fill="freeze"
+  from="470" to="350"
+  begin="anim1080.end" dur="1s"/>
+
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1084"
+  fill="freeze"
+  from="500" to="500"
+  begin="anim1083.end" dur="1s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1084"
+  fill="freeze"
+  from="350" to="420"
+  begin="anim1083.end" dur="1s"/>
+
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1090"
+  fill="freeze"
+  from="500" to="440"
+  begin="anim1084.end" dur="1s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1090"
+  fill="freeze"
+  from="420" to="220"
+  begin="anim1084.end" dur="1s"/>
+
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "15"
+  id="anim1091"
+  fill="freeze"
+  from="440" to="420"
+  begin="anim1090.end" dur="0.2s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "5"
+  id="anim1091"
+  fill="freeze"
+  from="220" to="200"
+  begin="anim1090.end" dur="0.2s"/>
+
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1092"
+  fill="freeze"
+  from="420" to="500"
+  begin="anim1091.end" dur="1s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1092"
+  fill="freeze"
+  from="200" to="350"
+  begin="anim1091.end" dur="1s"/>
+
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1093"
+  fill="freeze"
+  from="500" to="540"
+  begin="anim1092.end" dur="1s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1093"
+  fill="freeze"
+  from="350" to="470"
+  begin="anim1092.end" dur="1s"/>
+
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="540" to="745"
+  begin="anim1093.end" dur="1s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="350" to="430"
+  begin="anim1093.end" dur="1s"/>
+
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1113"
+  fill="freeze"
+  from="745" to="700"
+  begin="anim1112.end" dur="1s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1113"
+  fill="freeze"
+  from="430" to="300"
+  begin="anim1112.end" dur="1s"/>
+
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1080"
+  fill="freeze"
+  from="820" to="820"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1080"
+  fill="freeze"
+  from="300" to="300"
+  begin="anim1001.begin" dur="0.1s"/>
+
+</line>
+
+<!-- Chapeau -->
+<!-- Bas du Chapeau -->
+<rect x="560" y="135" width="120" height="10" fill="black" opacity="1"></rect>
+<!-- Haut du Chapeau -->
+<rect x="580" y="35" width="80" height="100" fill="black" opacity="1"></rect>
+<!-- Etoile du Chapeau -->
+<polygon points="620,55 630.5,80.5 653.7,81.1 637,100.5 646.4,126.3 620,109.9 593.6,126.3 602.9,100.5 586.2,81.1 609.4,80.5" fill="yellow">
+</polygon>
+
+<!-- Verre à Cocktail -->
+<!-- Socle -->
+<rect x="700" y="472" width="0" height="0" fill="black" opacity="1">
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="0" to="45"
+  begin="anim1093.end" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="0" to="6"
+  begin="anim1093.end" dur="0.1s"/>
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="1500" to="720"
+  begin="anim1093.end" dur="2s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="472" to="472"
+  begin="anim1093.end" dur="2s"/>
+
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="720" to="680"
+  begin="anim1112.end" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="472" to="360"
+  begin="anim1112.end" dur="1s"/>
+
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="700" to="700"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="472" to="472"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1001.begin" dur="0.1s"/>
+
+</rect>
+<!-- Pied -->
+<rect x="1550" y="403" width="0" height="0" fill="black" opacity="1">
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="0" to="6"
+  begin="anim1093.end" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="0" to="70"
+  begin="anim1093.end" dur="0.1s"/>
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="1500" to="740"
+  begin="anim1093.end" dur="2s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="403" to="403"
+  begin="anim1093.end" dur="2s"/>
+
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="740" to="700"
+  begin="anim1112.end" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="403" to="290"
+  begin="anim1112.end" dur="1s"/>
+
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="700" to="700"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="472" to="472"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1001.begin" dur="0.1s"/>
+
+</rect>
+<!-- Côté gauche du verre -->
+<line x1="1500" y1="370" x2="1500" y2="370" stroke-width="5" stroke="black">
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="1500" to="743"
+  begin="anim1093.end" dur="2s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="370" to="405"
+  begin="anim1093.end" dur="2s"/>
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="1500" to="710"
+  begin="anim1093.end" dur="2s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="370" to="370"
+  begin="anim1093.end" dur="2s"/>
+
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="743" to="703"
+  begin="anim1112.end" dur="1s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="405" to="290"
+  begin="anim1112.end" dur="1s"/>
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="710" to="670"
+  begin="anim1112.end" dur="1s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="370" to="255"
+  begin="anim1112.end" dur="1s"/>
+
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="1500" to="1500"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="370" to="370"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="1500" to="1500"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="370" to="370"
+  begin="anim1001.begin" dur="0.1s"/>
+
+</line>
+<!-- Côté droit du verre -->
+<line x1="1500" y1="390" x2="1500" y2="390" stroke-width="5" stroke="black">
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="1500" to="742"
+  begin="anim1093.end" dur="2s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="390" to="405"
+  begin="anim1093.end" dur="2s"/>
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="1500" to="772"
+  begin="anim1093.end" dur="2s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="390" to="370"
+  begin="anim1093.end" dur="2s"/>
+
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="742" to="702"
+  begin="anim1112.end" dur="1s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="405" to="290"
+  begin="anim1112.end" dur="1s"/>
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="772" to="732"
+  begin="anim1112.end" dur="1s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1094"
+  fill="freeze"
+  from="370" to="255"
+  begin="anim1112.end" dur="1s"/>
+
+  <animate attributeName="x1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="1500" to="1500"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="y1" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="390" to="390"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="x2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="1500" to="1500"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animate attributeName="y2" attributeType="XML"
+  repeatCount = "1"
+  id="anim1095"
+  fill="freeze"
+  from="390" to="390"
+  begin="anim1001.begin" dur="0.1s"/>
+
+</line>
+
+
+<!-- Bouteilles -->
+
+<!--- 1ère Bouteille -->
+
+<!-- Base -->
+<rect x="930" y="378" width="50" height="100" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1001"
+  fill="freeze"
+  from="930" to="800"
+  begin="0s; anim1116.end+2s" dur="1s"/>
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1005"
+  fill="freeze"
+  from="0 800 550" to="-90 690 470"
+  begin="anim1003.end" dur="1s"/>
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1011"
+  fill="freeze"
+  from="-90 690 470" to="0 800 550"
+  begin="anim1010.end+1.5s" dur="1s"/>
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1013"
+  fill="freeze"
+  from="800" to="930"
+  begin="anim1011.end" dur="1s"/>
+</rect>
+
+<!-- Goulot -->
+<rect x="944" y="328" width="20" height="50" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1002"
+  fill="freeze"
+  from="944" to="814"
+  begin="anim1001.begin" dur="1s"/>
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1006"
+  fill="freeze"
+  from="0 800 550" to="-90 690 470"
+  begin="anim1003.end" dur="1s"/>
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1012"
+  fill="freeze"
+  from="-90 690 470" to="0 800 550"
+  begin="anim1010.end+1.5s" dur="1s"/>
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1013"
+  fill="freeze"
+  from="814" to="944"
+  begin="anim1011.end" dur="1s"/>
+</rect>
+
+<!-- Liquide Première Bouteille -->
+
+<rect x="550" y="335" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1007"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1006.end" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1008"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1006.end" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1009"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1010"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1007"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1006.end+0.1s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1008"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1006.end+0.1s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1009"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.1s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1010"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.1s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1007"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1006.end+0.2s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1008"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1006.end+0.2s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1009"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.2s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1010"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.2s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1007"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1006.end+0.3s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1008"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1006.end+0.3s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1009"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.3s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1010"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.3s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1007"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1006.end+0.4s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1008"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1006.end+0.4s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1009"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.4s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1010"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.4s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1007"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1006.end+0.5s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1008"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1006.end+0.5s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1009"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.5s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1010"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.5s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1007"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1006.end+0.6s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1008"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1006.end+0.6s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1009"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.6s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1010"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.6s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1007"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1006.end+0.7s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1008"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1006.end+0.7s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1009"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.7s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1010"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.7s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1007"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1006.end+0.8s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1008"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1006.end+0.8s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1009"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.8s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1010"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.8s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1007"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1006.end+0.9s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1008"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1006.end+0.9s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1009"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.9s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1010"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+0.9s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1007"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1006.end+1s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1008"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1006.end+1s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1009"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+1s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1010"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1006.end+1s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<!--- 2ème Bouteille -->
+
+<!-- Base -->
+<rect x="990" y="378" width="50" height="100" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1020"
+  fill="freeze"
+  from="990" to="800"
+  begin="anim1013.end" dur="1s"/>
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1021"
+  fill="freeze"
+  from="0 800 550" to="-90 690 470"
+  begin="anim1020.end" dur="1s"/>
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1022"
+  fill="freeze"
+  from="-90 690 470" to="0 800 550"
+  begin="anim1033.end+1.5s" dur="1s"/>
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1023"
+  fill="freeze"
+  from="800" to="990"
+  begin="anim1022.end" dur="1s"/>
+</rect>
+
+<!-- Goulot -->
+<rect x="1004" y="328" width="20" height="50" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1024"
+  fill="freeze"
+  from="1004" to="814"
+  begin="anim1013.end" dur="1s"/>
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1025"
+  fill="freeze"
+  from="0 800 550" to="-90 690 470"
+  begin="anim1024.end" dur="1s"/>
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1026"
+  fill="freeze"
+  from="-90 690 470" to="0 800 550"
+  begin="anim1033.end+1.5s" dur="1s"/>
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1027"
+  fill="freeze"
+  from="814" to="1004"
+  begin="anim1022.end" dur="1s"/>
+</rect>
+
+<!-- Liquide Deuxième Bouteille -->
+<rect x="550" y="335" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1030"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1025.end" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1031"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1025.end" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1032"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1033"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1030"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1025.end+0.1s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1031"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1025.end+0.1s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1032"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.1s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1033"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.1s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1030"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1025.end+0.2s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1031"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1025.end+0.2s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1032"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.2s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1033"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.2s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1030"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1025.end+0.3s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1031"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1025.end+0.3s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1032"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.3s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1033"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.3s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1030"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1025.end+0.4s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1031"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1025.end+0.4s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1032"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.4s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1033"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.4s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1030"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1025.end+0.5s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1031"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1025.end+0.5s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1032"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.5s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1033"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.5s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1030"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1025.end+0.6s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1031"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1025.end+0.6s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1032"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.6s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1033"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.6s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1030"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1025.end+0.7s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1031"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1025.end+0.7s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1032"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.7s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1033"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.7s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1030"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1025.end+0.8s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1031"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1025.end+0.8s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1032"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.8s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1033"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.8s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1030"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1025.end+0.9s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1031"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1025.end+0.9s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1032"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.9s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1033"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+0.9s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1030"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1025.end+1s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1031"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1025.end+1s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1032"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+1s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1033"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1025.end+1s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<!--- 3ème Bouteille -->
+
+<!-- Base -->
+<rect x="1050" y="378" width="50" height="100" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1040"
+  fill="freeze"
+  from="1050" to="800"
+  begin="anim1023.end" dur="1s"/>
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1041"
+  fill="freeze"
+  from="0 800 550" to="-90 690 470"
+  begin="anim1040.end" dur="1s"/>
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1042"
+  fill="freeze"
+  from="-90 690 470" to="0 800 550"
+  begin="anim1053.end+1.5s" dur="1s"/>
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1043"
+  fill="freeze"
+  from="800" to="1050"
+  begin="anim1042.end" dur="1s"/>
+</rect>
+
+<!-- Goulot -->
+<rect x="1064" y="328" width="20" height="50" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1044"
+  fill="freeze"
+  from="1064" to="814"
+  begin="anim1023.end" dur="1s"/>
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1045"
+  fill="freeze"
+  from="0 800 550" to="-90 690 470"
+  begin="anim1044.end" dur="1s"/>
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1046"
+  fill="freeze"
+  from="-90 690 470" to="0 800 550"
+  begin="anim1053.end+1.5s" dur="1s"/>
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1047"
+  fill="freeze"
+  from="814" to="1064"
+  begin="anim1046.end" dur="1s"/>
+</rect>
+
+<!-- Liquide Troisième Bouteille -->
+<rect x="550" y="335" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1050"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1045.end" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1051"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1045.end" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1052"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1053"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1050"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1045.end+0.1s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1051"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1045.end+0.1s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1052"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.1s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1053"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.1s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1050"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1045.end+0.2s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1051"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1045.end+0.2s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1052"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.2s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1053"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.2s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1050"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1045.end+0.3s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1051"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1045.end+0.3s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1052"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.3s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1053"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.3s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1050"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1045.end+0.4s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1051"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1045.end+0.4s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1052"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.4s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1053"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.4s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1050"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1045.end+0.5s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1051"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1045.end+0.5s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1052"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.5s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1053"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.5s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1050"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1045.end+0.6s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1051"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1045.end+0.6s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1052"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.6s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1053"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.6s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1050"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1045.end+0.7s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1051"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1045.end+0.7s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1052"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.7s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1053"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.7s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1050"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1045.end+0.8s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1051"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1045.end+0.8s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1052"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.8s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1053"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.8s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1050"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1045.end+0.9s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1051"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1045.end+0.9s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1052"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.9s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1053"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+0.9s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<rect x="550" y="335" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1050"
+  fill="freeze"
+  from="550" to="520"
+  begin="anim1045.end+1s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1051"
+  fill="freeze"
+  from="335" to="420"
+  begin="anim1045.end+1s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1052"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+1s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1053"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1045.end+1s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1400"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1082.begin" dur="0.1s"/>
+</rect>
+
+<!-- Shaker -->
+
+<!-- Bas du Shaker -->
+
+<rect x="450" y="358" width="50" height="120" fill="grey" opacity="1" stroke-width="2" stroke="black">
+
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1085"
+  fill="freeze"
+  from="0 450 358" to="60 627 272"
+  begin="anim1084.end" dur="1s"/>
+
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "15"
+  type = "rotate"
+  id="anim1086"
+  fill="freeze"
+  from="60 627 272" to="60 600 240"
+  begin="anim1085.end" dur="0.2s"/>
+
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1087"
+  fill="freeze"
+  from="60 600 240" to="0 600 340"
+  begin="anim1086.end" dur="1s"/>
+
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1089"
+  fill="freeze"
+  from="0 600 340" to="90 600 460"
+  begin="anim1088.end+1s" dur="1s"/>
+
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1111"
+  fill="freeze"
+  from="90 600 460" to="0 600 340"
+  begin="anim1110.end" dur="1s"/>
+
+</rect>
+
+<!-- Haut du Shaker -->
+
+<rect x="500" y="418" width="50" height="60" fill="grey" opacity="1" stroke-width="2" stroke="black">
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1082"
+  fill="freeze"
+  from="0 500 418" to="-180 500 390"
+  begin="anim1080.end" dur="1s"/>
+
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1085"
+  fill="freeze"
+  from="-180 500 390" to="-120 430 320"
+  begin="anim1084.end" dur="1s"/>
+
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "15"
+  type = "rotate"
+  id="anim1086"
+  fill="freeze"
+  from="-120 430 320" to="-120 410 338"
+  begin="anim1085.end" dur="0.2s"/>
+
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1087"
+  fill="freeze"
+  from="-120 410 338" to="-180 500 398"
+  begin="anim1086.end" dur="1s"/>
+
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  type = "rotate"
+  id="anim1088"
+  fill="freeze"
+  from="-180 500 398" to="0 500 398"
+  begin="anim1087.end" dur="1s"/>
+
+</rect>
+
+<rect x="700" y="235" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1100"
+  fill="freeze"
+  from="700" to="740"
+  begin="anim1089.end" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1101"
+  fill="freeze"
+  from="335" to="380"
+  begin="anim1089.end" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1102"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1103"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1300"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1110.end" dur="0.1s"/>
+</rect>
+
+<rect x="700" y="235" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1100"
+  fill="freeze"
+  from="700" to="740"
+  begin="anim1089.end+0.1s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1101"
+  fill="freeze"
+  from="335" to="380"
+  begin="anim1089.end+0.1s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1102"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.1s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1103"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.1s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1300"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1110.end" dur="0.1s"/>
+</rect>
+
+<rect x="700" y="235" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1100"
+  fill="freeze"
+  from="700" to="740"
+  begin="anim1089.end+0.2s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1101"
+  fill="freeze"
+  from="335" to="380"
+  begin="anim1089.end+0.2s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1102"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.2s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1103"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.2s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1300"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1110.end" dur="0.1s"/>
+</rect>
+
+<rect x="700" y="235" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1100"
+  fill="freeze"
+  from="700" to="740"
+  begin="anim1089.end+0.3s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1101"
+  fill="freeze"
+  from="335" to="380"
+  begin="anim1089.end+0.3s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1102"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.3s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1103"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.3s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1300"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1110.end" dur="0.1s"/>
+</rect>
+
+<rect x="700" y="235" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1100"
+  fill="freeze"
+  from="700" to="740"
+  begin="anim1089.end+0.4s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1101"
+  fill="freeze"
+  from="335" to="380"
+  begin="anim1089.end+0.4s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1102"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.4s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1103"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.4s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1300"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1110.end" dur="0.1s"/>
+</rect>
+
+<rect x="700" y="235" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1100"
+  fill="freeze"
+  from="700" to="740"
+  begin="anim1089.end+0.5s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1101"
+  fill="freeze"
+  from="335" to="380"
+  begin="anim1089.end+0.5s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1102"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.5s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1103"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.5s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1300"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1110.end" dur="0.1s"/>
+</rect>
+
+<rect x="700" y="235" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1100"
+  fill="freeze"
+  from="700" to="740"
+  begin="anim1089.end+0.6s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1101"
+  fill="freeze"
+  from="335" to="380"
+  begin="anim1089.end+0.6s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1102"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.6s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1103"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.6s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1300"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1110.end" dur="0.1s"/>
+</rect>
+
+<rect x="700" y="235" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1100"
+  fill="freeze"
+  from="700" to="740"
+  begin="anim1089.end+0.7s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1101"
+  fill="freeze"
+  from="335" to="380"
+  begin="anim1089.end+0.7s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1102"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.7s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1103"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.7s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1300"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1110.end" dur="0.1s"/>
+</rect>
+
+<rect x="700" y="235" width="0" height="0" fill="blue" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1100"
+  fill="freeze"
+  from="700" to="740"
+  begin="anim1089.end+0.8s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1101"
+  fill="freeze"
+  from="335" to="380"
+  begin="anim1089.end+0.8s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1102"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.8s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1103"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.8s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1300"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1110.end" dur="0.1s"/>
+</rect>
+
+<rect x="700" y="235" width="0" height="0" fill="red" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1100"
+  fill="freeze"
+  from="700" to="740"
+  begin="anim1089.end+0.9s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1101"
+  fill="freeze"
+  from="335" to="380"
+  begin="anim1089.end+0.9s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1102"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.9s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1103"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+0.9s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1300"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1110.end" dur="0.1s"/>
+</rect>
+
+<rect x="700" y="235" width="0" height="0" fill="white" opacity="1">
+  <animate attributeName="x" attributeType="XML"
+  repeatCount = "1"
+  id="anim1100"
+  fill="freeze"
+  from="700" to="740"
+  begin="anim1089.end+1s" dur="1s"/>
+  <animate attributeName="y" attributeType="XML"
+  repeatCount = "1"
+  id="anim1101"
+  fill="freeze"
+  from="335" to="380"
+  begin="anim1089.end+1s" dur="1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1102"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+1s" dur="0.1s"/>
+  <animate attributeName="height" attributeType="XML"
+  repeatCount = "1"
+  id="anim1103"
+  fill="freeze"
+  from="0" to="10"
+  begin="anim1089.end+1s" dur="0.1s"/>
+  <animate attributeName="width" attributeType="XML"
+  repeatCount = "1"
+  id="anim1300"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1110.end" dur="0.1s"/>
+</rect>
+
+<!-- Cocktail -->
+
+<polygon points="713 370, 743 402, 770 370" fill="purple" opacity="0">
+  <animate attributeName="opacity" attributeType="XML"
+  repeatCount = "1"
+  id="anim1110"
+  fill="freeze"
+  from="0" to="1"
+  begin="anim1089.end+1s" dur="1s"/>
+
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  id="anim1114"
+  type="translate"
+  fill="freeze"
+  from="0 0" to="-40 -116"
+  begin="anim1112.end" dur="1s"/>
+
+  <animate attributeName="opacity" attributeType="XML"
+  repeatCount = "1"
+  id="anim1115"
+  fill="freeze"
+  from="1" to="0"
+  begin="anim1114.end" dur="2s"/>
+
+  <animate attributeName="opacity" attributeType="XML"
+  repeatCount = "1"
+  id="anim1120"
+  fill="freeze"
+  from="0" to="0"
+  begin="anim1001.begin" dur="0.1s"/>
+  <animateTransform attributeName="transform" attributeType="XML"
+  repeatCount = "1"
+  id="anim1120"
+  type="translate"
+  fill="freeze"
+  from="0 0" to="0 0"
+  begin="anim1001.begin" dur="0.1s"/>
+
+</polygon>
+</svg>

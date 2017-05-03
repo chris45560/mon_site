@@ -1,0 +1,386 @@
+<?php
+if(!isset($_GET['cocktail_id'])){ echo "<script type='text/javascript'>document.location.replace('realisations');</script>";}
+else{
+  ?>
+  <main class="container tab_posts">
+    <?php
+
+    $aCocktails = array();
+    $aListCockt = Recup_List_Posts(); // On récupère la liste de tous les cocktails
+
+    foreach ($aListCockt as $iKey => $aValue) {
+      $aCocktails[$aValue['post_id']] = $aValue['post_titre']; }
+      asort($aCocktails); // Trie un tableau et conserve l'association des index
+      // Ici $aTab est le tableau de tous les cocktails présents dans la base de données
+      // triés alphabétiquement
+
+
+      $aCocktails_Id_Titre = array();
+      foreach($aCocktails as $iKey => $sValue)
+      {
+        $aCocktails_Id_Titre[]=array(
+          'id' => $iKey,
+          'titre' => $sValue
+        );
+      }
+
+      // AFFICHAGE DU COCKTAIL D'AVANT ET DU COCKTAIL D'APRES PAR ORDRE ALPHABETIQUE
+
+      $Id = $_GET['cocktail_id'];
+      $aPosts = AffichagePost_Id($_GET['cocktail_id']);
+
+      if($aPosts['post_id'] == $Id)
+      {
+        foreach($aCocktails_Id_Titre as $iIndex => $aCockt)
+        {
+          if(in_array($aPosts['post_titre'], $aCockt))
+          {
+            if(empty($aCocktails_Id_Titre[$iIndex - 1]))
+            {
+              $Number_Cockt = count($aCocktails_Id_Titre);
+              $aCocktail_Before = $aCocktails_Id_Titre[$Number_Cockt-1];
+            }
+            else
+            {
+              $aCocktail_Before = $aCocktails_Id_Titre[$iIndex - 1];
+            }
+            $iCocktail_Before_Id = $aCocktail_Before['id'];
+            $sCocktail_Before_Titre = $aCocktail_Before['titre'];
+
+            if(empty($aCocktails_Id_Titre[$iIndex + 1]))
+            {
+              $aCocktail_After = $aCocktails_Id_Titre[0];
+            }
+            else
+            {
+              $aCocktail_After = $aCocktails_Id_Titre[$iIndex + 1];
+            }
+            $iCocktail_After_Id = $aCocktail_After['id'];
+            $sCocktail_After_Titre = $aCocktail_After['titre'];
+          }
+        }
+      }
+      else
+      {
+        // L'id présent dans l'url ne correspond à aucun id de cocktail présent dans la base de données
+        echo "<script type='text/javascript'>document.location.replace('index.php?page=realisations');</script>";
+      }
+      ?>
+
+      <a href="<?php echo $domain;?>realisations" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+      <div class="flex div_cocktails">
+        <a href="<?php echo $domain;?>cocktail/<?= $iCocktail_Before_Id ?>#ancre_prec" class="cta go_cocktail left" id="ancre_prec"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> <?= $sCocktail_Before_Titre ?></a>
+        <a href="<?php echo $domain;?>cocktail/<?= $iCocktail_After_Id ?>#ancre_suiv" class="cta go_cocktail right" id="ancre_suiv"><?= $sCocktail_After_Titre ?> <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+      </div>
+
+      <?php if(isset($_SESSION['status']) && $_SESSION['status']>=1)
+      { ?>
+        <a href="<?php echo $domain;?>new" class="cta create_post"><i class="fa fa-plus-circle" aria-hidden="true"></i> Ajouter un Article</a>
+        <?php
+      }
+
+      $bPopular_Cocktail = false;
+      ?>
+      <h2 class="title_cocktail">
+        <?php
+        if(!empty($_SESSION['id']))
+        {
+          $sFavorites = Recup_Favorites_Cocktail_User($_SESSION['id']);
+          $aTab = explode("-",$sFavorites['user_cocktail_favorites']);
+          if(in_array($aPosts['post_titre'],$aTab))
+          {
+            // Si ce cocktail est un de mes cocktails favoris alors j'affiche l'étoile or + "Retirer des Favoris"
+            // Sinon j'affiche l'étoile blanche + "Ajouter aux Favoris"
+            ?>
+            <span><i class='fa fa-star add_favorites gold' data-ajax="<?= $aPosts['post_titre'] ?>" aria-hidden='true'></i><em class="add_favorites_em"> : Retirer des Favoris</em></span>
+            <?php
+          }
+          else
+          {
+            ?>
+            <span><i class='fa fa-star add_favorites' data-ajax="<?= $aPosts['post_titre'] ?>" aria-hidden='true'></i><em class="add_favorites_em"> : Ajouter aux Favoris</em></span>
+            <?php
+          }
+        }
+
+        if(!$bPopular_Cocktail && $aPosts['post_titre'] == "Mojito")
+        {
+          echo "<i class='fa fa-star fa-spin' aria-hidden='true'></i> ";
+          echo $aPosts['post_titre'];
+          echo " <i class='fa fa-star fa-spin' aria-hidden='true'></i>";
+          $bPopular_Cocktail = true;
+        }
+        else
+        {
+          if($aPosts['post_titre'] == "Virgin Mojito (sans alcool)" || $aPosts['post_titre'] == "Virgin Colada (sans alcool)")
+          {
+            echo "<span class='lower_font_size'>".$aPosts['post_titre']."</span>";
+          }
+          else
+          {
+            echo $aPosts['post_titre'];
+          }
+        }
+
+        ?>
+
+        <?php
+        $iNote = 0;
+        if(!empty($_SESSION['id']))
+        {
+          $sMarks = Recup_Marks_Cocktail_User($_SESSION['id']);
+          // $sMars['user_cocktail_marks'] ==> Liste des cocktails notés par l'utilisateur
+
+          $aTab = explode("-",$sMarks['user_cocktail_marks']);
+          foreach($aTab as $iKey => $sValue)
+          {
+            if(substr($sValue, 0, -1) == $aPosts['post_titre'])
+            {
+              $iNote = intval(substr($sValue, -1));
+            }
+          }
+          ?>
+          <div class="grade_div flex">
+            <p>Ma note : </p>
+            <ul class="notes-echelle">
+              <li>
+                <label for="note01" title="Note&nbsp;: 1 sur 5" data-ajax="<?=$aPosts['post_titre']?>">1</label>
+                <input type="radio" name="notesA" id="note01" value="1"
+                <?php
+                if($iNote == 1){ echo "checked"; }
+                ?> />
+              </li>
+              <li>
+                <label for="note02" title="Note&nbsp;: 2 sur 5" data-ajax="<?=$aPosts['post_titre']?>">2</label>
+                <input type="radio" name="notesA" id="note02" value="2"
+                <?php
+                if($iNote == 2){ echo "checked"; }
+                ?> />
+              </li>
+              <li>
+                <label for="note03" title="Note&nbsp;: 3 sur 5" data-ajax="<?=$aPosts['post_titre']?>">3</label>
+                <input type="radio" name="notesA" id="note03" value="3"
+                <?php
+                if($iNote == 3){ echo "checked"; }
+                ?> />
+              </li>
+              <li>
+                <label for="note04" title="Note&nbsp;: 4 sur 5" data-ajax="<?=$aPosts['post_titre']?>">4</label>
+                <input type="radio" name="notesA" id="note04" value="4"
+                <?php
+                if($iNote == 4){ echo "checked"; }
+                ?> />
+              </li>
+              <li>
+                <label for="note05" title="Note&nbsp;: 5 sur 5" data-ajax="<?=$aPosts['post_titre']?>">5</label>
+                <input type="radio" name="notesA" id="note05" value="5"
+                <?php
+                if($iNote == 5){ echo "checked"; }
+                ?> />
+              </li>
+            </ul>
+
+          </div>
+
+          <?php
+        }
+        ?>
+
+      </h2>
+
+      <p class="categorie">Catégorie : <?=$aPosts['post_categorie']?></p>
+
+      <article class="posts">
+
+        <p class="post">Posté le : <span><?=$aPosts['date']?></span>
+          par : <span class="user_pseudo"><?=$aPosts['user_pseudo']?></span></p>
+          <?php if(isset($_SESSION['status']) && $_SESSION['status']>=1)
+          { ?>
+            <!-- <form id="form_buttons" method="POST" action=""> -->
+            <div class="modify_delete_buttons flex">
+              <a href="<?php echo $domain;?>modify/<?=$aPosts['post_id']?>" class="cta modify_post"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier</a>
+              <a href="delete&id=<?=$aPosts['post_id']?>" class="cta delete_post"><i class="fa fa-trash" aria-hidden="true"></i> Supprimer</a>
+            </div>
+            <?php
+          }
+          ?>
+
+          <div class="cocktail_mark_global">
+            <?php $aMark = Recup_Marks_Cocktail($aPosts['post_id']);
+
+            if($aMark['post_mark'] != 0)
+            {
+              ?>
+              <p>Note moyenne des Internautes : </p>
+              <?php
+              for($i=0; $i<$aMark['post_mark']; $i++)
+              {
+                ?>
+                <img class="picture_heart" src="<?php echo $domain;?>assets/img/mark_heart.png" alt="picture_heart">
+                <?php
+              }
+              for($i=$aMark['post_mark']; $i<5; $i++)
+              {
+                ?>
+                <img class="picture_heart" src="<?php echo $domain;?>assets/img/mark_noheart.png" alt="picture_heart">
+                <?php
+              }
+
+              $iTotal_Votes = Recup_Number_Marks_Cocktail($aPosts['post_titre']);
+              ?>
+              <p><?=$aMark['post_mark']?> / 5 <em>(<?php
+              echo $iTotal_Votes;
+              if($iTotal_Votes > 1){ echo " votes"; }
+              else{ echo " vote"; } ?>)</em></p>
+              <?php
+            }
+            ?>
+
+          </div>
+
+          <div class="div_material_image_ingredients flex">
+
+
+            <?php if ($aPosts['post_material_id1'] != 0)
+            { ?>
+
+              <div class="div_material">
+
+                <p class="material">Matériel nécessaire : </p>
+                <figure>
+                  <img class="picture_materials" src="<?php echo $domain;?>assets/img/<?=$aPosts['material_source']?>">
+                  <figcaption><?=$aPosts['material_titre']?></figcaption>
+                </figure>
+                <?php
+              }
+              ?>
+
+              <?php if ($aPosts['post_material_id2'] != 0)
+              {
+                $aTab = Recup_Material_Id($aPosts['post_material_id2']); ?>
+                <figure>
+                  <img class="picture_materials" src="<?php echo $domain;?>assets/img/<?=$aTab['material_source']?>">
+                  <figcaption><?=$aTab['material_titre']?></figcaption>
+                </figure>
+                <?php
+              }
+              ?>
+
+              <?php if ($aPosts['post_material_id3'] != 0)
+              {
+                $aTab = Recup_Material_Id($aPosts['post_material_id3']); ?>
+                <figure>
+                  <img class="picture_materials" src="<?php echo $domain;?>assets/img/<?=$aTab['material_source']?>">
+                  <figcaption><?=$aTab['material_titre']?></figcaption>
+                </figure>
+                <?php
+              }
+              ?>
+
+              <?php if ($aPosts['post_material_id1'] != 0)
+              { ?>
+              </div>
+              <?php }?>
+              <div class="div_image">
+
+                <?php if (!empty($aPosts['picture_source']))
+                { ?>
+                  <img class="cocktails" src="<?php echo $domain;?>pictures/<?=$aPosts['picture_source']?>">
+                  <?php
+                }
+                ?>
+              </div>
+
+              <div class="div_ingredients">
+                <p class="ingredients">Ingredients : </p>
+
+                <div class="div_ingredients_details">
+
+                  <ul class="list_ingredients flex">
+                    <?php
+                    $aIng = explode("-",$aPosts['ingredient_description']);
+                    foreach($aIng as $iIndex => $sValue)
+                    {
+                      ?>
+                      <li><?= $sValue ?></li>
+                      <?php }?>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <?php
+              $aTab = explode("/////", $aPosts['post_description']);
+              if(!empty($aTab[0]))
+              {
+                ?>
+                <h3 class="title_h3">Description : </h3>
+                <p class="description"><?=$aTab[0]?></p>
+                <?php
+              }
+              if(!empty($aTab[1]))
+              {
+                ?>
+                <h3 class="title_h3">Réalisation : </h3>
+                <?php
+                $aTabReal = explode(".", $aTab[1]);
+                ?>
+                <ul class="list_realisation">
+                  <?php
+                  foreach($aTabReal as $iKey => $sValue)
+                  {
+                    if(!empty($sValue))
+                    {
+                      ?>
+                      <li><?=$sValue?></li>
+                      <?php
+                    }
+                  }
+                  ?>
+                </ul>
+                <?php
+              }
+              ?>
+              <!-- COMMENTAIRES -->
+
+              <div class="parent_comment">
+
+                <?php foreach($aPosts['comments'] as $iInd => $aTab)
+                {
+                  include('comments.phtml');
+                } ?>
+
+              </div>
+
+              <div class="new_comments">
+                <a class="cta"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i> Ajouter un Commentaire</a>
+              </div>
+
+              <form class="form_comments" method="POST" action="<?= $domain ?>">
+                <input type="hidden" name="id_post" id="id_post" value="<?=$aPosts['post_id']?>">
+
+                <!-- <p class="flex">
+                <label for="pseudo_user">Numéro Utilisateur : </label>
+                <input type="pseudo_user" placeholder="Pseudo" id="pseudo_user" name="pseudo_user" value=1>
+              </p> -->
+
+              <p class="flex">
+                <label for="comment">Commentaire : </label>
+                <textarea placeholder="Commentaire" id="comment" name="comment"></textarea>
+              </p>
+
+              <input type="submit" name="send_comment" class="cta send_comment" value="Envoyer">
+            </form>
+
+          </article>
+
+          <div class="div_inscription">
+            <p>Pour vous inscrire, c'est simple :</p>
+            <ul class="prestations_inscription">
+              <li><i class="fa fa-laptop" aria-hidden="true"></i><span> par internet : </span>remplissez le formulaire dans : <a class="a_contact" href="<?php echo $domain;?>contact">"Contact / Réservation"</a></li>
+              <li><i class="fa fa-mobile" aria-hidden="true"></i> par téléphone : au <a class="tel_contact2" href="tel:+33682062629">06 82 06 26 29</a></li>
+            </ul>
+          </div>
+        </main>
+        <?php } ?>

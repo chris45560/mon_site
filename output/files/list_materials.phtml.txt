@@ -1,0 +1,57 @@
+<?php
+if(!isset($_SESSION['id']) || $_SESSION['status'] != 5){ echo "<script type='text/javascript'>document.location.replace('index.php');</script>";}
+else{
+?>
+<main class="container prestations main_prestations">
+
+  <a href="<?php echo $domain;?>admin" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+  <h2><i class="fa fa-list-ul" aria-hidden="true"></i> Liste des Matériels</h2>
+  <section class="section_admin">
+
+    <table class="tab_list_pictures">
+
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Titre</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <?php
+        foreach($aList_Materials as $aIndex => $aCol){ ?>
+          <tr>
+            <?php
+            foreach ($aCol as $key => $sValue) {
+              if($key == "material_id" ||
+              $key == "material_titre" ||
+              $key == "material_source"
+              )
+              {
+                if($key == "material_source")
+                {
+                  ?>
+                    <td class="td_avatar"><img src='<?php echo $domain;?>assets/img/<?= $sValue ?>' alt="<?= $sValue ?>"</td>
+                    <?php
+                }
+                else
+                { ?>
+                <td><?= $sValue ?></td>
+                <?php
+              }
+            }
+          } ?>
+            </tr>
+            <?php } ?>
+
+          </tbody>
+          <tfooter>
+          </tfooter>
+        </table>
+      </section>
+
+    </main>
+<?php } ?>
+

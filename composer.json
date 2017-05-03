@@ -1,0 +1,15 @@
+{
+  "name": "christophehebert/monsite",
+  "description": "mon atelier cocktails",
+  "authors": [
+    {
+      "name": "hebert christophe",
+      "email": "christophe.hebert45@gmail.com"
+    }
+  ],
+  "minimum-stability": "alpha",
+  "require": {},
+  "require-dev": {
+    "phpdocumentor/phpdocumentor": "2.*"
+  }
+}

@@ -1,0 +1,39 @@
+<?php
+
+/**
+* Cette fonction permet de se connecter à la base de données
+* @author Christophe HEBERT <christophe.hebert45@gmail.com>
+* @since 1.0
+* @return object Retourne un objet PDO qui représente une connexion à la base de données
+*/
+function Connexion()
+{
+  // $options = [PDO::MYSQL_ATTR_INIT_COMMAND =>"SET NAMES utf8;SET time_zone = 'Europe/Paris'"];
+
+  $options = array(
+  PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
+  // SET time_zone = 'Europe/Paris'
+  // );
+
+  try {
+      // $timezone = '+2:00';
+      // SET time_zone = '+2:00'; -- Ou SET time_zone = 'Europe/Paris';
+      // La seconde version n'est cependant pas toujours supportée par les bases de donnée.
+      // Donc en exécutant cette requête avant toute insertion, ta base de donnée contiendra toujours la bonne heure.
+
+      // $oPdo = new PDO('mysql:host=localhost;dbname=id1351516_bdd_cocktails',
+      //                 'id1351516_christophe',
+      //                 'testpassword',
+      //                 $options);
+
+      $oPdo = new PDO('mysql:host=christoptvhebara.mysql.db;dbname=christoptvhebara',
+                      'christoptvhebara',
+                      'Hebarara4556',
+                      $options);
+      // $oPdo->exec("SET time_zone = '{$timezone}'");
+  } catch (PDOException $e) {
+      echo 'Connection failed: ' . $e->getMessage();
+  }
+	return $oPdo;
+}
+

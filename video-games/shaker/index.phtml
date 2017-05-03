@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="shaker_logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <script src="script/jquery.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <title>Shaker</title>
+</head>
+<body>
+<a id="top"></a>
+
+  <h1>Shaker</h1>
+
+  <div class="description">
+    <p>Choisissez 3 produits et Shaker!</p>
+  </div>
+
+  <section class="alcools flex">
+
+    <article data="Vodka">
+      <figure>
+        <img class="image_produits" src="img/vodka.png" alt="vodka">
+        <figcaption>Vodka</figcaption>
+      </figure>
+    </article>
+
+    <article data="Rhum">
+      <figure>
+        <img class="image_produits" src="img/rhum.png" alt="rhum">
+        <figcaption>Rhum</figcaption>
+      </figure>
+    </article>
+
+    <article data="Whisky">
+      <figure>
+        <img class="image_produits" src="img/whisky.png" alt="whisky">
+        <figcaption>Whisky</figcaption>
+      </figure>
+    </article>
+
+    <article data="Tequila">
+      <figure>
+        <img class="image_produits" src="img/tequila.png" alt="tequila">
+        <figcaption>Tequila</figcaption>
+      </figure>
+    </article>
+
+    <article data="Gin">
+      <figure>
+        <img class="image_produits addwidth" src="img/gin.png" alt="gin">
+        <figcaption>Gin</figcaption>
+      </figure>
+    </article>
+
+  </section>
+
+  <section class="liqueurs flex">
+
+    <article data="Champagne">
+      <figure>
+        <img class="image_produits" src="img/champagne.png" alt="champagne">
+        <figcaption>Champagne</figcaption>
+      </figure>
+    </article>
+
+    <article data="Triple Sec">
+      <figure>
+        <img class="image_produits addwidth" src="img/cointreau.png" alt="cointreau">
+        <figcaption>Triple Sec</figcaption>
+      </figure>
+    </article>
+
+    <article data="Curaçao Bleu">
+      <figure>
+        <img class="image_produits addwidth" src="img/curacao_bleu.png" alt="curaçao_bleu">
+        <figcaption>Curaçao Bleu</figcaption>
+      </figure>
+    </article>
+
+    <article data="Liqueur Coco">
+      <figure>
+        <img class="image_produits" src="img/malibu.png" alt="malibu">
+        <figcaption>Liqueur Coco</figcaption>
+      </figure>
+    </article>
+
+    <article data="Coca-Cola">
+      <figure>
+        <img class="image_produits" src="img/coca.png" alt="coca">
+        <figcaption>Coca-Cola</figcaption>
+      </figure>
+    </article>
+
+  </section>
+
+  <section class="jus_sirops flex">
+
+    <article data="Jus d'orange">
+      <figure>
+        <img class="image_produits addwidth" src="img/orange.png" alt="orange">
+        <figcaption>Jus d'orange</figcaption>
+      </figure>
+    </article>
+
+    <article data="Jus d'ananas">
+      <figure>
+        <img class="image_produits addwidth" src="img/ananas.png" alt="ananas">
+        <figcaption>Jus d'ananas</figcaption>
+      </figure>
+    </article>
+
+    <article data="Jus de citron">
+      <figure>
+        <img class="image_produits addwidth" src="img/citron.jpg" alt="citron">
+        <figcaption>Jus de citron</figcaption>
+      </figure>
+    </article>
+
+    <article data="Sirop de grenadine">
+      <figure>
+        <img class="image_produits addwidthmax" src="img/sirop_grenadine.png" alt="sirop_grenadine">
+        <figcaption>Sirop Grenadine</figcaption>
+      </figure>
+    </article>
+
+    <article data="Sirop de sucre de canne">
+      <figure>
+        <img class="image_produits addwidth" src="img/sirop_sucre.gif" alt="sirop_sucre">
+        <figcaption>Sirop de Sucre</figcaption>
+      </figure>
+    </article>
+
+  </section>
+
+  <div class="result">
+    <a class="shake" href="#top">Shake!</a>
+  </div>
+
+  <div class="div_svg_perdant">
+    <?php
+    include("perdant_svg.svg");
+    ?>
+  </div>
+
+  <div class="div_svg_gagnant">
+    <?php
+    include("gagnant_svg.svg");
+    ?>
+  </div>
+
+  <script src="script/script.js"></script>
+
+</body>
+</html>

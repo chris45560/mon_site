@@ -1,0 +1,153 @@
+/************ GENERAL RULES *************/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 100%;
+}
+
+body{
+	background-color: white;
+	font-family: 'VT323', monospace;
+}
+
+h1,
+h2{
+	margin-top: 10px;
+	text-transform: uppercase;
+	color: black;
+	font-size: 3.5rem;
+	text-align: center;
+}
+
+p{
+	font-size: 1.5rem;
+}
+
+article{
+	text-align: center;
+	font-size: 1.8rem;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px black;
+	cursor: pointer;
+	width: 200px;
+	height: 150px;
+	padding: 10px;
+}
+
+article:hover{
+	background-color: black;
+	color: white;
+	border: 2px solid white;
+}
+
+section{
+	margin: 20px auto;
+}
+
+/************ GENERAL CLASSES RULES *************/
+
+.flex{
+	display: flex;
+}
+
+.description,
+.result{
+	text-align: center;
+	margin: 20px auto;
+}
+
+.alcools,
+.liqueurs,
+.jus_sirops{
+	justify-content: space-around;
+}
+
+.select{
+	background-color: yellow;
+}
+
+/************ .SHAKE RULES *************/
+
+a.shake{
+	display: block;
+	margin: 0 auto;
+	color: black;
+	text-decoration: none;
+	width: 300px;
+	padding: 10px;
+	font-family: 'VT323', monospace;
+	font-size: 1.8rem;
+	background-color: white;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px black;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+a.shake:hover{
+	background-color: black;
+	color: white;
+	border: 2px solid white;
+}
+
+/************ .IMAGE_PRODUITS RULES *************/
+
+.image_produits{
+	width: 60px;
+	height: 100px;
+}
+
+.image_produits.addwidth{
+	width: 100px;
+}
+
+.image_produits.addwidthmax{
+	width: 150px;
+	height: 100px;
+}
+
+/************ .DIV_SVG_GAGNANT + .DIV_SVG_PERDANT RULES *************/
+
+.div_svg_perdant,
+.div_svg_gagnant{
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.div_svg_gagnant img{
+	display: block;
+	margin: 0 auto;
+	width: 1300px;
+	height: 800px;
+}
+
+/****************************** MEDIA QUERY RULES *****************************/
+
+/******************** IPHONE 3G + 5 => 320 PX *******************/
+@media screen and (max-width: 600px)
+{
+	.alcools,
+	.liqueurs,
+	.jus_sirops{
+		flex-wrap: wrap;
+	}
+
+	.div_svg_gagnant,
+	.div_svg_perdant{
+		width: 200px;
+	}
+
+	.div_svg_gagnant svg{
+		display: block;
+		margin: 0 auto;
+		width: 300px;
+		height: 200px;
+	}
+}

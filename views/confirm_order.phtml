@@ -1,0 +1,59 @@
+<main class="container confirm_order">
+
+  <a href="<?php echo $domain;?>user_check_contact_information" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+  <?php $aUser = RecupInfosUser($_SESSION['pseudo']); ?>
+
+  <h2><i class="fa fa-check-circle" aria-hidden="true"></i> Vérification et Validation de votre Commande</h2>
+  <article>
+
+    <h3>Adresse d'Expédition :</h3>
+    <div class="address_user_expedition">
+      <p>
+        <?php if($aUser['user_civility']=='monsieur'){echo "Mr";} ?>
+        <?php if($aUser['user_civility']=='madame'){echo "Mme";} ?>
+        <?=$aUser['user_lastname']." ".$aUser['user_firstname']?>
+      </p>
+      <p><?=$aUser['user_address']?></p>
+      <p class="uppercase inline"><?=$aUser['user_city']?>, <?=$aUser['user_zipcode']?></p>
+      <p class="uppercase"><?=$aUser['user_country']?></p>
+    </div>
+    <h3>Récapitulatif de votre Commande :</h3>
+      <?php
+      foreach($_SESSION['basket'] as $iId => $aValue)
+      {
+        if($iId != 'total' && $iId != 'quantity_total')
+        {
+          echo "<div class='order_expedition flex'>";
+          echo "<img src='".$domain."assets/img/".$aValue['giftscard_photo']."' alt='".$aValue['giftscard_photo']."'>";
+          echo "<div class='div_description_order'>";
+          echo "<p class='uppercase'>".$aValue['giftscard_name']."</p>";
+          echo "<p>".$aValue['giftscard_description']."</p>";
+          echo "<p>"."Prix Unitaire : ".$aValue['giftscard_saleprice'].",00 € </p>";
+          echo "<p>"."Quantité : ".$aValue['giftscard_quantity']."</p>";
+          echo "<p class='price_order'>".($aValue['giftscard_saleprice']*$aValue['giftscard_quantity']).",00 € </p>";
+          echo "</div>";
+          echo "</div>";
+        }
+        else
+        {
+          continue;
+        }
+      }
+      ?>
+    <div class="order_total">
+      <p>Montant Total : <?=$_SESSION['basket']['total']?>,00 €</p>
+    </div>
+    <form method="POST" action="">
+
+      <p>
+        <input type="checkbox" name="cgv_yes" id="cgv_yes">
+        <label for="cgv_yes">J'ai lu et accepté les<a class="a_prestations" href="<?php echo $domain;?>cgv"> Conditions Générales de Vente</a></label>
+      </p>
+
+      <input type="submit" value=" Acheter" class="cta" id="order_confirm" name="order_confirm">
+
+    </form>
+
+  </article>
+</main>

@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+        <script type="text/javascript">
+        function loadExternalCodeSnippets() {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+                var src = pre.getAttribute('data-src');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist or is empty';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        $(document).ready(function(){
+            loadExternalCodeSnippets();
+        });
+        $('#source-view').on('shown', function () {
+            loadExternalCodeSnippets();
+        })
+    </script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">27</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1140868816"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1140868816" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/PDF.html">PDF</a></li>
+                                                    <li class="class"><a href="../classes/ReCaptcha.html">ReCaptcha</a></li>
+                                                    <li class="class"><a href="../classes/ReCaptchaResponse.html">ReCaptchaResponse</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content file">
+                    <nav>
+                                                                    </nav>
+
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+                    <h1><small></small>form_control.php</h1>
+                    <p><em></em></p>
+                    
+
+                    
+                    
+                                    </div>
+
+                <aside class="span4 detailsbar">
+                    <dl>
+                                                    <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">\Default</div></dd>
+                        
+                        
+                    </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                            </table>
+
+                </aside>
+            </div>
+
+            
+                        <div class="row-fluid">
+                <section class="span8 content file">
+                    <h2>Functions</h2>
+                </section>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_cryptagePwd" name="method_cryptagePwd" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">cryptagePwd()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">cryptagePwd(string  <span class="argument">$sPwd</span>) : string</pre>
+                <p><em>Cette fonction permet de crypter la variable passée en paramètre via une méthode de hashage (sha1, sha256 ou sha512) et un grain de sable</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sPwd </td>
+                                <td><p>Chaîne à crypter</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Retourne une chaîne de caractères contenant l'empreinte numérique calculée en chiffres hexadécimals minuscules.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_Convert_String" name="method_Convert_String" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">Convert_String()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">Convert_String(string  <span class="argument">$sValue</span>) : string</pre>
+                <p><em>Cette fonction permet de supprimer tous les symbôles et de convertir les caractères spéciaux présents dans la variable passée en paramètre en caractères &quot;normaux&quot; sans accentuation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Chaîne à convertir</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Retourne une chaîne de caractères sans symbôles avec les caractères spéciaux convertis en caractères &quot;normaux&quot; sans accentuation</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_Convert_Age" name="method_Convert_Age" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">Convert_Age()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">Convert_Age(string  <span class="argument">$naiss</span>) : integer</pre>
+                <p><em>Cette fonction permet de connaître l&#039;âge d&#039;une personne via sa date de naissance passée en paramètre</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$naiss </td>
+                                <td><p>Date de naissance</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>Retourne un entier représentant l'âge de la personne</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_PseudoControl" name="method_PseudoControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">PseudoControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">PseudoControl(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, alphanumérique et n&#039;est pas faite que de caractères blancs. Elle contrôle également si la valeur (pseudo) passée en paramètre n&#039;est pas déjà présent dans la base de données</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (pseudo de l'utilisateur)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre pseudo ne doit comporter que des chiffres et/ou des lettres');) ou (throw new DomainException('Ce pseudo est déjà pris');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_PseudoControl_Reset" name="method_PseudoControl_Reset" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">PseudoControl_Reset()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">PseudoControl_Reset(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, alphanumérique et n&#039;est pas faite que de caractères blancs.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (pseudo de l'utilisateur)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre pseudo ne doit comporter que des chiffres et/ou des lettres');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_NameControl" name="method_NameControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">NameControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">NameControl(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, alphabétique et n&#039;est pas faite que de caractères blancs.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (nom de l'utilisateur)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre nom ne doit comporter que des lettres');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_PasswordControl" name="method_PasswordControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">PasswordControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">PasswordControl(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, alphanumérique et n&#039;est pas faite que de caractères blancs.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (password)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre mot de passe ne doit comporter que des chiffres et/ou des lettres');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_PasswordModifControl" name="method_PasswordModifControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">PasswordModifControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">PasswordModifControl(string  <span class="argument">$sValue</span>, string  <span class="argument">$sActual_Password</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre ($sValue) est égale au password de l&#039;utilisateur</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sActual_Password </td>
+                                <td><p>Password de l'utilisateur</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre mot de passe est erroné');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ConfirmPasswordControl" name="method_ConfirmPasswordControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">ConfirmPasswordControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ConfirmPasswordControl(string  <span class="argument">$sMdp</span>, string  <span class="argument">$sConfirmMdp</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si les 2 valeurs passées en paramètre sont égales</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sMdp </td>
+                                <td><p>1ère valeur (mot de passe)</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sConfirmMdp </td>
+                                <td><p>2ème valeur (confirmation du mot de passe)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Les 2 Mots de Passe que vous avez entrés sont différents');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_EmailControl" name="method_EmailControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">EmailControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">EmailControl(integer  <span class="argument">$iId_User</span>, string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, si c&#039;est une adresse de courriel selon la syntaxe défini par la RFC 822 et si elle n&#039;est pas faite que de caractères blancs. Elle contrôle également si la valeur passée en paramètre n&#039;est pas déjà associée à un utilisateur différent de celui ayant l&#039;id passé en paramètre</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$iId_User </td>
+                                <td><p>Id de l'utilisateur</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (e-mail)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre E-mail n\'est pas correctement écrit');) ou (throw new DomainException('Votre E-mail est déjà pris');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_EmailControl_Register" name="method_EmailControl_Register" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">EmailControl_Register()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">EmailControl_Register(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, si c&#039;est une adresse de courriel selon la syntaxe défini par la RFC 822 et si elle n&#039;est pas faite que de caractères blancs. Elle contrôle également si la valeur passée en paramètre n&#039;est pas déjà associée à un utilisateur</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (e-mail)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre E-mail n\'est pas correctement écrit');) ou (throw new DomainException('Votre E-mail est déjà pris');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_EmailControl_Reset" name="method_EmailControl_Reset" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">EmailControl_Reset()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">EmailControl_Reset(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, si c&#039;est une adresse de courriel selon la syntaxe défini par la RFC 822 et si elle n&#039;est pas faite que de caractères blancs.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (e-mail)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre E-mail n\'est pas correctement écrit');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_EmailControl_Contact" name="method_EmailControl_Contact" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">EmailControl_Contact()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">EmailControl_Contact(string  <span class="argument">$sValue</span>) : boolean</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot; et si c&#039;est une adresse de courriel selon la syntaxe défini par la RFC 822</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (e-mail)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>Retourne true si le contrôle est conforme, false sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_BirthDateControl_Day" name="method_BirthDateControl_Day" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">BirthDateControl_Day()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">BirthDateControl_Day(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, si c&#039;est un entier et si sa taille est de 2 caractères</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (jour de naissance)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre jour de naissance doit comporter 2 chiffres');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_BirthDateControl_Month" name="method_BirthDateControl_Month" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">BirthDateControl_Month()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">BirthDateControl_Month(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, si c&#039;est un entier et si sa taille est de 2 caractères</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (mois de naissance)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre mois de naissance ne doit comporter que 2 chiffres');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_BirthDateControl_Year" name="method_BirthDateControl_Year" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">BirthDateControl_Year()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">BirthDateControl_Year(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, si c&#039;est un entier et si sa taille est de 4 caractères</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (année de naissance)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre année de naissance doit comporter 4 chiffres');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_BirthDateControl" name="method_BirthDateControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">BirthDateControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">BirthDateControl(integer  <span class="argument">$iDay</span>, integer  <span class="argument">$iMonth</span>, integer  <span class="argument">$iYear</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si les 3 valeurs passées en paramètre forment une date grégorienne, si cette date est inférieure ou égale à la date en cours et si, une fois converti en âge, est supérieure ou égale à 18</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$iDay </td>
+                                <td><p>Jour de naissance (2 chiffres)</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$iMonth </td>
+                                <td><p>Mois de naissance (2 chiffres)</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$iYear </td>
+                                <td><p>Année de naissance (4 chiffres)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('La Date n\'existe pas');) ou (throw new DomainException('Vous ne pouvez pas être né plus tard qu\'aujourd\'hui');) ou throw new DomainException('Vous devez être majeur pour vous inscrire sur ce site'); si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_MAX_FILE_SIZE" name="method_MAX_FILE_SIZE" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">MAX_FILE_SIZE()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">MAX_FILE_SIZE(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot; et si elle égale à l&#039;entier : 1048576</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (MAX_FILE_SIZE)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Ne touchez pas à cet input');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_CivilityControl" name="method_CivilityControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">CivilityControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">CivilityControl(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot; et si elle est égale soit à la chaîne de caractères &quot;monsieur&quot; soit à la chaîne de caractères &quot;madame&quot;</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (civilité)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre civilité est soit &quot;monsieur&quot; soit &quot;madame&quot;');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_FirstNameControl" name="method_FirstNameControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">FirstNameControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">FirstNameControl(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, alphabétique, n&#039;est pas faite que de caractères blancs et si elle n&#039;est pas vide</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (prénom)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre prénom ne doit comporter que des lettres');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_LastNameControl" name="method_LastNameControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">LastNameControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">LastNameControl(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, alphabétique, n&#039;est pas faite que de caractères blancs et si elle n&#039;est pas vide</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (nom)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre nom ne doit comporter que des lettres');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_AddressControl" name="method_AddressControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">AddressControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">AddressControl(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot; puis, après avoir été converti en une chaîne de caractères sans symbôles avec les caractères spéciaux convertis en caractères &quot;normaux&quot; sans accentuation, si elle est alphanumérique, n&#039;est pas faite que de caractères blancs et si elle n&#039;est pas vide</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (adresse)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre adresse ne doit comporter que des chiffres et/ou des lettres, les espaces, les tirets et les apostrophes sont acceptés');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_CityControl" name="method_CityControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">CityControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">CityControl(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot; puis, après avoir été converti en une chaîne de caractères sans symbôles avec les caractères spéciaux convertis en caractères &quot;normaux&quot; sans accentuation, si elle est alphanumérique, n&#039;est pas faite que de caractères blancs et si elle n&#039;est pas vide</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (ville)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre ville ne doit comporter que des lettres et aucun accent, les espaces, les tirets et les apostrophes sont acceptés');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ZipCodeControl" name="method_ZipCodeControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">ZipCodeControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ZipCodeControl(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, si elle n&#039;est pas vide, si c&#039;est un entier et si sa taille est de 5 caractères</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (code postal)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre code postal doit comporter 5 chiffres');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_CountryControl" name="method_CountryControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">CountryControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">CountryControl(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot; puis, après avoir été converti en une chaîne de caractères sans symbôles avec les caractères spéciaux convertis en caractères &quot;normaux&quot; sans accentuation, si elle est alphanumérique, n&#039;est pas faite que de caractères blancs et si elle n&#039;est pas vide</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (pays)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre pays ne doit comporter que des lettres, les espaces, les tirets et les apostrophes sont acceptés');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_PhoneControl" name="method_PhoneControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">PhoneControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">PhoneControl(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot;, si elle n&#039;est pas vide, si c&#039;est un entier et si sa taille est de 10 caractères</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (numéro de téléphone)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre numéro de téléphone doit comporter 10 chiffres');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_NewsletterControl" name="method_NewsletterControl" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">NewsletterControl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">NewsletterControl(string  <span class="argument">$sValue</span>) : \DomainException</pre>
+                <p><em>Cette fonction contrôle si la valeur passée en paramètre est bien de type &quot;string&quot; et si elle est égale soit à la chaîne de caractères &quot;yes&quot; soit à la chaîne de caractères &quot;no&quot;</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$sValue </td>
+                                <td><p>Valeur à contrôler (réponse à l'inscription à la newsletter)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DomainException
+                                            &mdash; <p>Retourne une erreur (throw new DomainException('Votre réponse à la newsletter est soit &quot;yes&quot; soit &quot;no&quot;');) si le contrôle n'est pas conforme, rien sinon</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">form_control.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Christophe HEBERT <a href="mailto:christophe.hebert45@gmail.com">christophe.hebert45@gmail.com</a></p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+        </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label"></h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/form_control.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on April 30th, 2017 at 09:27.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<?php
+if(!isset($_SESSION['id']) || $_SESSION['status'] != 5){ echo "<script type='text/javascript'>document.location.replace('index.php');</script>";}
+else{
+?>
+<main class="container prestations main_prestations">
+
+  <a href="<?php echo $domain;?>admin" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+  <h2><i class="fa fa-list-ul" aria-hidden="true"></i> Liste des Utilisateurs</h2>
+  <section class="section_admin">
+
+    <table class="tab_list_users">
+
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Pseudo</th>
+          <th>Mail</th>
+          <th colspan=2>Statut</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <?php
+        foreach($aList_Users as $aIndex => $aCol){ ?>
+          <tr>
+            <?php
+            foreach ($aCol as $key => $sValue) {
+              if($key == "user_id" || $key == "user_pseudo" || $key == "user_mail" || $key == "user_status")
+              {
+                if($key == "user_status"){ ?>
+                  <td class="td_change_user_status" onclick="location.href='<?=$domain."list_comments/id_user=".$aCol['user_id']?>'"><?= $sValue ?></td>
+                <?php }
+                else {?>
+                <td onclick="location.href='<?=$domain."list_comments/id_user=".$aCol['user_id']?>'"><?= $sValue ?></td>
+                <?php }
+              }
+                if($key == "user_status" && $sValue !=5 && $sValue!=1)
+                { ?>
+                  <td class="td_change_user_status">
+                    <a href="?status=1&id_user=<?=$aCol['user_id']?>" class="change_user_status"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                  </td>
+                  <?php  }
+                  if($key == "user_status" && $sValue == 5 || $key == "user_status" && $sValue == 1)
+                  { ?>
+                    <td class="td_change_user_status">
+                      <a href="<?php echo $domain;?>?status=0&id_user=<?=$aCol['user_id']?>" class="change_user_status"><i class="fa fa-user-times" aria-hidden="true"></i></a>
+                    </td>
+                    <?php  }
+                  } ?>
+                </tr>
+                <?php } ?>
+
+              </tbody>
+              <tfooter>
+              </tfooter>
+            </table>
+            <br>
+            <p><i class="fa fa-user-plus" aria-hidden="true"></i> : Elever au Statut de Rédacteur<p>
+              <p><i class="fa fa-user-times" aria-hidden="true"></i> : Baisser au Statut d'Utilisateur<p>
+              </section>
+
+            </main>
+<?php } ?>
+

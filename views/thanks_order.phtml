@@ -1,0 +1,25 @@
+<?php
+if(!isset($_SESSION['id'])){ echo "<script type='text/javascript'>document.location.replace('index.php');</script>";}
+else{
+?>
+<main class="container thanks_order">
+
+  <?php $aUser = RecupInfosUser($_SESSION['pseudo']); ?>
+
+  <h2><i class="fa fa-check" aria-hidden="true"></i> Commande effectuée !</h2>
+  <article>
+
+    <div class="title_thanks_order">
+    <h3>Merci, votre commande a été passée.</h3>
+    <em>Numéro de commande : <?= $Id_Order['id'] ?></em>
+  </div>
+    <p>Notre système de paiement n'étant malheureusement pas encore en état de fonctionnement,
+       nous ne pouvons donner suite à votre commande.</p>
+    <p>Cependant, votre commande est bien enregistrée et il vous est possible de la consulter
+       dans l'onglet :</p>
+    <p><a class="a_prestations" href="<?php echo $domain;?>list_order">"Mon Compte" => "Mes Commandes"</a>.</p>
+    <p>Nous vous enverrons un message électronique dés que le service sera en état de marche !</p>
+
+  </article>
+</main>
+<?php } ?>

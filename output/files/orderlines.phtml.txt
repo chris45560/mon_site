@@ -1,0 +1,28 @@
+<tbody>
+    <tr class="tr_orderlines">
+    <?php
+    foreach($aTab as $sIndex => $sValue)
+    {
+        if($sIndex == "giftscard_name" ||
+        $sIndex == "orderline_quantityordered" ||
+        $sIndex == "orderline_priceeach")
+        {
+          if($sIndex == "orderline_priceeach")
+          {
+            ?>
+            <td><?= $sValue ?>,00 €</td>
+            <?php
+          }
+          else
+          {
+            ?>
+            <td><?= $sValue ?></td>
+            <?php
+          }
+        }
+      }
+      ?>
+      <td><?= ($aTab['orderline_quantityordered']*$aTab['orderline_priceeach'])?>,00 €</td>
+      </tr>
+    </tbody>
+

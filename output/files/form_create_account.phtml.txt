@@ -1,0 +1,141 @@
+<div class="div_create_account">
+	<a href="<?php echo $domain;?>" class="cta retour"><i class="fa fa-reply" aria-hidden="true"></i> Retour</a>
+
+	<main class="container realisations main_create_account">
+		<h2>Création Compte</h2>
+		<form class="form" id="create_account" method="POST" action="" enctype="multipart/form-data">
+			<fieldset>
+				<p class="flex">
+					<label for="pseudo">Pseudo : <br>
+					<em>(les accents ne sont pas acceptés)</em></label>
+					<input type="text" placeholder="Pseudo" id="pseudo_create_account" name="pseudo"
+					value="<?php
+					if (isset($_POST['pseudo'])){ echo htmlentities(trim($_POST['pseudo'])); }?>"
+					required>
+				</p>
+				<p class="flex">
+					<label for="password" class="p_password">Password :
+						<?php
+						if(strpos($_SERVER['HTTP_USER_AGENT'], "Firefox") || strpos($_SERVER['HTTP_USER_AGENT'], "Safari")) // Si l'utilisateur utilise le navigateur "Firefox" ou "Safari"
+					  {
+					    echo "<span class='show-password_moz'>";
+					  }
+					  else
+						{
+							echo "<span class='show-password'>";
+						}
+						?>
+						Afficher</span></label>
+					<input type="password" placeholder="Password" id="password_create_account" name="password" required>
+				</p>
+				<p class="flex">
+					<label for="password_confirm" class="p_password">Confirmation Password :
+						<?php
+						if(strpos($_SERVER['HTTP_USER_AGENT'], "Firefox") || strpos($_SERVER['HTTP_USER_AGENT'], "Safari")) // Si l'utilisateur utilise le navigateur "Firefox" ou "Safari"
+						{
+							echo "<span class='show-password_moz confirm_password'>";
+						}
+						else
+						{
+							echo "<span class='show-password confirm_password'>";
+						}
+						?>
+						Afficher</span></label>
+					<input type="password" placeholder="Password" id="password_create_account_confirm" name="password_confirm" required>
+				</p>
+				<p class="flex">
+					<label for="mail_user">Adresse Mail : </label>
+					<input type="text" placeholder="Adresse Mail" id="mail_user" name="mail_user"
+					value="<?php
+					if (isset($_POST['mail_user'])){ echo htmlentities(trim($_POST['mail_user'])); }?>"
+					required>
+				</p>
+
+				<p class="flex flex_birthdate_user">
+					<label for="birthdate_user">Date de Naissance : </label>
+
+					<select id="day_birthdate_user" name="day_birthdate_user" class="birthdate_user">
+						<?php
+						$bDayVerif = false;
+						for($i=1; $i<=31; $i++)
+						{
+							if(!$bDayVerif && $i == $_POST['day_birthdate_user'])
+							{
+								if($i<10){$i="0".$i;}
+								echo "<option selected='selected' value=".$i.">".$i."</option>";
+								$bDayVerif = true;
+							}
+							else
+							{
+								if($i<10){$i="0".$i;}
+								echo "<option value=".$i.">".$i."</option>";
+							}
+						}
+						?>
+					</select>
+
+					<select id="month_birthdate_user" name="month_birthdate_user" class="birthdate_user">
+						<?php
+						$aTab = array(
+							'01' => 'Janvier',
+							'02' => 'Février',
+							'03' => 'Mars',
+							'04' => 'Avril',
+							'05' => 'Mai',
+							'06' => 'Juin',
+							'07' => 'Juillet',
+							'08' => 'Août',
+							'09' => 'Septembre',
+							'10' => 'Octobre',
+							'11' => 'Novembre',
+							'12' => 'Décembre'
+						);
+						$bMonthVerif = false;
+						foreach($aTab as $iIndex => $sValue){
+							if(!$bMonthVerif && $iIndex == $_POST['month_birthdate_user'])
+							{
+								echo "<option selected='selected' value=".$iIndex.">".$sValue."</option>";
+								$bMonthVerif = true;
+							}
+							else
+							{
+								echo "<option value=".$iIndex.">".$sValue."</option>";
+							}
+						}
+						?>
+					</select>
+
+					<select id="year_birthdate_user" name="year_birthdate_user" class="birthdate_user">
+						<?php
+						$bYearVerif = false;
+						for($i=2017; $i>=1900; $i--)
+						{
+							if(!$bYearVerif && $i == $_POST['year_birthdate_user'])
+							{
+								echo "<option selected='selected' value=".$i.">".$i."</option>";
+								$bYearVerif = true;
+							}
+							else
+							{
+								echo "<option value=".$i.">".$i."</option>";
+							}
+						}
+						?>
+					</select>
+				</p>
+
+				<p class="p_recaptcha">Vous devez cocher la case ci-dessous avant de vous créer un compte :</p>
+				<div class="g-recaptcha" data-sitekey="
+				<?php
+				echo $siteKey;
+				?>
+				"></div>
+
+			</fieldset>
+			<input type="submit" value=" Créer" class="cta input_creation_account" id="creation_create_account" name="creation">
+		</form>
+
+	</main>
+
+</div>
+

@@ -1,0 +1,24 @@
+<main class="container user_basket">
+
+  <h2><i class="fa fa-puzzle-piece" aria-hidden="true"></i> Jeux-vidéos</h2>
+
+  <section class="flex section_admin games">
+
+    <article class="flex">
+      <h2><i class="fa fa-hand-scissors-o" aria-hidden="true"></i> Chifoumi <i class="fa fa-hand-paper-o" aria-hidden="true"></i></h2>
+      <img src="<?php echo $domain;?>assets/img/chifoumi.png" alt="chifoumi">
+      <p>Pierre, Feuille, Ciseau, Puit, mais qui est le plus fort ?</p>
+      <a href="<?php echo $domain;?>video-games/chifoumi" class="video_games icon a_header_user" id="videogames"><i class="fa fa-gamepad" aria-hidden="true"></i> Jouer !</a>
+    </article>
+
+    <article class="flex">
+      <h2><i class="fa fa-glass" aria-hidden="true"></i> Shaker</h2>
+      <img src="<?php echo $domain;?>assets/img/shaker.png" alt="shaker">
+      <p>Envie de créer un cocktail ? Chimix, notre barman, vous dira s'il est magnifique ou.... dégueulasse !</p>
+      <a href="<?php echo $domain;?>video-games/shaker" class="video_games icon a_header_user" id="videogames"><i class="fa fa-gamepad" aria-hidden="true"></i> Jouer !</a>
+    </article>
+    
+  </section>
+
+</main>
+

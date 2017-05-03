@@ -1,0 +1,49 @@
+<main class="container who_am_i">
+
+  <h2><i class="fa fa-question-circle" aria-hidden="true"></i> Qui suis-je ?</h2>
+  <?php
+  if(strpos($_SERVER['HTTP_USER_AGENT'], "Firefox") || strpos($_SERVER['HTTP_USER_AGENT'], "Safari")) // Si l'utilisateur utilise le navigateur "Firefox" ou "Safari"
+  {
+    echo "<article class='presentation presentation_moz'>";
+  }
+  else
+  {
+    echo "<article class='presentation'>";
+  }
+  ?>
+
+  <em>" Être barman, ce n’est pas simplement servir !
+    C'est créer une ambiance, contribuer au bonheur d’un moment partagé,
+    mais aussi décupler les saveurs offertes par l’assemblage subtil d’ingrédients choisis avec goût "</em>
+    <br>
+
+    <img src="<?php echo $domain;?>assets/img/cocktail3.jpg" alt="cocktail3">
+    <img src="<?php echo $domain;?>assets/img/cocktail6.png" alt="cocktail6">
+
+    <p>Bonjour à tous ! Je m'apelle Christophe, j'ai 27 ans et je suis passionné de cocktails !<br>
+      J'ai toujours aimé le contact avec la clientèle et j'ai envie de vous transmettre cette passion !<br>
+      Je veux vous faire découvrir de nouveaux produits et vous serez surpris d'apprécier la saveur de
+      mélanges originaux et fantaisistes !</p>
+      <br>
+      <h3><i class="fa fa-briefcase" aria-hidden="true"></i> Mon parcours ?</h3>
+      <ul>
+        <li>Ecole Hôtelière de Blois</li>
+        <li>Mention Complémentaire Barman à l'Ecole Ferrandi</li>
+        <li>Barman au Sofitel à Moorea en Polynésie Française</li>
+        <li>Barman au Trianon Palace à Versailles</li>
+        <li>Cours de Flair <em>(art de jongler avec les bouteilles)</em> suivis aux côtés de Nicolas Saint Jean,
+          champion du monde de flair bartending</li>
+          <li>Formations de Mixologie suivies à Londres, Berlin et Barcelone</li>
+        </ul>
+
+        <img src="<?php echo $domain;?>assets/img/cocktail5.jpg" alt="cocktail5">
+        <img src="<?php echo $domain;?>assets/img/cocktail8.jpg" alt="cocktail8">
+
+        <p>
+          Mes connaissances et mes expériences acquises ainsi que mon dynamisme vous permettront de
+          passer un moment convivial et festif lors de mes ateliers ; vous en sortirez enrichis, amusés et prêts à organiser
+          des soirées cocktails entre amis, fier de vos nouveaux talents !</p>
+
+        </article>
+
+      </main>

@@ -1,0 +1,47 @@
+<?php
+
+// CHARGEMENT DU FICHIER "config.php"
+require 'config.php';
+
+// CHARGEMENT DU FICHIER "connexion.php"
+require 'connexion.php';
+
+// CHARGEMENT DU FICHIER "functions.php"
+require 'functions.php';
+
+// CHARGEMENT DU FICHIER "form_control.php"
+require 'form_control.php';
+
+if(isset($_POST['pseudo']) && isset($_POST['password']) && is_string($_POST['pseudo']) && is_string($_POST['password']))
+{
+	$_POST['pseudo'] = htmlspecialchars($_POST['pseudo']);
+	$_POST['password'] = htmlspecialchars($_POST['password']);
+
+	if(VerifExistUser($_POST['pseudo'],$_POST['password']))
+		{
+			$aUser = array();
+			$aUser = RecupInfosUser($_POST['pseudo']);
+			session_start();
+
+			$_SESSION['id'] = $aUser['user_id'];
+			$_SESSION['pseudo'] = $aUser['user_pseudo'];
+			$_SESSION['password'] = $_POST['password'];
+			$_SESSION['mail'] = $aUser['user_mail'];
+			$_SESSION['status'] = $aUser['user_status'];
+
+			$aAvatar = Recup_Avatar_User_Pseudo($_POST['pseudo']);
+
+			if(isset($aAvatar['avatar_source']))
+			{
+			$_SESSION['avatar_source'] = $aAvatar['avatar_source'];
+			}
+			Update_Lastlogintimestamp($aUser['user_id']);
+
+			echo "OK";
+		}
+		else
+		{
+			echo "KO";
+		}
+	}
+
